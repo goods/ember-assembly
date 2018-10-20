@@ -1,11 +1,14 @@
 {
   "name": "ember-assembly",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "A collection of beautiful UI components built by Goods",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "goods",
+    "components",
+    "ui"
   ],
-  "repository": "",
+  "repository": "https://github.com/goods/ember-assembly.git",
   "license": "MIT",
   "author": "",
   "directories": {
