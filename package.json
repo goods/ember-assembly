@@ -26,7 +26,8 @@
     "postpublish": "ember ts:clean"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.16.0"
+    "ember-cli-babel": "^6.16.0",
+    "ember-css-modules": "^1.0.1"
   },
   "devDependencies": {
     "@ember-decorators/babel-transforms": "^2.0.0",
