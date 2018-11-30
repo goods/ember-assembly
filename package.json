@@ -29,7 +29,8 @@
     "ember-basic-dropdown": "^1.0.4",
     "ember-cli-babel": "^6.16.0",
     "ember-cli-htmlbars": "^3.0.0",
-    "ember-css-modules": "^1.0.1"
+    "ember-css-modules": "^1.0.1",
+    "ember-svg-jar": "^1.2.2"
   },
   "devDependencies": {
     "@ember-decorators/babel-transforms": "^2.0.0",
