@@ -1,0 +1,30 @@
+@value neutral-lightest: #F9F9FB;
+@value neutral-light: #E4E7EB;
+@value neutral-base: #425A70;
+@value neutral-dark: #234361;
+
+@value blue-lightest: #f8f9fb;
+@value blue-light: #eef0f5;
+
+@value border-muted-colour: #EDF0F2;
+@value border-colour: #E4E7EB;
+@value border-error-colour: #e22525;
+
+@value text-muted-colour: #66788A;
+@value text-colour: #3c4346;
+@value text-dark-colour: #234361;
+@value text-danger-colour: #bb1414;
+
+@value neutral-n0: #ffffff;
+@value neutral-n1: #F9F9FB;
+@value neutral-n2: #F5F6F7;
+@value neutral-n3: #EDF0F2;
+@value neutral-n4: #E4E7EB;
+@value neutral-n5: #C7CED4;
+@value neutral-n6: #A6B1BB;
+@value neutral-n7: #7B8B9A;
+@value neutral-n8: #66788A;
+@value neutral-n9: #425A70;
+@value neutral-n1:0 #234361;
+
+@value icon-danger: #e22525;

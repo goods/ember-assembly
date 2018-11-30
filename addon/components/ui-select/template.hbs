@@ -1,0 +1,12 @@
+<UiPopover as |Popover|>
+  <Popover.trigger>
+    <UiButton>{{this.value}}</UiButton>
+  </Popover.trigger>
+  <Popover.content @class="ui-popover-content">
+    {{yield 
+      (hash
+        Option=(component "ui-select-option" onChange=this.onChange onClose=Popover.actions.close)
+      )
+    }}
+  </Popover.content>
+</UiPopover>

@@ -1,0 +1,12 @@
+@value border-colour, border-error-colour from "ember-assembly/styles/palette";
+
+.ui-text-input {
+}
+.ui-text-input input {
+  border: 1px solid border-colour;
+  border-radius: 3px;
+}
+
+.ui-text-input.has-error input {
+  border-color: border-error-colour;
+}

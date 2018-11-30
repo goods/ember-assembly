@@ -1,0 +1,47 @@
+@value gutter, gutter-half, gutter-quarter from "ember-assembly/styles/global";
+@value text-muted-colour, neutral-n3, neutral-n4, border-colour, border-error-colour, icon-danger from "ember-assembly/styles/palette";
+
+.ui-tag-input {
+  border: 1px solid border-colour;
+  border-radius: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: gutter-half gutter-half 0;
+  width: 100%;
+}
+
+.ui-tag-input.has-error {
+  border-color: border-error-colour;
+}
+
+.tag {
+  background: neutral-n3;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: none;
+  flex: 0 0 auto;
+  font-size: 14px;
+  margin: 0 gutter-half gutter-half 0;
+  padding: gutter-quarter gutter-half;
+}
+
+.tag:hover {
+  background: neutral-n4;
+}
+
+.ui-tag-input .input {
+  border: 0;
+  flex: 1 1 auto;
+  padding: gutter-quarter gutter-half;
+  height: auto;
+  width: auto;
+  margin-bottom: gutter-half;
+}
+
+.ui-tag-input .input::placeholder {
+  color: text-muted-colour;
+}
+
+.ui-tag-input .input:focus {
+  box-shadow: none;
+}
