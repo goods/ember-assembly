@@ -1,8 +1,8 @@
 @value gutter, gutter-half, gutter-quarter from "ember-assembly/styles/global";
-@value text-muted-colour, neutral-n3, neutral-n4, border-colour, border-error-colour, icon-danger from "ember-assembly/styles/palette";
+@value text-muted, neutral-n3, neutral-n4, border-default, border-error, icon-danger from "ember-assembly/styles/palette";
 
 .ui-tag-input {
-  border: 1px solid border-colour;
+  border: 1px solid border-default;
   border-radius: 3px;
   display: flex;
   flex-wrap: wrap;
@@ -11,7 +11,7 @@
 }
 
 .ui-tag-input.has-error {
-  border-color: border-error-colour;
+  border-color: border-error;
 }
 
 .tag {
@@ -39,7 +39,7 @@
 }
 
 .ui-tag-input .input::placeholder {
-  color: text-muted-colour;
+  color: text-muted;
 }
 
 .ui-tag-input .input:focus {

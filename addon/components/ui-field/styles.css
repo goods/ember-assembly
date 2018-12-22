@@ -1,23 +1,23 @@
 @value gutter, gutter-half, gutter-quarter from "ember-assembly/styles/global";
-@value text-colour, text-muted-colour, text-danger-colour, icon-danger, neutral-n3, neutral-n4 from "ember-assembly/styles/palette";
+@value text-default, text-muted, text-danger, icon-danger, neutral-n3, neutral-n4 from "ember-assembly/styles/palette";
 
 .ui-field {
   margin: gutter 0;
 }
 
 .ui-field .label {
-  color: text-colour;
+  color: text-default;
   margin: 0 0 gutter-quarter 0;
 }
 
 .ui-field .description {
-  color: text-muted-colour;
+  color: text-muted;
   font-size: 14px;
   margin: calc(-1 * gutter-quarter) 0 gutter-quarter 0;
 }
 
 .validation-message {
-  color: text-danger-colour;
+  color: text-danger;
   display: flex;
   font-size: 12px;
   line-height: 16px;
