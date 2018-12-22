@@ -38,7 +38,7 @@ export default class UiButton extends Component {
   disabled!: boolean;
 
   click() {
-    if (!isNone(this.onClick) && this.isDisabled !== false) {
+    if (!isNone(this.onClick) && this.isDisabled === false) {
       this.onClick();
     }
   }
