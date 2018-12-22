@@ -1,1 +1,10 @@
-{{yield}}
+{{#if this.isLoading}}
+  <UiSpinner local-class="spinner" />
+{{/if}}
+<span local-class="label">
+  {{#if this.label}}
+    {{this.label}}
+  {{else}}
+    {{yield}}
+  {{/if}}
+</span>
