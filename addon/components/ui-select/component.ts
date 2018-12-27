@@ -1,8 +1,19 @@
 import Component from "@ember/component";
 //@ts-ignore
 import template from "./template";
-import { classNames, layout } from "@ember-decorators/component";
+import { layout } from "@ember-decorators/component";
+import { localClassNames } from "ember-css-modules";
 
 @layout(template)
-@classNames("ui-select")
-export default class UiSelect extends Component {}
+@localClassNames("ui-select")
+export default class UiSelect extends Component {
+  value!: any;
+  onChange!: Function;
+  labelPath?: string = "";
+  isLoading?: boolean = false;
+  isDisabled?: boolean = false;
+  options?: Array<any> = [];
+  placeholder?: string = "Please choose";
+  triggerComponent?: string | null = null;
+  optionComponent?: string | null = null;
+}

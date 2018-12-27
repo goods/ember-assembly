@@ -1,12 +1,61 @@
 <UiPopover as |Popover|>
-  <Popover.trigger>
-    <UiButton>{{this.value}}</UiButton>
+  <Popover.trigger
+    @class="{{local-class
+        "ui-select-trigger"
+        from="ember-assembly/components/ui-select/styles"
+      }}"
+  >
+    {{#if this.triggerComponent}}
+      {{component
+        this.triggerComponent
+        value=this.value
+        isDisabled=this.isDisabled
+      }}
+    {{else}}
+      <UiButton @isDisabled={{this.isDisabled}}>
+        {{#if this.value}}
+          {{#if this.labelPath}}
+            {{get this.value this.labelPath}}
+          {{else}}
+            {{this.value}}
+          {{/if}}
+        {{else}}
+          {{this.placeholder}}
+        {{/if}}
+      </UiButton>
+    {{/if}}
   </Popover.trigger>
-  <Popover.content @class="ui-popover-content">
-    {{yield 
-      (hash
-        Option=(component "ui-select-option" onChange=this.onChange onClose=Popover.actions.close)
-      )
-    }}
+  <Popover.content
+    @class="ui-popover-content ui-popover-animated
+      {{local-class
+        "ui-select-content"
+        from="ember-assembly/components/ui-select/styles"
+      }}"
+  >
+    {{#if hasBlock}}
+      {{yield
+        (hash
+          Option=(component
+            "ui-select-option"
+            onChange=this.onChange
+            onClose=Popover.actions.close
+          )
+        )
+      }}
+    {{else if this.isLoading}}
+      <UiSpinner />
+    {{else}}
+      {{#each this.options as |option|}}
+        <UiSelectOption
+          @local-class="ui-select-option"
+          @value={{option}}
+          @labelPath={{this.labelPath}}
+          @optionComponent={{this.optionComponent}}
+          @onChange={{this.onChange}}
+          @onClose={{Popover.actions.close}}
+         />
+
+      {{/each}}
+    {{/if}}
   </Popover.content>
 </UiPopover>
