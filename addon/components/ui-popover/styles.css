@@ -2,14 +2,6 @@
 @value gutter from "ember-assembly/styles/global";
 @value timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.175);
 
-.ui-popover {
-  background: green;
-}
-
-:global(.ui-popover) {
-  background: green;
-}
-
 :global(.ember-basic-dropdown-trigger) {
   display: inline-block;
 }
