@@ -1,19 +1,10 @@
-<UiPopover as |Popover|>
-  <Popover.trigger
-    @class="{{local-class
-        "ui-select-trigger"
-        from="ember-assembly/components/ui-select/styles"
-      }}"
-  >
+<UiPopover disabled={{this.isDisabled}} as |Popover|>
+  <Popover.trigger local-class="ui-select-trigger">
     {{#if this.triggerComponent}}
-      {{component
-        this.triggerComponent
-        value=this.value
-        isDisabled=this.isDisabled
-      }}
+      {{component this.triggerComponent value=this.value isDisabled=this.isDisabled}}
     {{else}}
-      <UiButton @isDisabled={{this.isDisabled}}>
-        {{#if this.value}}
+      <UiButton disabled={{this.isDisabled}}>
+        {{#if this.value }}
           {{#if this.labelPath}}
             {{get this.value this.labelPath}}
           {{else}}
@@ -25,37 +16,27 @@
       </UiButton>
     {{/if}}
   </Popover.trigger>
-  <Popover.content
-    @class="ui-popover-content ui-popover-animated
-      {{local-class
-        "ui-select-content"
-        from="ember-assembly/components/ui-select/styles"
-      }}"
-  >
+  <Popover.content @class="ui-popover-content ui-popover-animated {{local-class "ui-select-content"}}">
     {{#if hasBlock}}
-      {{yield
+      {{yield 
         (hash
-          Option=(component
-            "ui-select-option"
-            onChange=this.onChange
-            onClose=Popover.actions.close
-          )
+          Option=(component "ui-select-option" onChange=this.onChange onClose=Popover.actions.close)
         )
       }}
-    {{else if this.isLoading}}
-      <UiSpinner />
     {{else}}
-      {{#each this.options as |option|}}
-        <UiSelectOption
-          @local-class="ui-select-option"
-          @value={{option}}
-          @labelPath={{this.labelPath}}
-          @optionComponent={{this.optionComponent}}
-          @onChange={{this.onChange}}
-          @onClose={{Popover.actions.close}}
-         />
-
-      {{/each}}
+        {{#if this.isLoading}}
+          <UiSpinner />
+        {{else}}
+          {{#each this.options as |option|}}
+            <UiSelectOption 
+              @value={{option}}
+              @labelPath={{this.labelPath}}
+              @optionComponent={{this.optionComponent}}
+              @onChange={{this.onChange}} 
+              @onClose={{Popover.actions.close}}
+            />
+          {{/each}}
+        {{/if}}
     {{/if}}
   </Popover.content>
 </UiPopover>

@@ -4,15 +4,14 @@ import template from "./template";
 import { layout } from "@ember-decorators/component";
 import { localClassNames } from "ember-css-modules";
 
-@layout(template)
 @localClassNames("ui-select-option")
+@layout(template)
 export default class UiSelectOption extends Component {
   onChange!: Function;
   onClose!: Function;
-  value!: string;
+  value!: any;
   labelPath?: string = "";
-  optionComponent?: string = "";
-
+  optionComponent?: any = null;
 
   click() {
     this.onChange(this.value);

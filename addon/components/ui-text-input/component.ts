@@ -7,8 +7,8 @@ import { action } from "@ember-decorators/object";
 import { isNone } from "@ember/utils";
 import { set } from "@ember/object";
 
-@layout(template)
 @localClassNames("ui-text-input")
+@layout(template)
 export default class UiTextInput extends Component {
   value?: string = "";
   onSetValue?: Function | null = null;

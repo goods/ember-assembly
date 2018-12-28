@@ -1,3 +1,4 @@
+/* Palette */
 @value neutral-tint: #F9F9FB;
 @value neutral-lightest: #F5F6F7;
 @value neutral-light: #E4E7EB;
@@ -28,6 +29,7 @@
 @value green-base: #47B881;
 @value green-dark: #00783E;
 
+/* Scales */
 @value neutral-n0: #ffffff;
 @value neutral-n1: #F9F9FB;
 @value neutral-n2: #F5F6F7;
@@ -80,17 +82,19 @@
 @value black-b7a: rgba(0, 0, 0, 0.7);
 @value black-b8a: rgba(0, 0, 0, 0.81);
 
-@value border-muted: #EDF0F2;
-@value border-default: #E4E7EB;
+/* Functional colours */
+@value border-muted: neutral-n3;
+@value border-default: neutral-light;
 @value border-error: red-base;
 
-@value text-muted: #66788A;
-@value text-default: #3c4346;
-@value text-dark: #234361;
+@value text-muted: neutral-n8;
+@value text-default: neutral-base;
+@value text-dark: neutral-dark;
 @value text-danger: red-dark;
 
 @value icon-danger: red-base;
 
+/* Intents */
 @value intent-none: blue-base;
 @value intent-success: green-base;
 @value intent-danger: red-base;

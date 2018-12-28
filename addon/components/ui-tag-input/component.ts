@@ -8,8 +8,8 @@ import { assert } from "@ember/debug";
 import { isNone } from "@ember/utils";
 import { set } from "@ember/object";
 
-@layout(template)
 @localClassNames("ui-tag-input")
+@layout(template)
 export default class UiTagInput extends Component {
   tags!: Array<string>;
   onAdd!: Function;
@@ -29,8 +29,8 @@ export default class UiTagInput extends Component {
     }
   }
 
-  constructor() {
-    super(...arguments);
+  init() {
+    super.init();
     assert("`tags` is required", !isNone(this.tags));
     assert("`onAdd` is required", !isNone(this.onAdd));
     assert("`onRemove` is required", !isNone(this.onRemove));
