@@ -1,14 +1,15 @@
 @value gutter-double, gutter, gutter-half, gutter-quarter from "ember-assembly/styles/global";
-@value ui from "ember-assembly/styles/typography";
-@value text-default, text-muted from "ember-assembly/styles/palette";
-@value icon-danger from "ember-assembly/styles/palette";
-@value blue-b3, blue-b4a, blue-tint, blue-dark from "ember-assembly/styles/palette";
+@value text-default, text-muted, icon-danger from "ember-assembly/styles/palette";
+@value intent-none, intent-success, intent-danger, intent-warning from "ember-assembly/styles/palette";
+@value blue-b3 from "ember-assembly/styles/palette";
+@value blue-b4a from "ember-assembly/styles/palette";
+@value blue-tint, blue-dark from "ember-assembly/styles/palette";
 @value red-tint, red-dark from "ember-assembly/styles/palette";
 @value green-tint, green-dark from "ember-assembly/styles/palette";
 @value yellow-tint, yellow-dark from "ember-assembly/styles/palette";
 @value neutral-n0, neutral-n1, neutral-n2, neutral-n3, neutral-n4, neutral-n5, neutral-n7 from "ember-assembly/styles/palette";
 @value white-w5a from "ember-assembly/styles/palette";
-@value intent-none, intent-success, intent-danger, intent-warning from "ember-assembly/styles/palette";
+@value ui from "ember-assembly/styles/typography";
 @value timing-function: cubic-bezier(0, 0, 0.25, 0.99);
 
 .ui-button {
@@ -18,8 +19,8 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   color: text-default;
   cursor: default;
-  font-size: 12px;
   font-family: ui;
+  font-size: 12px;
   font-weight: 500;
   line-height: gutter-double;
   padding: 0 gutter;
@@ -31,128 +32,21 @@
   cursor: pointer;
 }
 
+.ui-button.appearance-minimal:focus,
 .ui-button:focus {
-  box-shadow: 0 0 0 3px blue-tint;
-  outline: 0;
+  box-shadow: 0 0 0 3px blue-b4a;
+  outline: none;
 }
 
+.ui-button.appearance-minimal:active:enabled,
 .ui-button:active:enabled {
   background: blue-b3;
 }
 
-/* Minimal appearance */
-.ui-button.appearance-minimal {
-  background: 0;
-  border: 1px solid transparent;
-  box-shadow: none;
-}
-.ui-button.appearance-minimal:focus {
-  box-shadow: 0 0 0 3px blue-tint;
-  outline: 0;
-}
-.ui-button.appearance-minimal:active:enabled {
-  background: blue-b3;
-}
-.ui-button.appearance-minimal:hover {
-  background: neutral-n2;
-  border: 1px solid neutral-n2;
-}
-.ui-button.appearance-minimal.intent-success {
-  color: intent-success;
-}
-.ui-button.appearance-minimal.intent-danger {
-  color: intent-danger;
-}
-.ui-button.appearance-minimal.intent-warning {
-  color: intent-warning;
-}
-.ui-button.appearance-minimal:disabled {
-  color: neutral-n5;
-}
-.ui-button.appearance-minimal:disabled:hover {
-  background: inherit;
-  border-color: transparent;
-}
-
-/* Default appearance */
-.ui-button.appearance-default.intent-success {
-  color: intent-success;
-}
-.ui-button.appearance-default.intent-danger {
-  color: intent-danger;
-}
-.ui-button.appearance-default.intent-warning {
-  color: intent-warning;
-}
-.ui-button.appearance-default:disabled {
-  border-color: neutral-n4;
-  color: neutral-n5;
-}
-
-/* Strong appearance */
-.ui-button.appearance-strong.intent-none,
-.ui-button.appearance-strong.intent-none.is-loading:disabled {
-  background: intent-none;
-  border-color: intent-none;
-  color: neutral-n0;
-}
-.ui-button.appearance-strong.intent-none:active {
-  background: blue-dark;
-  border-color: blue-dark;
-}
-.ui-button.appearance-strong .spinner > div {
-  border-top-color: white-w5a;
-}
-.ui-button.appearance-strong.intent-success,
-.ui-button.appearance-strong.intent-success.is-loading:disabled {
-  background: intent-success;
-  border-color: intent-success;
-  color: neutral-n0;
-}
-.ui-button.appearance-strong.intent-success:focus {
-  box-shadow: 0 0 0 3px green-tint;
-}
-.ui-button.appearance-strong.intent-success:active {
-  background: green-dark;
-  border-color: green-dark;
-}
-.ui-button.appearance-strong.intent-danger,
-.ui-button.appearance-strong.intent-danger.is-loading:disabled {
-  background: intent-danger;
-  border-color: intent-danger;
-  color: neutral-n0;
-}
-.ui-button.appearance-strong.intent-danger:focus {
-  box-shadow: 0 0 0 3px red-tint;
-}
-.ui-button.appearance-strong.intent-danger:active {
-  background: red-dark;
-  border-color: red-dark;
-}
-.ui-button.appearance-strong.intent-warning,
-.ui-button.appearance-strong.intent-warning.is-loading:disabled {
-  background: intent-warning;
-  border-color: intent-warning;
-  color: neutral-n0;
-}
-.ui-button.appearance-strong.intent-warning:focus {
-  box-shadow: 0 0 0 3px yellow-tint;
-}
-.ui-button.appearance-strong.intent-warning:active {
-  background: yellow-dark;
-  border-color: yellow-dark;
-}
-.ui-button.appearance-strong:disabled,
-.ui-button.appearance-strong:disabled:active {
-  background: neutral-n1;
-  border-color: neutral-n4;
-  color: neutral-n5;
-}
-
-/* Loading */
 .is-loading {
-  border-color: border-default;
+  border-color: neutral-n4;
 }
+
 .is-loading .label {
   opacity: 0;
 }
@@ -171,8 +65,120 @@
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
+}
+
+/* Appearance: Minimal */
+.ui-button.appearance-minimal {
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.ui-button.appearance-minimal:hover {
+  background: neutral-n2;
+  border: 1px solid neutral-n2;
+}
+
+.ui-button.appearance-minimal.intent-success {
+  color: intent-success;
+}
+
+.ui-button.appearance-minimal.intent-danger {
+  color: intent-danger;
+}
+
+.ui-button.appearance-minimal.intent-warning {
+  color: intent-warning;
+}
+
+.ui-button.appearance-minimal:disabled {
+  color: neutral-n5;
+}
+
+.ui-button.appearance-minimal:disabled:hover {
+  background: inherit;
+}
+
+/* Appearance: Default */
+.ui-button.appearance-default.intent-success {
+  color: intent-success;
+}
+
+.ui-button.appearance-default.intent-danger {
+  color: intent-danger;
+}
+
+.ui-button.appearance-default.intent-warning {
+  color: intent-warning;
+}
+
+.ui-button.appearance-default:disabled {
+  border-color: neutral-n4;
+  color: neutral-n5;
+}
+
+/* Appearance: Strong */
+.ui-button.appearance-strong.intent-none.is-loading:disabled,
+.ui-button.appearance-strong.intent-none {
+  background: intent-none;
+  border-color: intent-none;
+  color: neutral-n0;
+}
+.ui-button.appearance-strong.intent-none:active {
+  background: blue-dark;
+  border-color: blue-dark;
+}
+.ui-button.appearance-strong .spinner > div {
+  border-top-color: white-w5a;
+}
+
+.ui-button.appearance-strong.intent-success.is-loading:disabled,
+.ui-button.appearance-strong.intent-success {
+  background: intent-success;
+  border-color: intent-success;
+  color: neutral-n0;
+}
+.ui-button.appearance-strong.intent-success:focus {
+  box-shadow: 0 0 0 3px green-tint;
+}
+.ui-button.appearance-strong.intent-success:active {
+  background: green-dark;
+  border-color: green-dark;
+}
+
+.ui-button.appearance-strong.intent-danger.is-loading:disabled,
+.ui-button.appearance-strong.intent-danger {
+  background: intent-danger;
+  border-color: intent-danger;
+  color: neutral-n0;
+}
+.ui-button.appearance-strong.intent-danger:focus {
+  box-shadow: 0 0 0 3px red-tint;
+}
+.ui-button.appearance-strong.intent-danger:active {
+  background: red-dark;
+  border-color: red-dark;
+}
+
+.ui-button.appearance-strong.intent-warning.is-loading:disabled,
+.ui-button.appearance-strong.intent-warning {
+  background: intent-warning;
+  border-color: intent-warning;
+  color: neutral-n0;
+}
+.ui-button.appearance-strong.intent-warning:focus {
+  box-shadow: 0 0 0 3px yellow-tint;
+}
+.ui-button.appearance-strong.intent-warning:active {
+  background: yellow-dark;
+  border-color: yellow-dark;
+}
+
+.ui-button.appearance-strong:disabled {
+  background: neutral-n1;
+  border-color: neutral-n4;
+  color: neutral-n5;
 }
