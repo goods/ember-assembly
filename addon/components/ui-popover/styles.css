@@ -2,38 +2,31 @@
 @value gutter from "ember-assembly/styles/global";
 @value timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.175);
 
-.ui-popover {
-  background: green;
-}
-
-:global(.ui-popover) {
-  background: green;
-}
-
 :global(.ember-basic-dropdown-trigger) {
   display: inline-block;
 }
 
-:global(.ui-popover-content.ember-basic-dropdown-content) {
+:global(.ui-popover-content) {
   background: neutral-n0;
+  border-radius: 3px;
   box-shadow: rgba(67, 90, 111, 0.3) 0px 0px 1px,
     rgba(67, 90, 111, 0.47) 0px 8px 10px -4px;
   padding: gutter;
-  width: 240px;
-  height: 240px;
+  width: 300px;
+  max-height: 240px;
   transform-origin: center 0px 0px;
   will-change: transform, opacity;
 }
 
-:global(.ui-popover-content.ember-basic-dropdown-content--left.ember-basic-dropdown-content--below) {
+:global(.ui-popover-animated.ui-popover-content.ember-basic-dropdown-content--left.ember-basic-dropdown-content--below) {
   transform-origin: left top;
 }
 
-:global(.ui-popover-content.ember-basic-dropdown--transitioning-in) {
+:global(.ui-popover-animated.ui-popover-content.ember-basic-dropdown--transitioning-in) {
   animation: ui-popover-in 300ms timing-function;
 }
 
-:global(.ui-popover-content.ember-basic-dropdown--transitioning-out) {
+:global(.ui-popover-animated.ui-popover-content.ember-basic-dropdown--transitioning-out) {
   animation: ui-popover-out 300ms timing-function;
 }
 

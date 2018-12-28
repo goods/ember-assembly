@@ -1,12 +1,24 @@
-@value border-colour, border-error-colour from "ember-assembly/styles/palette";
+@value blue-b4a, blue-base, border-default, border-error, text-default from "ember-assembly/styles/palette";
+@value gutter-half from "ember-assembly/styles/global";
+@value ui from "ember-assembly/styles/typography";
 
-.ui-text-input {
-}
 .ui-text-input input {
-  border: 1px solid border-colour;
+  border: 1px solid border-default;
   border-radius: 3px;
+  color: text-default;
+  font-family: ui;
+  font-size: 12px;
+  font-weight: 400;
+  height: 32px;
+  padding: 0 gutter-half;
+}
+
+.ui-text-input input:focus {
+  border-color: blue-base;
+  box-shadow: 0 0 0 3px blue-b4a;
+  outline: none;
 }
 
 .ui-text-input.has-error input {
-  border-color: border-error-colour;
+  border-color: border-error;
 }

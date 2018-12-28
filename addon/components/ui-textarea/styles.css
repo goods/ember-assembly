@@ -1,10 +1,10 @@
-@value border-colour, border-error-colour from "ember-assembly/styles/palette";
+@value border-default border-error from "ember-assembly/styles/palette";
 
 .ui-textarea {
-  border: 1px solid border-colour;
+  border: 1px solid border-default;
   border-radius: 3px;
 }
 
 .ui-textarea.has-error {
-  border-color: border-error-colour;
+  border-color: border-error;
 }

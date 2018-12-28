@@ -1,10 +1,9 @@
-import Component from '@ember/component';
+import Component from "@ember/component";
 // @ts-ignore: Ignore import of compiled template
-import layout from './template';
+import template from "./template";
+import { layout } from "@ember-decorators/component";
+import { localClassNames } from "ember-css-modules";
 
-export default class UiSpinner extends Component.extend({
-  // anything which *must* be merged to prototype here
-}) {
-  layout = layout;
-  // normal class body definition here
-};
+@localClassNames("ui-spinner")
+@layout(template)
+export default class UiSpinner extends Component {}

@@ -6,9 +6,9 @@ import { localClassNames, localClassName } from "ember-css-modules";
 import { isNone } from "@ember/utils";
 import { set } from "@ember/object";
 
+@localClassNames("ui-textarea")
 @layout(template)
 @tagName("textarea")
-@localClassNames("ui-textarea")
 export default class UiTextarea extends Component {
   id?: string = this.elementId;
   value?: string = "";

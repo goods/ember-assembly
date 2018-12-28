@@ -1,1 +1,13 @@
-{{yield}}
+{{#if this.optionComponent}}
+  {{component this.optionComponent value=option}}
+{{else}}
+  {{#if hasBlock}}
+    {{yield}}
+  {{else}}
+    {{#if this.labelPath}}
+      {{get this.value this.labelPath}}
+    {{else}}
+      {{this.value}}
+    {{/if}}
+  {{/if}}
+{{/if}}
