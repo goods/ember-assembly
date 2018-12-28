@@ -5,22 +5,11 @@
 @value ring-width: 3px;
 
 .ui-spinner {
+  display: inline-block;
   position: relative;
   width: medium-size;
   height: medium-size;
   margin-top: -1px;
-}
-
-.ui-spinner .inner {
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: medium-size;
-  height: medium-size;
-  border: 3px solid neutral-n5;
-  border-radius: 50%;
-  animation: ui-spinner-animation 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: neutral-n5 transparent transparent;
 }
 
 .ui-spinner.size-small,
@@ -35,21 +24,30 @@
   height: large-size;
 }
 
-.ui-spinner .inner_:nth-child(1) {
+.ui-spinner .inner {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: medium-size;
+  height: medium-size;
+  border: ring-width solid neutral-n5;
+  border-radius: 50%;
+  animation: ui-spinner-animation 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: neutral-n5 transparent transparent transparent;
+}
+.ui-spinner .inner:nth-child(1) {
   animation-delay: -0.45s;
 }
-.ui-spinner .inner_:nth-child(2) {
+.ui-spinner .inner:nth-child(2) {
   animation-delay: -0.3s;
 }
-.ui-spinner .inner_:nth-child(3) {
+.ui-spinner .inner:nth-child(3) {
   animation-delay: -0.15s;
 }
-
 @keyframes ui-spinner-animation {
   0% {
-    transform: rotate(0);
+    transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
