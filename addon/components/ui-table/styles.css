@@ -1,0 +1,14 @@
+@value blue-b3 from "ember-assembly/styles/palette";
+@value gutter, gutter-half, gutter-quarter from "ember-assembly/styles/global";
+
+.table {
+  border-spacing: 0;
+  border-left: 1px solid blue-b3;
+  border-right: 1px solid blue-b3;
+  width: 100%;
+}
+
+.height-full {
+  height: 100%;
+  overflow: auto;
+}
