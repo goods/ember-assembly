@@ -2,20 +2,19 @@ import Component from "@ember/component";
 // @ts-ignore: Ignore import of compiled template
 import template from "./template";
 import { localClassNames, localClassName } from "ember-css-modules";
-import { tagName, layout, attribute } from "@ember-decorators/component";
-import { isNone } from "@ember/utils";
-import { computed } from "@ember-decorators/object";
+import { layout, tagName, attribute } from "@ember-decorators/component";
 import { or } from "@ember-decorators/object/computed";
+import { computed } from "@ember-decorators/object";
+import { isNone } from "@ember/utils";
 
 @localClassNames("ui-button")
 @layout(template)
 @tagName("button")
 export default class UiButton extends Component {
-  appearance?: string = "default";
-  intent?: string = "none";
-
   onClick?: Function | null = null;
   label?: string = "";
+  appearance?: string = "default"; //Enum: default, strong, minimal
+  intent?: string = "none"; //Enum: none, success, warning, danger
   isDisabled?: boolean = false;
 
   @localClassName()
@@ -38,7 +37,7 @@ export default class UiButton extends Component {
   disabled!: boolean;
 
   click() {
-    if (!isNone(this.onClick) && this.isDisabled === false) {
+    if (this.disabled === false && !isNone(this.onClick)) {
       this.onClick();
     }
   }
