@@ -1,0 +1,20 @@
+{{#if this.optionComponent}}
+  {{component this.optionComponent value=this.option isSelected=this.isSelected}}
+{{else}}
+  <div local-class="selected">
+    {{#if this.isSelected}}
+      {{svg-jar "checkmark-1" local-class="tick"}}
+    {{else}}
+      <div local-class="spot"></div>
+    {{/if}}
+  </div>
+  {{#if hasBlock}}
+    {{yield}}
+  {{else}}
+    {{#if this.labelPath}}
+      {{get this.value this.labelPath}}
+    {{else}}
+      {{this.value}}
+    {{/if}}
+  {{/if}}
+{{/if}}

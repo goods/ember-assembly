@@ -1,0 +1,23 @@
+@value caret-size: 5px;
+@value neutral-n7 from "ember-assembly/styles/palette";
+
+.ui-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-radius: 2px;
+  border-left: caret-size solid transparent;
+  border-right: caret-size solid transparent;
+  border-bottom: caret-size solid neutral-n7;
+  margin-top: -2px;
+  transition: transform 150ms;
+  vertical-align: middle;
+}
+
+.ui-caret.asc {
+  transform: rotate(0deg);
+}
+
+.ui-caret.desc {
+  transform: rotate(180deg);
+}

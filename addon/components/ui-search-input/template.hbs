@@ -1,0 +1,11 @@
+{{svg-jar "search" local-class="search-icon" width="13px" height="13px"}}
+
+{{input
+  id=@inputId
+  value=@value
+  required=@required
+  type=@type
+  placeholder=@placeholder
+  disabled=this.isDisabled
+  key-up=(action "onKeyUp")
+}}

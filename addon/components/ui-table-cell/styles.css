@@ -1,0 +1,8 @@
+@value blue-b3, neutral-n0 from "ember-assembly/styles/palette";
+@value gutter, gutter-half, gutter-quarter from "ember-assembly/styles/global";
+
+.ui-table-cell {
+  background: neutral-n0;
+  border-bottom: 1px solid blue-b3;
+  padding: gutter-half;
+}

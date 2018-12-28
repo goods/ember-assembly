@@ -1,0 +1,35 @@
+<table local-class="table">
+  {{#if this.hasColumns}}
+    <UiTableHead 
+      @hasFixedHeader={{this.hasFixedHeader}}
+      as |Head|
+    >
+      <Head.Row as |Row|>
+        {{#each this.columns as |column|}}
+          <Row.Cell 
+            @key={{column.key}}
+            @isSortable={{column.isSortable}}
+            @sortBy={{this.sortBy}}
+            @sortOrder={{this.sortOrder}}
+            @onSort={{this.onSort}}
+            class={{column.classes}}
+          >
+            {{column.label}}
+          </Row.Cell>
+        {{/each}}
+      </Head.Row>
+  </UiTableHead>
+  {{/if}}
+  {{yield 
+    (hash 
+      Head=(component "ui-table-head" 
+        isLoading=this.isLoading 
+        onSort=this.onSort 
+        hasFixedHeader=this.hasFixedHeader
+      )
+      Body=(component "ui-table-body" 
+        isLoading=this.isLoading
+      )
+    )
+  }}
+</table>
