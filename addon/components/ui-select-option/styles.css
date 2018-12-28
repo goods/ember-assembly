@@ -1,16 +1,15 @@
+@value blue-b3, blue-b2, text-default from "ember-assembly/styles/palette";
 @value gutter, gutter-half from "ember-assembly/styles/global";
 @value ui from "ember-assembly/styles/typography";
-@value blue-b2, blue-b3, text-default from "ember-assembly/styles/palette";
 
-/* ui: '"SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"', */
 .ui-select-option {
   align-items: center;
   border-top: 1px solid blue-b3;
   color: text-default;
   cursor: pointer;
+  font-family: ui;
   font-size: 12px;
   font-weight: 400;
-  font-family: ui;
   line-height: 1.5em;
   overflow-x: hidden;
   padding: gutter-half gutter;

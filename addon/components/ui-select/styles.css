@@ -1,7 +1,7 @@
-@value gutter-half from "ember-assembly/styles/global";
 @value blue-b4a from "ember-assembly/styles/palette";
+@value gutter-half from "ember-assembly/styles/global";
 
-:global(.ui-popover-content).ui-select-content {
+:global(.ui-popover-content.ui-popover-content).ui-select-content {
   margin-top: gutter-half;
   padding: 0;
   overflow: auto;
@@ -10,5 +10,5 @@
 .ui-select-trigger:focus {
   border-radius: 3px;
   box-shadow: 0 0 0 3px blue-b4a;
-  outline: 0;
+  outline: none;
 }
