@@ -7,8 +7,8 @@ import { isNone } from "@ember/utils";
 import { layout } from "@ember-decorators/component";
 import { computed } from "@ember-decorators/object";
 
-@layout(template)
 @localClassNames("ui-field")
+@layout(template)
 export default class UiField extends Component {
   label!: string;
   description?: string = "";

@@ -1,5 +1,6 @@
 @value gutter, gutter-half, gutter-quarter from "ember-assembly/styles/global";
 @value text-default, text-muted, text-danger, icon-danger, neutral-n3, neutral-n4 from "ember-assembly/styles/palette";
+@value ui from "ember-assembly/styles/typography";
 
 .ui-field {
   margin: gutter 0;
@@ -7,6 +8,10 @@
 
 .ui-field .label {
   color: text-default;
+  display: inline-block;
+  font-family: ui;
+  font-size: 14px;
+  font-weight: 500;
   margin: 0 0 gutter-quarter 0;
 }
 
