@@ -1,0 +1,48 @@
+@value blue-b3, blue-b4a, neutral-n2, text-default from "ember-assembly/styles/palette";
+@value gutter, gutter-half, gutter-double from "ember-assembly/styles/global";
+
+:global(.ui-popover-content.ui-popover-content).ui-combobox-content {
+  margin-top: gutter-half;
+  padding: 0;
+  overflow: auto;
+}
+
+.ui-combobox-trigger:focus {
+  border-radius: 3px;
+  box-shadow: 0 0 0 3px blue-b4a;
+  outline: none;
+}
+
+.header {
+  display: flex;
+}
+
+.title {
+  color: text-default;
+  flex: 1 1 auto;
+  font-weight: 500;
+  padding: gutter-half gutter;
+}
+
+.close-btn {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.ui-combobox-content .filter input {
+  background: neutral-n2;
+  border: 0;
+  border-radius: 0;
+  border-top: 1px solid blue-b3;
+  padding-left: calc(gutter-double + gutter-half);
+  width: 100%;
+}
+
+.ui-combobox-content .filter input:focus {
+  border-color: blue-b3;
+  box-shadow: none;
+}
+
+.ui-combobox-content .filter svg {
+  left: 14px;
+}

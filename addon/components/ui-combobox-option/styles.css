@@ -1,0 +1,48 @@
+@value neutral-n4, blue-b3, blue-b2, blue-base, text-default from "ember-assembly/styles/palette";
+@value gutter, gutter-half from "ember-assembly/styles/global";
+@value ui from "ember-assembly/styles/typography";
+
+.ui-combobox-option {
+  align-items: center;
+  border-top: 1px solid blue-b3;
+  color: text-default;
+  cursor: pointer;
+  display: flex;
+  font-family: ui;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5em;
+  overflow-x: hidden;
+  padding: gutter-half gutter;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ui-combobox-option:first-child {
+  border-top: 0;
+}
+
+.ui-combobox-option:hover {
+  background: blue-b2;
+}
+
+.selected {
+  width: 24px;
+}
+
+.selected svg path {
+  fill: blue-base;
+}
+
+.is-selected {
+  background: blue-b2;
+  color: blue-base;
+}
+
+.spot {
+  background-color: neutral-n4;
+  border-radius: 100%;
+  width: gutter-half;
+  height: gutter-half;
+  margin-left: 2px;
+}
