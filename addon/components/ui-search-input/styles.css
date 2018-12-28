@@ -1,7 +1,6 @@
+@value blue-b4a, blue-base, border-default, border-error, text-default, neutral-n8 from "ember-assembly/styles/palette";
 @value gutter-double, gutter, gutter-half from "ember-assembly/styles/global";
 @value ui from "ember-assembly/styles/typography";
-@value blue-b4a, blue-base, neutral-n8 from "ember-assembly/styles/palette";
-@value border-default, border-error, text-default from "ember-assembly/styles/palette";
 
 .ui-search-input {
   position: relative;
@@ -11,7 +10,9 @@
   border: 1px solid border-default;
   border-radius: 3px;
   color: text-default;
+  font-family: ui;
   font-size: 12px;
+  font-weight: 400;
   height: 32px;
   padding: 0 gutter-half 0 gutter-double;
 }
@@ -19,7 +20,7 @@
 .ui-search-input input:focus {
   border-color: blue-base;
   box-shadow: 0 0 0 3px blue-b4a;
-  outline: 0;
+  outline: none;
 }
 
 .ui-search-input.has-error input {
@@ -34,8 +35,4 @@
 
 .search-icon > path {
   fill: neutral-n8;
-}
-.ui-search-input input {
-  font-weight: 400;
-  font-family: ui;
 }
