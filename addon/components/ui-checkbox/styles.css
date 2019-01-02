@@ -1,0 +1,46 @@
+@value blue-base, border-default, neutral-n0 from "ember-assembly/styles/palette";
+@value gutter-half from "ember-assembly/styles/global";
+@value size: 16px;
+
+.ui-checkbox {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+}
+
+.checkbox-input {
+  border: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  opacity: 0;
+}
+
+.checkbox {
+  align-items: center;
+  border: 1px solid border-default;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  margin-right: gutter-half;
+  height: size;
+  width: size;
+}
+
+.check-icon {
+  fill: neutral-n0;
+}
+
+.is-checked .checkbox {
+  background: blue-base;
+  border-color: blue-base;
+  color: neutral-n0;
+}
+
+.label {
+  cursor: pointer;
+}

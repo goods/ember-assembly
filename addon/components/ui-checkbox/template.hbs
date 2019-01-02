@@ -1,0 +1,9 @@
+{{input type="checkbox" checked=this.checked local-class="checkbox-input" id=(concat "checkbox-input-" this.elementId)}}
+<div local-class="checkbox">
+  {{#if this.checked}}
+    {{svg-jar "checkmark-1" width="10px" height="10px" local-class="check-icon"}}
+  {{/if}}
+</div>
+<label local-class="label" for={{concat "checkbox-input-" this.elementId}}>
+  {{this.label}}
+</label>
