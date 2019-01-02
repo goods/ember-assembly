@@ -43,6 +43,11 @@
   background: blue-b3;
 }
 
+.ui-button .label {
+  display: flex;
+  align-items: center;
+}
+
 .is-loading {
   border-color: neutral-n4;
 }
