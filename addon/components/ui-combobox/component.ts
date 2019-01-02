@@ -36,7 +36,8 @@ export default class UiCombobox extends Component {
       return `${selectedCount} selected...`;
     }
     let value = get(this.selected, "firstObject");
-    if (!isNone(this.labelPath)) {
+
+    if (!isEmpty(this.labelPath) && !isNone(this.labelPath)) {
       return get(value, this.labelPath);
     }
 
@@ -55,7 +56,7 @@ export default class UiCombobox extends Component {
 
     return this.options.filter(option => {
       let label = option;
-      if (!isNone(this.labelPath)) {
+      if (!isEmpty(this.labelPath) && !isNone(this.labelPath)) {
         label = get(option, this.labelPath);
       }
       //@ts-ignore
