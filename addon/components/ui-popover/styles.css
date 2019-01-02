@@ -12,7 +12,7 @@
   box-shadow: rgba(67, 90, 111, 0.3) 0px 0px 1px,
     rgba(67, 90, 111, 0.47) 0px 8px 10px -4px;
   padding: gutter;
-  width: 300px;
+  min-width: 150px;
   max-height: 240px;
   transform-origin: center 0px 0px;
   will-change: transform, opacity;
