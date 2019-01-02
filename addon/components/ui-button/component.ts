@@ -17,6 +17,9 @@ export default class UiButton extends Component {
   intent?: string = "none"; //Enum: none, success, warning, danger
   isDisabled?: boolean = false;
 
+  @attribute()
+  type?: string = "submit";
+
   @localClassName()
   isLoading?: boolean = false;
 
