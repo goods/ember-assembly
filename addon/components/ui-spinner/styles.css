@@ -1,4 +1,4 @@
-@value neutral-n5 from "ember-assembly/styles/palette";
+@value blue-base, neutral-n5 from "ember-assembly/styles/palette";
 @value large-size: 34px;
 @value medium-size: 20px;
 @value small-size: 10px;
@@ -24,6 +24,10 @@
   height: large-size;
 }
 
+.ui-spinner.appearance-strong .inner {
+  border-color: blue-base transparent transparent transparent;
+}
+
 .ui-spinner .inner {
   box-sizing: border-box;
   display: block;
@@ -44,6 +48,7 @@
 .ui-spinner .inner:nth-child(3) {
   animation-delay: -0.15s;
 }
+
 @keyframes ui-spinner-animation {
   0% {
     transform: rotate(0deg);

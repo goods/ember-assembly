@@ -9,6 +9,13 @@ import { computed } from "@ember-decorators/object";
 @layout(template)
 export default class UiSpinner extends Component {
   size?: string = "default";
+  appearance?: string = "default"; //Enum: default, strong
+
+  @localClassName()
+  @computed("appearance")
+  get appearanceClass(): string {
+    return `appearance-${this.appearance}`;
+  }
 
   @localClassName()
   @computed("size")
