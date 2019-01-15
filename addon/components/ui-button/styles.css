@@ -76,11 +76,18 @@
   }
 }
 
+/* Size */
+.ui-button.size-large {
+  font-size: 14px;
+  line-height: 34px;
+}
+
 /* Appearance: Minimal */
 .ui-button.appearance-minimal {
   background: transparent;
   border: 1px solid transparent;
   box-shadow: none;
+  color: intent-none;
 }
 
 .ui-button.appearance-minimal:hover {

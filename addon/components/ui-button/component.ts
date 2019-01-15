@@ -2,11 +2,17 @@ import Component from "@ember/component";
 // @ts-ignore: Ignore import of compiled template
 import template from "./template";
 import { localClassNames, localClassName } from "ember-css-modules";
-import { layout, tagName, attribute } from "@ember-decorators/component";
+import {
+  layout,
+  tagName,
+  attribute,
+  classNames
+} from "@ember-decorators/component";
 import { or } from "@ember-decorators/object/computed";
 import { computed } from "@ember-decorators/object";
 import { isNone } from "@ember/utils";
 
+@classNames("ui-button")
 @localClassNames("ui-button")
 @layout(template)
 @tagName("button")
@@ -15,6 +21,7 @@ export default class UiButton extends Component {
   label?: string = "";
   appearance?: string = "default"; //Enum: default, strong, minimal
   intent?: string = "none"; //Enum: none, success, warning, danger
+  size?: string = "default"; //Enum: small, large
   isDisabled?: boolean = false;
 
   @attribute()
@@ -33,6 +40,12 @@ export default class UiButton extends Component {
   @computed("intent")
   get intentClass(): string {
     return `intent-${this.intent}`;
+  }
+
+  @localClassName()
+  @computed("size")
+  get sizeClass(): string {
+    return `size-${this.size}`;
   }
 
   @attribute()
