@@ -1,6 +1,6 @@
 @value gutter-half from "ember-assembly/styles/global";
 @value ui from "ember-assembly/styles/typography";
-@value blue-b4a, blue-base from "ember-assembly/styles/palette";
+@value text-default, blue-b4a, blue-base, neutral-n2 from "ember-assembly/styles/palette";
 @value border-default, border-error from "ember-assembly/styles/palette";
 
 .ui-text-input input {
@@ -22,4 +22,9 @@
 
 .ui-text-input.has-error input {
   border-color: border-error;
+}
+
+.ui-text-input input:disabled {
+  background: neutral-n2;
+  cursor: not-allowed;
 }
