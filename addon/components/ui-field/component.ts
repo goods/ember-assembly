@@ -4,9 +4,10 @@ import template from "./template";
 import { localClassNames } from "ember-css-modules";
 import { assert } from "@ember/debug";
 import { isNone } from "@ember/utils";
-import { layout } from "@ember-decorators/component";
+import { layout, classNames } from "@ember-decorators/component";
 import { computed } from "@ember-decorators/object";
 
+@classNames("ui-field")
 @localClassNames("ui-field")
 @layout(template)
 export default class UiField extends Component {
