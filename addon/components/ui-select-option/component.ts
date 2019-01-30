@@ -10,6 +10,7 @@ export default class UiSelectOption extends Component {
   onChange!: Function;
   onClose!: Function;
   value!: any;
+  label?: string = "";
   labelPath?: string = "";
   optionComponent?: any = null;
 

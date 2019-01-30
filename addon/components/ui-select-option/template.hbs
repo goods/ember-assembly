@@ -2,6 +2,8 @@
   {{component this.optionComponent value=option}}
 {{else if hasBlock}}
   {{yield}}
+{{else if this.label}}
+  {{this.label}}
 {{else if this.labelPath}}
   {{get this.value this.labelPath}}
 {{else}}
