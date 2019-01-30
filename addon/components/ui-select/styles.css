@@ -5,6 +5,8 @@
   margin-top: gutter-half;
   padding: 0;
   overflow: auto;
+  position: absolute;
+  z-index: 999;
 }
 
 .ui-select-trigger:focus {
