@@ -1,4 +1,4 @@
-<UiPopover disabled={{this.isDisabled}} as |Popover|>
+<UiPopover disabled={{this.isDisabled}} @renderInPlace={{true}} as |Popover|>
   <Popover.trigger local-class="ui-combobox-trigger">
     {{#if this.triggerComponent}}
       {{component this.triggerComponent selected=this.selected isDisabled=this.isDisabled}}
