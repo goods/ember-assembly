@@ -29,6 +29,7 @@
   margin-right: gutter-half;
   height: size;
   width: size;
+  min-width: size;
 }
 
 .check-icon {
