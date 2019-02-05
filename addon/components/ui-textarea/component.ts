@@ -1,11 +1,12 @@
 import Component from "@ember/component";
 // @ts-ignore: Ignore import of compiled template
 import template from "./template";
-import { layout, tagName } from "@ember-decorators/component";
+import { layout, tagName, classNames } from "@ember-decorators/component";
 import { localClassNames, localClassName } from "ember-css-modules";
 import { isNone } from "@ember/utils";
 import { set } from "@ember/object";
 
+@classNames("ui-textarea")
 @localClassNames("ui-textarea")
 @layout(template)
 @tagName("textarea")

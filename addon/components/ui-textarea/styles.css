@@ -1,10 +1,34 @@
+@value ui from "ember-assembly/styles/typography";
+@value gutter-half from "ember-assembly/styles/global";
 @value border-default, border-error from "ember-assembly/styles/palette";
+@value text-default, blue-b4a, blue-base, neutral-n2 from "ember-assembly/styles/palette";
 
 .ui-textarea {
   border: 1px solid border-default;
   border-radius: 3px;
+  color: text-default;
+  font-family: ui;
+  font-size: 12px;
+  font-weight: 400;
+  padding: gutter-half;
+  line-height: 1.5em;
 }
 
 .ui-textarea.has-error {
   border-color: border-error;
+}
+
+.ui-textarea:focus {
+  border-color: blue-base;
+  box-shadow: 0 0 0 3px blue-b4a;
+  outline: 0;
+}
+
+.ui-textarea.has-error {
+  border-color: border-error;
+}
+
+.ui-textarea:disabled {
+  background: neutral-n2;
+  cursor: not-allowed;
 }
