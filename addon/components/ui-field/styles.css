@@ -17,7 +17,7 @@
 
 .ui-field .description {
   color: text-muted;
-  font-size: 14px;
+  font-size: 13px;
   margin: calc(-1 * gutter-quarter) 0 gutter-quarter 0;
 }
 
