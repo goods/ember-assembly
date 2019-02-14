@@ -1,9 +1,9 @@
 <UiPopover disabled={{this.isDisabled}} @renderInPlace={{true}} as |Popover|>
-  <Popover.trigger local-class="ui-select-trigger">
+  <Popover.trigger local-class="ui-select-trigger" class="ui-select-trigger">
     {{#if this.triggerComponent}}
       {{component this.triggerComponent value=this.value isDisabled=this.isDisabled}}
     {{else}}
-      <UiButton disabled={{this.isDisabled}}>
+      <UiButton type="button" disabled={{this.isDisabled}}>
         {{#if this.value }}
           {{#if this.labelPath}}
             {{get this.value this.labelPath}}
