@@ -1,6 +1,6 @@
 @value blue-b3, blue-b2, text-default from "ember-assembly/styles/palette";
 @value gutter, gutter-half from "ember-assembly/styles/global";
-@value ui from "ember-assembly/styles/typography";
+@value ui from "typography";
 
 .ui-select-option {
   align-items: center;

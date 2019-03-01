@@ -9,7 +9,7 @@
 @value yellow-tint, yellow-dark from "ember-assembly/styles/palette";
 @value neutral-n0, neutral-n1, neutral-n2, neutral-n3, neutral-n4, neutral-n5, neutral-n7 from "ember-assembly/styles/palette";
 @value white-w5a from "ember-assembly/styles/palette";
-@value ui from "ember-assembly/styles/typography";
+@value ui from "typography";
 @value timing-function: cubic-bezier(0, 0, 0.25, 0.99);
 
 .ui-button {
