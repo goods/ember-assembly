@@ -1,7 +1,7 @@
 @value scale-3 from "layout";
 @value ui from "typography";
-@value text-default, blue-b4a, blue-base, neutral-n2 from "ember-assembly/styles/palette";
-@value border-default, border-error from "ember-assembly/styles/palette";
+@value text-default, blue-b4a, blue-base, neutral-n2 from "palette";
+@value border-default, border-error from "palette";
 
 .ui-text-input input {
   border: 1px solid border-default;

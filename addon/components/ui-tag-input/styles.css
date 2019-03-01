@@ -1,5 +1,5 @@
 @value scale-2, scale-3 from "layout";
-@value text-muted, neutral-n3, neutral-n4, border-default, border-error, icon-danger from "ember-assembly/styles/palette";
+@value text-muted, neutral-n3, neutral-n4, border-default, border-error, icon-danger from "palette";
 
 .ui-tag-input {
   border: 1px solid border-default;

@@ -1,5 +1,5 @@
 @value scale-2, scale-3, scale-4 from "layout";
-@value text-default, text-muted, text-danger, icon-danger, neutral-n3, neutral-n4 from "ember-assembly/styles/palette";
+@value text-default, text-muted, text-danger, icon-danger, neutral-n3, neutral-n4 from "palette";
 @value ui from "typography";
 
 .ui-field {

@@ -1,4 +1,4 @@
-@value neutral-n4, blue-b3, blue-b2, blue-base, text-default from "ember-assembly/styles/palette";
+@value neutral-n4, blue-b3, blue-b2, blue-base, text-default from "palette";
 @value scale-3, scale-4 from "layout";
 @value ui from "typography";
 

@@ -1,5 +1,5 @@
 @value caret-size: 5px;
-@value neutral-n7 from "ember-assembly/styles/palette";
+@value neutral-n7 from "palette";
 
 .ui-caret {
   display: inline-block;
