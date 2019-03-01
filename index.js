@@ -128,11 +128,12 @@ module.exports = {
 
   included() {
     let config = this.project.config()["ember-assembly"] || {};
-    let virtualModules = Object.assign(
-      {},
-      { typography: typography, palette: palette, layout: layout },
-      config.styles
-    );
+
+    let virtualModules = {
+      typography: Object.assign({}, typography, config.styles.typography),
+      palette: Object.assign({}, palette, config.styles.palette),
+      layout: Object.assign({}, layout, config.styles.layout)
+    };
 
     this.options = Object.assign({}, this.options, {
       cssModules: { virtualModules: virtualModules }
