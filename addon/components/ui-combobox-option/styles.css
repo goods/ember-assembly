@@ -1,5 +1,5 @@
 @value neutral-n4, blue-b3, blue-b2, blue-base, text-default from "ember-assembly/styles/palette";
-@value gutter, gutter-half from "ember-assembly/styles/global";
+@value scale-3, scale-4 from "layout";
 @value ui from "typography";
 
 .ui-combobox-option {
@@ -13,7 +13,7 @@
   font-weight: 400;
   line-height: 1.5em;
   overflow-x: hidden;
-  padding: gutter-half gutter;
+  padding: scale-3 scale-4;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -42,7 +42,7 @@
 .spot {
   background-color: neutral-n4;
   border-radius: 100%;
-  width: gutter-half;
-  height: gutter-half;
+  width: scale-3;
+  height: scale-3;
   margin-left: 2px;
 }

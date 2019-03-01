@@ -1,4 +1,4 @@
-@value gutter, gutter-half, gutter-quarter from "ember-assembly/styles/global";
+@value scale-2, scale-3 from "layout";
 @value text-muted, neutral-n3, neutral-n4, border-default, border-error, icon-danger from "ember-assembly/styles/palette";
 
 .ui-tag-input {
@@ -6,7 +6,7 @@
   border-radius: 3px;
   display: flex;
   flex-wrap: wrap;
-  padding: gutter-half gutter-half 0;
+  padding: scale-3 scale-3 0;
   width: 100%;
 }
 
@@ -21,8 +21,8 @@
   box-shadow: none;
   flex: 0 0 auto;
   font-size: 14px;
-  margin: 0 gutter-half gutter-half 0;
-  padding: gutter-quarter gutter-half;
+  margin: 0 scale-3 scale-3 0;
+  padding: scale-2 scale-3;
 }
 
 .tag:hover {
@@ -32,10 +32,10 @@
 .ui-tag-input .input {
   border: 0;
   flex: 1 1 auto;
-  padding: gutter-quarter gutter-half;
+  padding: scale-2 scale-3;
   height: auto;
   width: auto;
-  margin-bottom: gutter-half;
+  margin-bottom: scale-3;
 }
 
 .ui-tag-input .input::placeholder {

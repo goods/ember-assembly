@@ -1,4 +1,4 @@
-@value gutter-half from "ember-assembly/styles/global";
+@value scale-3 from "layout";
 @value ui from "typography";
 @value text-default, blue-b4a, blue-base, neutral-n2 from "ember-assembly/styles/palette";
 @value border-default, border-error from "ember-assembly/styles/palette";
@@ -11,7 +11,7 @@
   font-size: 12px;
   font-weight: 400;
   height: 32px;
-  padding: 0 gutter-half;
+  padding: 0 scale-3;
 }
 
 .ui-text-input input:focus {

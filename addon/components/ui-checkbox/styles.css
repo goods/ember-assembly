@@ -1,5 +1,5 @@
 @value blue-base, border-default, neutral-n0 from "ember-assembly/styles/palette";
-@value gutter-half from "ember-assembly/styles/global";
+@value scale-3 from "layout";
 @value size: 16px;
 
 .ui-checkbox {
@@ -26,7 +26,7 @@
   border-radius: 2px;
   display: flex;
   justify-content: center;
-  margin-right: gutter-half;
+  margin-right: scale-3;
   height: size;
   width: size;
   min-width: size;
