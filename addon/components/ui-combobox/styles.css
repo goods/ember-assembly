@@ -1,4 +1,4 @@
-@value blue-b3, blue-b4a, neutral-n2, text-default from "ember-assembly/styles/palette";
+@value blue-b3, blue-b4a, neutral-n2, text-default from "palette";
 @value scale-3, scale-4, scale-5 from "layout";
 
 :global(.ui-popover-content.ui-popover-content).ui-combobox-content {

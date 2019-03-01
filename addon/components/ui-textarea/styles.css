@@ -1,7 +1,7 @@
 @value ui from "typography";
 @value scale-3 from "layout";
-@value border-default, border-error from "ember-assembly/styles/palette";
-@value text-default, blue-b4a, blue-base, neutral-n2 from "ember-assembly/styles/palette";
+@value border-default, border-error from "palette";
+@value text-default, blue-b4a, blue-base, neutral-n2 from "palette";
 
 .ui-textarea {
   border: 1px solid border-default;

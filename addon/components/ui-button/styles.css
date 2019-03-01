@@ -1,14 +1,14 @@
 @value scale-3, scale-4, scale-5 from "layout";
-@value text-default, text-muted, icon-danger from "ember-assembly/styles/palette";
-@value intent-none, intent-success, intent-danger, intent-warning from "ember-assembly/styles/palette";
-@value blue-b3 from "ember-assembly/styles/palette";
-@value blue-b4a from "ember-assembly/styles/palette";
-@value blue-tint, blue-dark from "ember-assembly/styles/palette";
-@value red-tint, red-dark from "ember-assembly/styles/palette";
-@value green-tint, green-dark from "ember-assembly/styles/palette";
-@value yellow-tint, yellow-dark from "ember-assembly/styles/palette";
-@value neutral-n0, neutral-n1, neutral-n2, neutral-n3, neutral-n4, neutral-n5, neutral-n7 from "ember-assembly/styles/palette";
-@value white-w5a from "ember-assembly/styles/palette";
+@value text-default, text-muted, icon-danger from "palette";
+@value intent-none, intent-success, intent-danger, intent-warning from "palette";
+@value blue-b3 from "palette";
+@value blue-b4a from "palette";
+@value blue-tint, blue-dark from "palette";
+@value red-tint, red-dark from "palette";
+@value green-tint, green-dark from "palette";
+@value yellow-tint, yellow-dark from "palette";
+@value neutral-n0, neutral-n1, neutral-n2, neutral-n3, neutral-n4, neutral-n5, neutral-n7 from "palette";
+@value white-w5a from "palette";
 @value ui from "typography";
 @value timing-function: cubic-bezier(0, 0, 0.25, 0.99);
 

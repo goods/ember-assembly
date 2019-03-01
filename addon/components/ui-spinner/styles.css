@@ -1,4 +1,4 @@
-@value blue-base, neutral-n5 from "ember-assembly/styles/palette";
+@value blue-base, neutral-n5 from "palette";
 @value large-size: 34px;
 @value medium-size: 20px;
 @value small-size: 10px;

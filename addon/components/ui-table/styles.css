@@ -1,4 +1,4 @@
-@value blue-b3 from "ember-assembly/styles/palette";
+@value blue-b3 from "palette";
 
 .table {
   border-spacing: 0;

@@ -1,4 +1,4 @@
-@value blue-b3, neutral-n0 from "ember-assembly/styles/palette";
+@value blue-b3, neutral-n0 from "palette";
 @value scale-3 from "layout";
 
 .ui-table-cell {

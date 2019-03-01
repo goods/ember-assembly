@@ -1,4 +1,4 @@
-@value neutral-n0 from "ember-assembly/styles/palette";
+@value neutral-n0 from "palette";
 @value scale-4 from "layout";
 @value timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.175);
 

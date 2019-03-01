@@ -1,4 +1,4 @@
-@value blue-base, border-default, neutral-n0 from "ember-assembly/styles/palette";
+@value blue-base, border-default, neutral-n0 from "palette";
 @value scale-3 from "layout";
 @value size: 16px;
 
