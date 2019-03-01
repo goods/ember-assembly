@@ -1,5 +1,5 @@
 @value gutter-half from "ember-assembly/styles/global";
-@value ui from "ember-assembly/styles/typography";
+@value ui from "typography";
 @value text-default, blue-b4a, blue-base, neutral-n2 from "ember-assembly/styles/palette";
 @value border-default, border-error from "ember-assembly/styles/palette";
 

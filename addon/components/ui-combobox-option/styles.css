@@ -1,6 +1,6 @@
 @value neutral-n4, blue-b3, blue-b2, blue-base, text-default from "ember-assembly/styles/palette";
 @value gutter, gutter-half from "ember-assembly/styles/global";
-@value ui from "ember-assembly/styles/typography";
+@value ui from "typography";
 
 .ui-combobox-option {
   align-items: center;
