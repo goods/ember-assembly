@@ -1,5 +1,5 @@
 @value neutral-n0 from "ember-assembly/styles/palette";
-@value gutter from "ember-assembly/styles/global";
+@value scale-4 from "layout";
 @value timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.175);
 
 :global(.ember-basic-dropdown-trigger) {
@@ -11,7 +11,7 @@
   border-radius: 3px;
   box-shadow: rgba(67, 90, 111, 0.3) 0px 0px 1px,
     rgba(67, 90, 111, 0.47) 0px 8px 10px -4px;
-  padding: gutter;
+  padding: scale-4;
   min-width: 150px;
   max-height: 240px;
   transform-origin: center 0px 0px;

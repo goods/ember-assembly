@@ -1,5 +1,5 @@
 @value blue-b2, blue-b3, text-default from "ember-assembly/styles/palette";
-@value gutter, gutter-half, gutter-quarter from "ember-assembly/styles/global";
+@value scale-3 from "layout";
 
 .ui-table-head-cell {
   background: blue-b2;
@@ -8,7 +8,7 @@
   color: text-default;
   font-size: 12px;
   font-weight: 500;
-  padding: gutter-half;
+  padding: scale-3;
   text-align: left;
   text-transform: uppercase;
 }

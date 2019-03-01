@@ -1,8 +1,8 @@
 @value blue-b3, blue-b4a, neutral-n2, text-default from "ember-assembly/styles/palette";
-@value gutter, gutter-half, gutter-double from "ember-assembly/styles/global";
+@value scale-3, scale-4, scale-5 from "layout";
 
 :global(.ui-popover-content.ui-popover-content).ui-combobox-content {
-  margin-top: gutter-half;
+  margin-top: scale-3;
   padding: 0;
   overflow: auto;
 }
@@ -21,7 +21,7 @@
   color: text-default;
   flex: 1 1 auto;
   font-weight: 500;
-  padding: gutter-half gutter;
+  padding: scale-3 scale-4;
 }
 
 .close-btn {
@@ -34,7 +34,7 @@
   border: 0;
   border-radius: 0;
   border-top: 1px solid blue-b3;
-  padding-left: calc(gutter-double + gutter-half);
+  padding-left: calc(scale-5 + scale-3);
   width: 100%;
 }
 

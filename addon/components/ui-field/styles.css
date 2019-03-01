@@ -1,9 +1,9 @@
-@value gutter, gutter-half, gutter-quarter from "ember-assembly/styles/global";
+@value scale-2, scale-3, scale-4 from "layout";
 @value text-default, text-muted, text-danger, icon-danger, neutral-n3, neutral-n4 from "ember-assembly/styles/palette";
 @value ui from "typography";
 
 .ui-field {
-  margin: gutter 0;
+  margin: scale-4 0;
 }
 
 .ui-field .label {
@@ -12,13 +12,13 @@
   font-family: ui;
   font-size: 13px;
   font-weight: 500;
-  margin: 0 0 gutter-quarter 0;
+  margin: 0 0 scale-2 0;
 }
 
 .ui-field .description {
   color: text-muted;
   font-size: 13px;
-  margin: calc(-1 * gutter-quarter) 0 gutter-quarter 0;
+  margin: calc(-1 * scale-2) 0 scale-2 0;
 }
 
 .validation-message {
@@ -26,11 +26,11 @@
   display: flex;
   font-size: 12px;
   line-height: 16px;
-  margin-top: gutter-half;
+  margin-top: scale-3;
 }
 
 .validation-icon {
-  margin-right: gutter-half;
+  margin-right: scale-3;
 }
 
 .validation-icon path {

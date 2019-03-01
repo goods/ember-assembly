@@ -1,5 +1,5 @@
 @value blue-b4a, blue-base, border-default, border-error, text-default, neutral-n8 from "ember-assembly/styles/palette";
-@value gutter-double, gutter, gutter-half from "ember-assembly/styles/global";
+@value scale-3, scale-5 from "layout";
 @value ui from "typography";
 
 .ui-search-input {
@@ -14,7 +14,7 @@
   font-size: 12px;
   font-weight: 400;
   height: 32px;
-  padding: 0 gutter-half 0 gutter-double;
+  padding: 0 scale-3 0 scale-5;
 }
 
 .ui-search-input input:focus {
