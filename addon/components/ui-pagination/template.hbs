@@ -1,0 +1,23 @@
+<UiButton 
+  local-class="prev-btn"
+  @isDisabled={{not this.showPrevious}}
+  @onClick={{action "onPrevious"}}
+>
+  {{svg-jar "arrow-left-1"}}
+</UiButton>
+
+<UiSelect
+  local-class="current-page"
+  @labelPath="label"
+  @options={{this.paginationOptions}}
+  @onChange={{action "onSetPage"}}
+  @value={{this.currentPagination}}
+/>
+
+<UiButton 
+  local-class="next-btn"
+  @isDisabled={{not this.showNext}}
+  @onClick={{action "onNext"}}
+>
+  {{svg-jar "arrow-right-1"}}
+</UiButton>

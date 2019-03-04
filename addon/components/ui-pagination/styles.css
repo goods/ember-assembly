@@ -1,0 +1,68 @@
+@value scale-3, scale-4, scale-5 from "layout";
+@value blue-base, blue-b4a, border-default, border-muted, neutral-n4, neutral-n5 from "palette";
+
+.ui-pagination {
+  border-radius: 3px;
+  display: flex;
+}
+
+.ui-pagination:focus-within {
+  box-shadow: 0 0 0 3px blue-b4a;
+  outline: none;
+}
+
+.ui-pagination button:focus,
+.ui-pagination :global(.ui-select-trigger:focus) {
+  box-shadow: none;
+}
+
+.ui-pagination .next-btn,
+.ui-pagination .prev-btn {
+  padding: 0 scale-3;
+}
+
+.ui-pagination .next-btn svg,
+.ui-pagination .prev-btn svg {
+  width: 12px;
+}
+
+.ui-pagination .next-btn:hover svg,
+.ui-pagination .prev-btn:hover svg {
+  fill: blue-base;
+}
+
+.ui-pagination .next-btn:disabled svg,
+.ui-pagination .prev-btn:disabled svg {
+  fill: neutral-n4;
+}
+
+.ui-pagination .next-btn:disabled {
+  border: 1px solid neutral-n5;
+  border-left: 0;
+}
+
+.ui-pagination .prev-btn:disabled {
+  border: 1px solid neutral-n5;
+  border-right: 0;
+}
+
+.ui-pagination .next-btn {
+  border-radius: 0 3px 3px 0;
+  border-left: 0;
+}
+
+.ui-pagination .prev-btn {
+  border-radius: 3px 0 0 3px;
+  border-right: 0;
+}
+
+.current-page button {
+  border-radius: 0;
+  border-left: border-muted;
+  border-right: border-muted;
+  min-width: calc(scale-4 + scale-5);
+}
+
+.current-page button:hover {
+  color: blue-base;
+}
