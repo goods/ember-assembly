@@ -4,21 +4,25 @@
       @hasFixedHeader={{this.hasFixedHeader}}
       as |Head|
     >
-      <Head.Row as |Row|>
+      <Head.Row 
+        @isSelected={{this.isAllSelected}}
+        @onSelect={{this.onSelectAll}}
+        @onDeselect={{this.onDeselectAll}}
+      as |Row|>
         {{#each this.columns as |column|}}
           <Row.Cell 
+            class={{column.classes}}
             @key={{column.key}}
             @isSortable={{column.isSortable}}
             @sortBy={{this.sortBy}}
             @sortOrder={{this.sortOrder}}
             @onSort={{this.onSort}}
-            class={{column.classes}}
           >
             {{column.label}}
           </Row.Cell>
         {{/each}}
       </Head.Row>
-  </UiTableHead>
+    </UiTableHead>
   {{/if}}
   {{yield 
     (hash 

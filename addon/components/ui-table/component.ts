@@ -17,6 +17,9 @@ export default class UiTable extends Component {
   onSort?: Function | null = null;
   height?: string = "";
   hasFixedHeader?: boolean = false;
+  isAllSelected?: boolean = false;
+  onSelectAll?: Function | null = null;
+  onDeselectAll: Function | null = null;
 
   @localClassName()
   @computed("height")

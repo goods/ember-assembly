@@ -1,3 +1,12 @@
+{{#if this.onSelect}}
+  {{#component this.cellComponent hasFixedHeader=this.hasFixedHeader}}
+    <UiCheckbox 
+      @checked={{this.isSelected}}
+      @onChange={{action "onToggleSelection" this.isSelected}}
+    />
+  {{/component}}
+{{/if}}
+
 {{yield 
   (hash 
     Cell=(component this.cellComponent onSort=this.onSort hasFixedHeader=this.hasFixedHeader)
