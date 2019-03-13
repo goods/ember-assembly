@@ -127,7 +127,7 @@ module.exports = {
   },
 
   included() {
-    let config = this.project.config()["ember-assembly"] || {};
+    let config = this.project.config()["ember-assembly"] || { styles: {} };
 
     let virtualModules = {
       typography: Object.assign({}, typography, config.styles.typography),
