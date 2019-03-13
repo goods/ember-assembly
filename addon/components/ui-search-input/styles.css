@@ -13,7 +13,7 @@
   font-family: ui;
   font-size: 12px;
   font-weight: 400;
-  height: 32px;
+  height: scale-5;
   padding: 0 scale-3 0 scale-5;
 }
 
@@ -29,8 +29,8 @@
 
 .search-icon {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: calc(scale-3 + 1px);
+  left: calc(scale-3 + 1px);
 }
 
 .search-icon > path {
