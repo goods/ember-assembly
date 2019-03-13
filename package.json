@@ -30,19 +30,19 @@
     "ember-basic-dropdown": "^1.0.4",
     "ember-cli-babel": "^7.1.2",
     "ember-cli-htmlbars": "^3.0.0",
-    "ember-cli-typescript": "^2.0.0-rc.1",
-    "ember-css-modules": "^1.1.0",
-    "ember-decorators": "^3.1.5",
+    "ember-cli-typescript": "^2.0.0-rc.2",
+    "ember-css-modules": "^1.1.1",
+    "ember-decorators": "^5.1.4",
     "ember-svg-jar": "^1.2.2"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.6.3",
-    "@types/ember": "^3.0.26",
-    "@types/ember-qunit": "^3.4.4",
-    "@types/ember-test-helpers": "^1.0.4",
+    "@types/ember": "^3.0.29",
+    "@types/ember-qunit": "^3.4.6",
+    "@types/ember-test-helpers": "^1.0.5",
     "@types/ember-testing-helpers": "^0.0.3",
-    "@types/ember__test-helpers": "^0.7.6",
-    "@types/qunit": "^2.5.3",
+    "@types/ember__test-helpers": "^0.7.8",
+    "@types/qunit": "^2.5.4",
     "@types/rsvp": "^4.0.2",
     "babel-eslint": "^8.0.0",
     "broccoli-asset-rev": "^2.7.0",
@@ -74,7 +74,7 @@
     "eslint-plugin-node": "^7.0.1",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.8.0",
-    "typescript": "^3.2.2"
+    "typescript": "^3.3.3333"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
