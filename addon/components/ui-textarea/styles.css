@@ -1,34 +1,32 @@
 @value ui from "typography";
-@value scale-3 from "layout";
+@value scale-3, scale-7, scale-9 from "layout";
 @value border-default, border-error from "palette";
 @value text-default, blue-b4a, blue-base, neutral-n2 from "palette";
 
-.ui-textarea {
+.ui-textarea textarea {
   border: 1px solid border-default;
   border-radius: 3px;
   color: text-default;
   font-family: ui;
   font-size: 12px;
   font-weight: 400;
+  height: scale-7;
   padding: scale-3;
   line-height: 1.5em;
+  width: scale-9;
 }
 
-.ui-textarea.has-error {
-  border-color: border-error;
-}
-
-.ui-textarea:focus {
+.ui-textarea textarea:focus {
   border-color: blue-base;
   box-shadow: 0 0 0 3px blue-b4a;
   outline: 0;
 }
 
-.ui-textarea.has-error {
+.ui-textarea.has-error textarea {
   border-color: border-error;
 }
 
-.ui-textarea:disabled {
+.ui-textarea textarea:disabled {
   background: neutral-n2;
   cursor: not-allowed;
 }

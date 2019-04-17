@@ -1,1 +1,8 @@
-{{this.value}}
+{{textarea 
+  id=@inputId
+  value=@value
+  required=@required
+  placeholder=@placeholder
+  disabled=this.isDisabled
+  key-up=(action "onKeyUp")
+}}
