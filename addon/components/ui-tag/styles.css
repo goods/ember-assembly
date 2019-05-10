@@ -1,0 +1,46 @@
+@value scale-2, scale-3 from "layout";
+@value blue-dark, blue-b4a, intent-none, text-muted, neutral-n0, neutral-n3 from "palette";
+@value ui from "typography";
+
+.ui-tag {
+  align-items: center;
+  background: neutral-n3;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: none;
+  display: flex;
+  font-family: ui;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+.ui-tag:focus {
+  box-shadow: 0 0 0 3px blue-b4a;
+  outline: none;
+}
+
+.label,
+.icon {
+  padding: scale-2 scale-3;
+}
+
+.icon {
+  border-left: 1px solid blue-dark;
+}
+
+/* Appearance: Strong */
+.ui-tag.appearance-strong {
+  background: intent-none;
+  border-color: intent-none;
+  color: neutral-n0;
+}
+.ui-tag.appearance-strong:active {
+  background: blue-dark;
+  border-color: blue-dark;
+}
+
+.ui-tag.appearance-strong .icon svg {
+  fill: neutral-n0;
+}
