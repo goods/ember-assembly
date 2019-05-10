@@ -36,3 +36,9 @@
 .search-icon > path {
   fill: neutral-n8;
 }
+
+.spinner {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}

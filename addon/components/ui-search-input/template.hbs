@@ -9,3 +9,10 @@
   disabled=this.isDisabled
   key-up=(action "onKeyUp")
 }}
+
+{{#if this.isSearching}}
+  <UiSpinner 
+    local-class="spinner"
+    @appearance="strong"
+  />
+{{/if}}

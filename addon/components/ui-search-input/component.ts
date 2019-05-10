@@ -6,4 +6,6 @@ import { layout } from "@ember-decorators/component";
 
 @localClassNames("ui-search-input")
 @layout(template)
-export default class UiSearchInput extends Component {}
+export default class UiSearchInput extends Component {
+  isSearching?: boolean = false;
+}
