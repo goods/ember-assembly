@@ -61,6 +61,7 @@
   border-left: border-muted;
   border-right: border-muted;
   min-width: calc(scale-4 + scale-5);
+  line-height: scale-5;
 }
 
 .current-page button:hover {
