@@ -18,6 +18,5 @@ export default class UiCheckbox extends Component {
     if (!isNone(this.onChange)) {
       this.onChange(!this.checked);
     }
-    return false;
   }
 }
