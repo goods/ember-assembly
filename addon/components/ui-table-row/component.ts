@@ -4,7 +4,10 @@ import template from "./template";
 import { layout, tagName } from "@ember-decorators/component";
 import { computed, action } from "@ember-decorators/object";
 import { isNone } from "@ember/utils";
+import { localClassNames, localClassName } from "ember-css-modules";
+import { notEmpty } from "@ember-decorators/object/computed";
 
+@localClassNames("ui-table-row")
 @layout(template)
 @tagName("tr")
 export default class UiTableRow extends Component {
@@ -14,6 +17,7 @@ export default class UiTableRow extends Component {
   isSelected?: boolean = false;
   onSelect?: Function | null = null;
   onDeselect: Function | null = null;
+  linkTo?: any[] = [];
 
   @computed("isHead")
   get cellComponent() {
@@ -22,6 +26,10 @@ export default class UiTableRow extends Component {
     }
     return "ui-table-cell";
   }
+
+  @localClassName()
+  @notEmpty("linkTo")
+  hasLink!: boolean;
 
   @action
   onToggleSelection(isSelected: boolean) {

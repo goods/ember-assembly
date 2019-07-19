@@ -1,1 +1,7 @@
-{{yield}}
+{{#if this.linkTo}}
+  {{#link-to params=this.linkTo local-class="cell-link" class="ui-table-cell-link"}}
+    {{yield}}
+  {{/link-to}}
+{{else}}
+  {{yield}}
+{{/if}}

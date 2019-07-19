@@ -1,8 +1,19 @@
-@value blue-b3, neutral-n0 from "palette";
+@value blue-b3, neutral-n0, text-default from "palette";
 @value scale-3 from "layout";
 
 .ui-table-cell {
   background: neutral-n0;
   border-bottom: 1px solid blue-b3;
+  padding: scale-3;
+  white-space: nowrap;
+}
+
+.ui-table-cell.has-link {
+  padding: 0;
+}
+
+.cell-link {
+  color: text-default;
+  display: block;
   padding: scale-3;
 }
