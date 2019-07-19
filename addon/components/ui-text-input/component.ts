@@ -13,6 +13,7 @@ import { set } from "@ember/object";
 export default class UiTextInput extends Component {
   value?: string = "";
   onSetValue?: Function | null = null;
+  onFocusOut?: Function | null = null;
   inputId?: string = "";
   required?: boolean = false;
   type?: string = "text";
@@ -27,5 +28,12 @@ export default class UiTextInput extends Component {
       return set(this, "value", value);
     }
     return this.onSetValue(value, event);
+  }
+
+  @action
+  didFocusOut() {
+    if (!isNone(this.onFocusOut)) {
+      this.onFocusOut();
+    }
   }
 }
