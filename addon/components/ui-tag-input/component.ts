@@ -2,7 +2,7 @@ import Component from "@ember/component";
 // @ts-ignore: Ignore import of compiled template
 import template from "./template";
 import { layout } from "@ember-decorators/component";
-import { action } from "@ember-decorators/object";
+import { action } from "@ember/object";
 import { localClassNames, localClassName } from "ember-css-modules";
 import { assert } from "@ember/debug";
 import { isNone } from "@ember/utils";

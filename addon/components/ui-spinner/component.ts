@@ -3,7 +3,7 @@ import Component from "@ember/component";
 import template from "./template";
 import { layout } from "@ember-decorators/component";
 import { localClassNames, localClassName } from "ember-css-modules";
-import { computed } from "@ember-decorators/object";
+import { computed } from "@ember/object";
 
 @localClassNames("ui-spinner")
 @layout(template)
