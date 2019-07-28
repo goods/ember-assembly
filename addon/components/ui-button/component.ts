@@ -8,8 +8,8 @@ import {
   attribute,
   classNames
 } from "@ember-decorators/component";
-import { or } from "@ember-decorators/object/computed";
-import { computed } from "@ember-decorators/object";
+import { or } from "@ember/object/computed";
+import { computed } from "@ember/object";
 import { isNone } from "@ember/utils";
 
 @classNames("ui-button")

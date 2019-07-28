@@ -2,10 +2,10 @@ import Component from "@ember/component";
 // @ts-ignore: Ignore import of compiled template
 import template from "./template";
 import { layout, tagName } from "@ember-decorators/component";
-import { computed, action } from "@ember-decorators/object";
+import { computed, action } from "@ember/object";
 import { isNone } from "@ember/utils";
 import { localClassNames, localClassName } from "ember-css-modules";
-import { notEmpty } from "@ember-decorators/object/computed";
+import { notEmpty } from "@ember/object/computed";
 
 @localClassNames("ui-table-row")
 @layout(template)

@@ -3,8 +3,8 @@ import Component from "@ember/component";
 import template from "./template";
 import { layout, classNames } from "@ember-decorators/component";
 import { localClassNames, localClassName } from "ember-css-modules";
-import { notEmpty } from "@ember-decorators/object/computed";
-import { computed } from "@ember-decorators/object";
+import { notEmpty } from "@ember/object/computed";
+import { computed } from "@ember/object";
 
 @classNames("ui-table")
 @localClassNames("ui-table")

@@ -3,7 +3,7 @@ import Component from "@ember/component";
 import template from "./template";
 import { localClassNames, localClassName } from "ember-css-modules";
 import { layout, classNames } from "@ember-decorators/component";
-import { action } from "@ember-decorators/object";
+import { action } from "@ember/object";
 import { isNone } from "@ember/utils";
 import { set } from "@ember/object";
 

@@ -3,8 +3,8 @@ import Component from "@ember/component";
 import template from "./template";
 import { localClassNames } from "ember-css-modules";
 import { layout } from "@ember-decorators/component";
-import { gt } from "@ember-decorators/object/computed";
-import { computed, action } from "@ember-decorators/object";
+import { gt } from "@ember/object/computed";
+import { computed, action } from "@ember/object";
 
 @localClassNames("ui-pagination")
 @layout(template)

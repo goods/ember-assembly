@@ -4,7 +4,7 @@ import template from "./template";
 import { localClassNames, localClassName } from "ember-css-modules";
 import { layout, tagName } from "@ember-decorators/component";
 import { isNone } from "@ember/utils";
-import { computed } from "@ember-decorators/object";
+import { computed } from "@ember/object";
 
 @localClassNames("ui-tag")
 @layout(template)

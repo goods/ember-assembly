@@ -5,7 +5,7 @@ import { localClassNames } from "ember-css-modules";
 import { assert } from "@ember/debug";
 import { isNone } from "@ember/utils";
 import { layout, classNames } from "@ember-decorators/component";
-import { computed } from "@ember-decorators/object";
+import { computed } from "@ember/object";
 
 @classNames("ui-field")
 @localClassNames("ui-field")
