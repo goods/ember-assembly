@@ -23,6 +23,11 @@ export default class UiPagination extends Component {
 
   @computed("start", "count", "total")
   get currentPagination(): any {
+    if (this.total == 0) {
+      return {
+        label: "0"
+      };
+    }
     let max = Math.min(this.start + this.count, this.total);
     return {
       label: `${this.start + 1} - ${max} of ${this.total}`
