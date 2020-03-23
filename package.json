@@ -31,6 +31,7 @@
     "ember-cli-htmlbars": "^3.0.1",
     "ember-cli-typescript": "^2.0.2",
     "ember-concurrency": "^1.1.6",
+    "ember-concurrency-decorators": "^1.0.0",
     "ember-css-modules": "^1.2.1",
     "ember-decorators": "^6.0.0",
     "ember-svg-jar": "^1.2.2"
