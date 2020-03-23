@@ -1,0 +1,42 @@
+<div local-class="notification"
+  onmouseenter={{action "cancelProgress"}}
+  onmouseleave={{action "resumeProgress"}}
+>
+
+  <div local-class="icon">
+    {{#if (eq this.notification.intent "success")}}
+      {{svg-jar "checkmark-1" local-class="info-icon"}}
+    {{else}}
+      {{svg-jar "exclamation-point-2" local-class="info-icon"}}
+    {{/if}}
+  </div>
+
+  <div local-class="message">
+    <div local-class="title">
+      {{this.notification.title}}
+    </div>
+    {{#if this.safeDescription}}
+      <div local-class="description">
+        {{{this.safeDescription}}}
+      </div>
+    {{/if}}
+  </div>
+
+  <div local-class="dismiss">
+
+    <UiButton
+      local-class="dismiss-btn"
+      @appearance="minimal"
+      @onClick={{this.onDismiss}}
+    >
+      <UiProgressRing
+        @size="25"
+        @stroke="3"
+        @appearance="subtle"
+        @progress={{this.progress}}
+      >
+        {{svg-jar "x-1" local-class="dismiss-icon"}}
+      </UiProgressRing>
+    </UiButton>
+  </div>
+</div>

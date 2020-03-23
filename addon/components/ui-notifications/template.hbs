@@ -1,0 +1,11 @@
+{{#animated-each (reverse this.notifications)
+    key='id'
+    use=this.transition
+    duration=300
+  as |notification|}}
+    
+    <UiNotification
+      @notification={{notification}}
+      @onDismiss={{action "onDestroyNotification" notification}}
+    />
+{{/animated-each}}
