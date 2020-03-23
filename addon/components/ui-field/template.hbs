@@ -1,21 +1,25 @@
-<label local-class="label" for={{this.inputId}}>
-  {{@label}}
-</label>
-{{#if this.description}}
-  <div local-class="description">
-    {{this.description}}
-  </div>
-{{/if}}
+<div local-class="descriptors" class="ui-field-descriptors">
+  <label local-class="label" for={{this.inputId}}>
+    {{@label}}
+  </label>
+  {{#if this.description}}
+    <div local-class="description">
+      {{this.description}}
+    </div>
+  {{/if}}
+</div>
 
-{{yield (hash inputId=this.inputId)}}
+<div local-class="controls" class="ui-field-controls">
+  {{yield (hash inputId=this.inputId)}}
 
-{{#if @validationMessages}}
-  <div local-class="validation-messages">
-    {{#each @validationMessages as |message|}}
-      <div local-class="validation-message">
-        {{svg-jar "exclamation-point-2" local-class="validation-icon" height="14px" width="14px"}}
-        {{message}}
-      </div>
-    {{/each}}
-  </div>
-{{/if}}
+  {{#if @validationMessages}}
+    <div local-class="validation-messages">
+      {{#each @validationMessages as |message|}}
+        <div local-class="validation-message">
+          {{svg-jar "exclamation-point-2" local-class="validation-icon" height="14px" width="14px"}}
+          {{message}}
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>
