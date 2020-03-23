@@ -1,0 +1,107 @@
+@value scale-2, scale-3, scale-4, scale-5 from "layout";
+@value blue-base, neutral-n0, neutral-n7, neutral-n9 from "palette";
+@value intent-none, intent-success, intent-danger, intent-warning from "palette";
+
+.ui-notification {
+  background: neutral-n0;
+  border-radius: 3px;
+  box-shadow: rgba(67, 90, 111, 0.3) 0px 0px 1px,
+    rgba(67, 90, 111, 0.47) 0px 8px 10px -4px;
+  margin-top: scale-3;
+  border-left: 3px solid blue-base;
+}
+
+.notification {
+  align-items: center;
+  display: flex;
+  padding: scale-4 scale-4;
+}
+
+.has-description .notification {
+  align-items: inherit;
+}
+
+.body {
+  display: flex;
+}
+
+.icon,
+.dismiss {
+  flex: 0 0 auto;
+}
+
+.icon {
+  display: flex;
+  fill: blue-base;
+  margin-right: scale-4;
+}
+
+.dismiss {
+  margin-left: scale-3;
+}
+
+.info-icon {
+  width: scale-4;
+  height: scale-4;
+}
+
+.message {
+  flex: 1;
+}
+
+.message .title {
+  font-weight: 500;
+  line-height: scale-4;
+}
+
+.message .description {
+  margin-top: scale-2;
+}
+
+.dismiss-btn {
+  padding: 0;
+}
+
+.notification :global(.ui-button).dismiss-btn:hover {
+  background: 0;
+  border-color: transparent;
+}
+
+.dismiss-icon {
+  transition: fill 150ms ease-in-out;
+  fill: neutral-n7;
+  width: calc(scale-3 + 1.5px);
+  height: calc(scale-3 + 1.5px);
+}
+
+.notification :global(.ui-button).dismiss-btn:hover .dismiss-icon {
+  fill: neutral-n9;
+}
+
+.description strong {
+  font-weight: 500;
+}
+
+.intent-success.ui-notification {
+  border-color: intent-success;
+}
+
+.intent-success .icon {
+  fill: intent-success;
+}
+
+.intent-danger.ui-notification {
+  border-color: intent-danger;
+}
+
+.intent-danger .icon {
+  fill: intent-danger;
+}
+
+.intent-warning.ui-notification {
+  border-color: intent-warning;
+}
+
+.intent-warning .icon {
+  fill: intent-warning;
+}
