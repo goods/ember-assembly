@@ -1,0 +1,22 @@
+<svg
+  local-class="progress-ring"
+  height={{this.size}}
+  width={{this.size}}
+>
+  <circle
+    local-class="progress-ring-circle"
+    stroke-dasharray="{{this.circumference}} {{this.circumference}}"
+    style={{this.ringStyle}}
+    stroke-width={{this.stroke}}
+    fill="transparent"
+    r={{this.normalizedRadius}}
+    cx={{this.radius}}
+    cy={{this.radius}}
+  />
+</svg>
+
+{{#if hasBlock}}
+  <div local-class="content" style={{this.contentStyle}}>
+    {{yield}}
+  </div>
+{{/if}}

@@ -1,0 +1,32 @@
+@value blue-base, neutral-n5, neutral-n4 from "palette";
+
+.ui-progress-ring {
+  position: relative;
+}
+
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress-ring-circle {
+  /* axis compensation */
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke: neutral-n5;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appearance-strong .progress-ring-circle {
+  stroke: blue-base;
+}
+
+.appearance-subtle .progress-ring-circle {
+  stroke: neutral-n4;
+}
