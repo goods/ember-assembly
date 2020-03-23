@@ -1,7 +1,7 @@
 import Component from "@ember/component";
 // @ts-ignore: Ignore import of compiled template
 import template from "./template";
-import { localClassNames } from "ember-css-modules";
+import { localClassNames, localClassName } from "ember-css-modules";
 import { assert } from "@ember/debug";
 import { isNone } from "@ember/utils";
 import { layout, classNames } from "@ember-decorators/component";
@@ -14,6 +14,9 @@ export default class UiField extends Component {
   label!: string;
   description?: string = "";
   validationMessages?: Array<string> = [];
+
+  @localClassName()
+  direction?: string = "vertical"; //vertical | horizontal
 
   @computed("elementId")
   get inputId(): string {
