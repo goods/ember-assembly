@@ -21,7 +21,7 @@
   font-family: ui;
   font-size: 12px;
   font-weight: 500;
-  line-height: calc(scale(8) - 2px);
+  line-height: calc(scale(6) - 2px);
   padding: 0 scale(4);
   position: relative;
   text-align: center;
