@@ -1,5 +1,4 @@
 @value ui from "typography";
-@value scale-3, scale-7, scale-9 from "layout";
 @value border-default, border-error from "palette";
 @value text-default, blue-b4a, blue-base, neutral-n2 from "palette";
 
@@ -10,10 +9,10 @@
   font-family: ui;
   font-size: 12px;
   font-weight: 400;
-  height: scale-7;
-  padding: scale-3;
+  height: scale(32);
+  padding: scale(2);
   line-height: 1.5em;
-  width: scale-9;
+  width: scale(128);
 }
 
 .ui-textarea textarea:focus {

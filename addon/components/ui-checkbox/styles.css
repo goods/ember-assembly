@@ -1,5 +1,4 @@
 @value blue-base, neutral-n5, neutral-n0 from "palette";
-@value scale-3 from "layout";
 @value size: 16px;
 
 .ui-checkbox {
@@ -26,7 +25,7 @@
   border-radius: 2px;
   display: flex;
   justify-content: center;
-  margin-right: scale-3;
+  margin-right: scale(2);
   height: size;
   width: size;
   min-width: size;

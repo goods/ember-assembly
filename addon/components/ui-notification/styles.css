@@ -1,4 +1,3 @@
-@value scale-2, scale-3, scale-4, scale-5 from "layout";
 @value blue-base, neutral-n0, neutral-n7, neutral-n9 from "palette";
 @value intent-none, intent-success, intent-danger, intent-warning from "palette";
 
@@ -7,14 +6,14 @@
   border-radius: 3px;
   box-shadow: rgba(67, 90, 111, 0.3) 0px 0px 1px,
     rgba(67, 90, 111, 0.47) 0px 8px 10px -4px;
-  margin-top: scale-3;
+  margin-top: scale(2);
   border-left: 3px solid blue-base;
 }
 
 .notification {
   align-items: center;
   display: flex;
-  padding: scale-4 scale-4;
+  padding: scale(4) scale(4);
 }
 
 .has-description .notification {
@@ -33,16 +32,16 @@
 .icon {
   display: flex;
   fill: blue-base;
-  margin-right: scale-4;
+  margin-right: scale(4);
 }
 
 .dismiss {
-  margin-left: scale-3;
+  margin-left: scale(2);
 }
 
 .info-icon {
-  width: scale-4;
-  height: scale-4;
+  width: scale(4);
+  height: scale(4);
 }
 
 .message {
@@ -51,11 +50,11 @@
 
 .message .title {
   font-weight: 500;
-  line-height: scale-4;
+  line-height: scale(4);
 }
 
 .message .description {
-  margin-top: scale-2;
+  margin-top: scale(1);
 }
 
 .dismiss-btn {
@@ -70,8 +69,8 @@
 .dismiss-icon {
   transition: fill 150ms ease-in-out;
   fill: neutral-n7;
-  width: calc(scale-3 + 1.5px);
-  height: calc(scale-3 + 1.5px);
+  width: calc(scale(2) + 1.5px);
+  height: calc(scale(2) + 1.5px);
 }
 
 .notification :global(.ui-button).dismiss-btn:hover .dismiss-icon {
