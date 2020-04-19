@@ -1,5 +1,3 @@
-@value scale-3 from "layout";
-
 .ui-notifications {
   max-width: 560px;
   top: 40px;
@@ -8,5 +6,5 @@
   position: fixed;
   z-index: 10;
   margin: 0px auto;
-  padding: 0 scale-3;
+  padding: 0 scale(2);
 }

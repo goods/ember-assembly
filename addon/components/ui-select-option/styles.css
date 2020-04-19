@@ -1,5 +1,4 @@
 @value blue-b3, blue-b2, text-default from "palette";
-@value scale-3, scale-4 from "layout";
 @value ui from "typography";
 
 .ui-select-option {
@@ -12,7 +11,7 @@
   font-weight: 400;
   line-height: 1.5em;
   overflow-x: hidden;
-  padding: scale-3 scale-4;
+  padding: scale(2) scale(4);
   text-overflow: ellipsis;
   white-space: nowrap;
 }

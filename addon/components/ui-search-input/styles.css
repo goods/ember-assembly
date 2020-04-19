@@ -1,5 +1,4 @@
 @value blue-b4a, blue-base, border-default, border-error, text-default, neutral-n8 from "palette";
-@value scale-3, scale-5 from "layout";
 @value ui from "typography";
 
 .ui-search-input {
@@ -13,8 +12,8 @@
   font-family: ui;
   font-size: 12px;
   font-weight: 400;
-  height: scale-5;
-  padding: 0 scale-3 0 scale-5;
+  height: scale(8);
+  padding: 0 scale(2) 0 scale(8);
 }
 
 .ui-search-input input:focus {
@@ -29,8 +28,8 @@
 
 .search-icon {
   position: absolute;
-  top: calc(scale-3 + 1px);
-  left: calc(scale-3 + 1px);
+  top: calc(scale(2) + 1px);
+  left: calc(scale(2) + 1px);
 }
 
 .search-icon > path {

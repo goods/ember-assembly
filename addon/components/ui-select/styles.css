@@ -1,8 +1,7 @@
 @value blue-b4a from "palette";
-@value scale-3 from "layout";
 
 :global(.ui-popover-content.ui-popover-content).ui-select-content {
-  margin-top: scale-3;
+  margin-top: scale(2);
   padding: 0;
   overflow: auto;
   position: absolute;

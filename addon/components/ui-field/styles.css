@@ -1,9 +1,8 @@
-@value scale-7, scale-5, scale-2, scale-3, scale-4 from "layout";
 @value text-default, text-muted, text-danger, icon-danger, neutral-n3, neutral-n4 from "palette";
 @value ui, small-font-size, base-font-size from "typography";
 
 .ui-field {
-  margin: scale-4 0;
+  margin: scale(4) 0;
 }
 
 .ui-field .label {
@@ -12,13 +11,13 @@
   font-family: ui;
   font-size: base-font-size;
   font-weight: 500;
-  margin: 0 0 scale-2 0;
+  margin: 0 0 scale(1) 0;
 }
 
 .ui-field .description {
   color: text-muted;
   font-size: base-font-size;
-  margin: calc(-1 * scale-2) 0 scale-2 0;
+  margin: calc(-1 * scale(1)) 0 scale(1) 0;
 }
 
 .validation-message {
@@ -26,11 +25,11 @@
   display: flex;
   font-size: small-font-size;
   line-height: 16px;
-  margin-top: scale-3;
+  margin-top: scale(2);
 }
 
 .validation-icon {
-  margin-right: scale-3;
+  margin-right: scale(2);
 }
 
 .validation-icon path {
@@ -42,8 +41,8 @@
 }
 
 .ui-field.horizontal .descriptors {
-  flex: 0 0 calc(scale-7 + scale-5);
-  margin-right: scale-4;
+  flex: 0 0 calc(scale(32) + scale(8));
+  margin-right: scale(4);
 }
 
 .ui-field.horizontal .controls {

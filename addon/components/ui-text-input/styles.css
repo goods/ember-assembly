@@ -1,4 +1,3 @@
-@value scale-3 from "layout";
 @value ui from "typography";
 @value text-default, blue-b4a, blue-base, neutral-n2 from "palette";
 @value border-default, border-error from "palette";
@@ -11,7 +10,7 @@
   font-size: 12px;
   font-weight: 400;
   height: 32px;
-  padding: 0 scale-3;
+  padding: 0 scale(2);
 }
 
 .ui-text-input input:focus {

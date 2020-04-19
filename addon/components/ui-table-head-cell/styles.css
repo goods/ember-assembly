@@ -1,5 +1,4 @@
 @value blue-b2, blue-b3, text-default from "palette";
-@value scale-3 from "layout";
 
 .ui-table-head-cell {
   background: blue-b2;
@@ -8,7 +7,7 @@
   color: text-default;
   font-size: 12px;
   font-weight: 500;
-  padding: scale-3;
+  padding: scale(2);
   text-align: left;
   text-transform: uppercase;
 }
