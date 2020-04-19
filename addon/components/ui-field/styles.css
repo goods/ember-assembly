@@ -43,6 +43,7 @@
 
 .ui-field.horizontal .descriptors {
   flex: 0 0 calc(scale-7 + scale-5);
+  margin-right: scale-4;
 }
 
 .ui-field.horizontal .controls {
