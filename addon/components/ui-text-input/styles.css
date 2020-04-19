@@ -9,7 +9,7 @@
   font-family: ui;
   font-size: 12px;
   font-weight: 400;
-  height: 32px;
+  height: scale(7);
   padding: 0 scale(2);
 }
 
