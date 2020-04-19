@@ -8,7 +8,7 @@ typography["base-font-size"] = "13px";
 typography["small-font-size"] = "12px";
 
 let layout = {};
-layout["base-scale"] = 4; // Base scale in px
+layout["base-scale"] = 5; // Base scale in px
 
 let palette = {};
 palette["neutral-tint"] = "#F9F9FB";
