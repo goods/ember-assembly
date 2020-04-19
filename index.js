@@ -8,6 +8,8 @@ typography["base-font-size"] = "13px";
 typography["small-font-size"] = "12px";
 
 let layout = {};
+layout["base-scale"] = 4; // Base scale in px
+
 layout["scale-1"] = "2px";
 layout["scale-2"] = "4px";
 layout["scale-3"] = "8px";
@@ -134,13 +136,24 @@ module.exports = {
     let virtualModules = {
       typography: Object.assign({}, typography, config.styles.typography),
       palette: Object.assign({}, palette, config.styles.palette),
-      layout: Object.assign({}, layout, config.styles.layout)
+      layout: Object.assign({}, layout, config.styles.layout),
     };
 
     this.options = Object.assign({}, this.options, {
-      cssModules: { virtualModules: virtualModules }
+      cssModules: {
+        virtualModules,
+        plugins: [
+          require("postcss-functions")({
+            functions: {
+              scale: function (value) {
+                return value * virtualModules["layout"]["base-scale"] + "px";
+              },
+            },
+          }),
+        ],
+      },
     });
 
     this._super.included.apply(this, arguments);
-  }
+  },
 };
