@@ -80,10 +80,13 @@ export default class UiCalendar extends Component {
           localRangeFinish = this.localRangeStart;
         }
 
-        //@ts-ignore
-        isRangeStart = this.localRangeStart.isSame(date, "day");
-        //@ts-ignore
-        isRangeFinish = this.localRangeFinish.isSame(date, "day");
+        isRangeStart =
+          !isNone(this.localRangeStart) &&
+          this.localRangeStart.isSame(date, "day");
+
+        isRangeFinish =
+          !isNone(this.localRangeFinish) &&
+          this.localRangeFinish.isSame(date, "day");
 
         isSelected =
           date.isSameOrAfter(this.localRangeStart, "day") &&
