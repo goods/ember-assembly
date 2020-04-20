@@ -21,6 +21,7 @@ export default class UiSelect extends Component {
   acceptsNull?: boolean = false;
   options?: Array<any> = [];
   placeholder?: string = "Please choose";
+  triggerIcon?: string | null = null;
   triggerComponent?: string | null = null;
   optionComponent?: string | null = null;
 }

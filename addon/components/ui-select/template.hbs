@@ -4,6 +4,9 @@
       {{component this.triggerComponent value=this.value isDisabled=this.isDisabled}}
     {{else}}
       <UiButton type="button" disabled={{this.isDisabled}}>
+        {{#if this.triggerIcon}}
+          {{svg-jar this.triggerIcon local-class="trigger-icon" class="ui-select-trigger-icon"}}
+        {{/if}}
         {{#if this.value }}
           {{#if this.labelPath}}
             {{get this.value this.labelPath}}
