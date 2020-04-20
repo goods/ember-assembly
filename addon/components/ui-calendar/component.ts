@@ -4,7 +4,7 @@ import template from "./template";
 import { localClassNames } from "ember-css-modules";
 import { layout, classNames } from "@ember-decorators/component";
 import moment, { Moment } from "moment";
-import { action, computed, get, set } from "@ember/object";
+import { action, computed, set } from "@ember/object";
 import { isNone } from "@ember/utils";
 
 interface Day {
@@ -75,17 +75,15 @@ export default class UiCalendar extends Component {
       let isRangeFinish = false;
 
       if (this.mode == "range") {
-        isRangeStart =
-          // @ts-ignore
-          this.mode == "range" && get(formattedSelected, "firstObject") == id;
-        isRangeFinish =
-          // @ts-ignore
-          this.mode == "range" && get(formattedSelected, "lastObject") == id;
-
         let localRangeFinish = this.localRangeFinish;
         if (isNone(localRangeFinish)) {
           localRangeFinish = this.localRangeStart;
         }
+
+        //@ts-ignore
+        isRangeStart = this.localRangeStart.isSame(date, "day");
+        //@ts-ignore
+        isRangeFinish = this.localRangeFinish.isSame(date, "day");
 
         isSelected =
           date.isSameOrAfter(this.localRangeStart, "day") &&
