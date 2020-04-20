@@ -59,8 +59,8 @@
   border-radius: 0;
   border-left: border-muted;
   border-right: border-muted;
-  min-width: calc(scale(4) + scale(8));
-  line-height: scale(8);
+  min-width: scale(12);
+  line-height: scale(6);
 }
 
 .current-page button:hover {
