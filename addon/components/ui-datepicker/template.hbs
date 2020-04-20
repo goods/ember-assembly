@@ -1,10 +1,11 @@
 <UiPopover local-class="ui-popover" disabled={{this.isDisabled}} @renderInPlace={{true}} as |Popover|>
   <Popover.trigger local-class="trigger">
-    <UiButton>
-      {{svg-jar "calendar-3" local-class="calendar-icon"}}
+    <UiButton class="ui-datepicker-trigger-button">
+      {{svg-jar "calendar-3" local-class="calendar-icon" class="ui-datepicker-calendar-icon" }}
+      
       {{#if (and (is-empty this.selected) (is-empty this.rangeStart))}}
         <div local-class="no-dates">
-          None selected
+          Select dates
         </div>
       {{else if (eq this.mode "single")}}
         <div local-class="single-date">
@@ -26,16 +27,20 @@
         </div>
       {{else if (eq this.mode "range")}}
         <div local-class="multiple-dates">
-          <div local-class="from">
-            {{moment-format this.rangeStart "Do MMMM YYYY"}}
-          </div>
+          
           {{#if (is-same this.rangeStart this.rangeFinish)}}
+            <div local-class="from">
+              {{moment-format this.rangeStart "Do MMMM YYYY"}}
+            </div>
           {{else}}
+            <div local-class="from">
+              {{moment-format this.rangeStart "Do MMM YYYY"}}
+            </div>
             <div local-class="separator">
               to
             </div>
             <div local-class="to">
-              {{moment-format this.rangeFinish "Do MMMM YYYY"}}
+              {{moment-format this.rangeFinish "Do MMM YYYY"}}
             </div>
           {{/if}}
         </div>
