@@ -5,6 +5,7 @@ import { notEmpty } from "@ember/object/computed";
 import template from "./template";
 import { layout, classNames } from "@ember-decorators/component";
 import { localClassNames, localClassName } from "ember-css-modules";
+// @ts-ignore
 import { timeout } from "ember-concurrency";
 import { task } from "ember-concurrency-decorators";
 import { computed } from "@ember/object";
@@ -37,7 +38,7 @@ export default class UiNotification extends Component {
   }
 
   @task
-  progressTask = function*(
+  progressTask = function* (
     this: UiNotification,
     notification: any,
     intervalMs: number

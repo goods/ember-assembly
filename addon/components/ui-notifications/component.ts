@@ -6,8 +6,10 @@ import { action } from "@ember/object";
 import { alias } from "@ember/object/computed";
 import { inject } from "@ember/service";
 import { localClassNames } from "ember-css-modules";
-import Notifications from "dummy/services/notifications";
+import Notifications from "addon/services/notifications";
+// @ts-ignore
 import move from "ember-animated/motions/move";
+// @ts-ignore
 import { fadeOut } from "ember-animated/motions/opacity";
 
 @localClassNames("ui-notifications")

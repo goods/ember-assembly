@@ -59,8 +59,10 @@ export default class UiCalendar extends Component {
         formattedSelected.find((selected) => selected == id) !== undefined;
 
       let isRangeStart =
+        // @ts-ignore
         this.mode == "range" && get(formattedSelected, "firstObject") == id;
       let isRangeFinish =
+        // @ts-ignore
         this.mode == "range" && get(formattedSelected, "lastObject") == id;
 
       days.push({

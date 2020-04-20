@@ -23,11 +23,13 @@ export default class UiProgressRing extends Component {
 
   @computed("size")
   get radius() {
+    // @ts-ignore
     return this.size / 2;
   }
 
   @computed("radius", "stroke")
   get normalizedRadius() {
+    // @ts-ignore
     return this.radius - this.stroke;
   }
 
@@ -39,6 +41,7 @@ export default class UiProgressRing extends Component {
   @computed("progress", "radius", "stroke")
   get ringStyle() {
     let offset =
+      // @ts-ignore
       this.circumference - (this.progress / 100) * this.circumference;
     return htmlSafe(`stroke-dashoffset: ${offset}`);
   }
