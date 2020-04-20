@@ -22,7 +22,7 @@
   font-size: 12px;
   font-weight: 500;
   line-height: calc(scale(6) - 2px);
-  padding: 0 scale(4);
+  padding: 0 scale(2);
   position: relative;
   text-align: center;
 }
