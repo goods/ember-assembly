@@ -24,11 +24,20 @@ interface Day {
 export default class UiCalendar extends Component {
   selected: Moment[] = [];
   mode?: "single" | "multiple" | "range" = "multiple";
-  center?: Moment | undefined = undefined;
+  center?: Moment = moment.utc();
   rangeStart?: Moment | undefined = undefined;
   rangeFinish?: Moment | undefined = undefined;
   onChangeSelection?: Function | null = null;
+  onChangeRange?: Function | null = null;
   onChangeCenter?: Function | null = null;
+
+  /*
+  A local copy of the range start and finish is needed to handle the problem
+  where the range is only actually selected once a start and finish have been
+  chosen.
+  */
+  localRangeStart: Moment | undefined = undefined;
+  localRangeFinish: Moment | undefined = undefined;
 
   @computed("center")
   get startDate(): Moment {
@@ -40,7 +49,14 @@ export default class UiCalendar extends Component {
     return moment.utc(this.center).endOf("month").endOf("week");
   }
 
-  @computed("center", "startDate", "finishDate", "selected.[]")
+  @computed(
+    "center",
+    "startDate",
+    "finishDate",
+    "selected.[]",
+    "localRangeStart",
+    "localRangeFinish"
+  )
   get days(): Day[] {
     let days: any = [];
     let date = this.startDate.clone();
@@ -54,16 +70,30 @@ export default class UiCalendar extends Component {
 
     while (date.isBefore(this.finishDate)) {
       let id = date.format("YYYY-MM-DD");
+      let isSelected = false;
+      let isRangeStart = false;
+      let isRangeFinish = false;
 
-      let isSelected =
-        formattedSelected.find((selected) => selected == id) !== undefined;
+      if (this.mode == "range") {
+        isRangeStart =
+          // @ts-ignore
+          this.mode == "range" && get(formattedSelected, "firstObject") == id;
+        isRangeFinish =
+          // @ts-ignore
+          this.mode == "range" && get(formattedSelected, "lastObject") == id;
 
-      let isRangeStart =
-        // @ts-ignore
-        this.mode == "range" && get(formattedSelected, "firstObject") == id;
-      let isRangeFinish =
-        // @ts-ignore
-        this.mode == "range" && get(formattedSelected, "lastObject") == id;
+        let localRangeFinish = this.localRangeFinish;
+        if (isNone(localRangeFinish)) {
+          localRangeFinish = this.localRangeStart;
+        }
+
+        isSelected =
+          date.isSameOrAfter(this.localRangeStart, "day") &&
+          date.isSameOrBefore(localRangeFinish, "day");
+      } else {
+        isSelected =
+          formattedSelected.find((selected) => selected == id) !== undefined;
+      }
 
       days.push({
         id: id,
@@ -73,7 +103,7 @@ export default class UiCalendar extends Component {
         isPreviousMonth: date.isBefore(this.center, "month"),
         isNextMonth: date.isAfter(this.center, "month"),
         isToday: date.isSame(moment.utc(), "day"),
-        isSelected: isSelected,
+        isSelected,
         isRangeStart,
         isRangeFinish,
       });
@@ -115,6 +145,9 @@ export default class UiCalendar extends Component {
 
     if (this.mode == "single") {
       selected = [day.date];
+      if (!isNone(this.onChangeSelection)) {
+        this.onChangeSelection(selected);
+      }
     } else if (this.mode == "multiple") {
       selected = this.selected.map((date) => date.clone());
       if (day.isSelected) {
@@ -127,45 +160,34 @@ export default class UiCalendar extends Component {
         //@ts-ignore
         selected.pushObject(day.date);
       }
+      if (!isNone(this.onChangeSelection)) {
+        this.onChangeSelection(selected);
+      }
     } else if (this.mode == "range") {
       let isChangingStart =
-        isNone(this.rangeStart) || !isNone(this.rangeFinish);
+        isNone(this.localRangeStart) || !isNone(this.localRangeFinish);
 
       if (isChangingStart) {
-        set(this, "rangeStart", day.date);
-        set(this, "rangeFinish", undefined);
-        selected = [day.date];
+        set(this, "localRangeStart", day.date);
+        set(this, "localRangeFinish", undefined);
       } else {
-        if (day.date.isBefore(this.rangeStart)) {
-          set(this, "rangeFinish", this.rangeStart);
-          set(this, "rangeStart", day.date);
+        if (day.date.isBefore(this.localRangeStart)) {
+          set(this, "localRangeFinish", this.localRangeStart);
+          set(this, "localRangeStart", day.date);
         } else {
-          set(this, "rangeFinish", day.date);
+          set(this, "localRangeFinish", day.date);
         }
 
-        //Enumerate all the dates into the list
-        let date = this.rangeStart?.clone();
-        while (date?.isAfter(this.rangeFinish) == false) {
-          //@ts-ignore
-          selected.pushObject(date.clone());
-          date.add(1, "day");
+        if (!isNone(this.onChangeRange)) {
+          this.onChangeRange(this.localRangeStart, this.localRangeFinish);
         }
       }
-    }
-
-    if (!isNone(this.onChangeSelection)) {
-      this.onChangeSelection(selected, this.rangeStart, this.rangeFinish);
     }
   }
 
   init() {
     super.init();
-    if (isNone(this.center)) {
-      if (isNone(this.selected[0])) {
-        set(this, "center", moment.utc());
-      } else {
-        set(this, "center", this.selected[0]);
-      }
-    }
+    set(this, "localRangeStart", this.rangeStart);
+    set(this, "localRangeFinish", this.rangeFinish);
   }
 }
