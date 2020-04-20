@@ -1,0 +1,30 @@
+@value blue-base, blue-dark, neutral-n0, neutral-n3, neutral-n6, neutral-n10, text-default, text-muted from "palette";
+
+.trigger .ui-button {
+  font-weight: 400;
+}
+
+.multiple-dates {
+  display: flex;
+  text-align: left;
+}
+
+.multiple-dates .separator {
+  margin: 0 scale(2);
+}
+
+.selected-range {
+  color: text-muted;
+  font-weight: 400;
+}
+
+.calendar-icon {
+  width: calc(scale(2) + 2px);
+  height: calc(scale(2) + 2px);
+  margin-right: scale(2);
+  fill: neutral-n10;
+}
+
+.ui-datepicker :global(.ui-popover-content) {
+  max-height: inherit;
+}

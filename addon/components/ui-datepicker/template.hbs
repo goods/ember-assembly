@@ -1,0 +1,54 @@
+<UiPopover local-class="ui-popover" disabled={{this.isDisabled}} @renderInPlace={{true}} as |Popover|>
+  <Popover.trigger local-class="trigger">
+    <UiButton>
+      {{svg-jar "calendar-3" local-class="calendar-icon"}}
+      {{#if (is-empty this.selected)}}
+        <div local-class="no-dates">
+          None selected
+        </div>
+      {{else if (eq this.mode "single")}}
+        <div local-class="single-date">
+          {{moment-format this.selected.firstObject "Do MMMM YYYY"}}
+        </div>
+      {{else if (eq this.mode "multiple")}}
+        <div local-class="multiple-dates">
+          <div local-class="from">
+            {{moment-format this.selected.firstObject "Do MMMM YYYY"}}
+          </div>
+          {{#if (gt this.selected.length 1)}}
+            <div local-class="separator">
+              ...
+            </div>
+            <div local-class="to">
+              {{moment-format this.selected.lastObject "Do MMMM YYYY"}}
+            </div>
+          {{/if}}
+        </div>
+      {{else if (eq this.mode "range")}}
+        <div local-class="multiple-dates">
+          <div local-class="from">
+            {{moment-format this.selected.firstObject "Do MMMM YYYY"}}
+          </div>
+          {{#if (gt this.selected.length 1)}}
+            <div local-class="separator">
+              to
+            </div>
+            <div local-class="to">
+              {{moment-format this.selected.lastObject "Do MMMM YYYY"}}
+            </div>
+          {{/if}}
+        </div>
+      {{/if}}
+    </UiButton>
+
+  </Popover.trigger>
+  <Popover.content @class="ui-popover-content ui-popover-animated options">
+    <UiCalendar
+      @selected={{this.selected}}
+      @mode={{this.mode}}
+      @center={{this.center}}
+      @onChangeCenter={{action (mut this.center)}}
+      @onChangeSelection={{fn this.onChangeDateSelection Popover.actions.close}}
+    />
+  </Popover.content>
+</UiPopover>
