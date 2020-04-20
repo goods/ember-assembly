@@ -12,8 +12,8 @@
   font-family: ui;
   font-size: 12px;
   font-weight: 400;
-  height: scale(8);
-  padding: 0 scale(2) 0 scale(8);
+  height: scale(6);
+  padding: 0 scale(2) 0 scale(6);
 }
 
 .ui-search-input input:focus {
@@ -28,8 +28,10 @@
 
 .search-icon {
   position: absolute;
-  top: calc(scale(2) + 1px);
-  left: calc(scale(2) + 1px);
+  top: scale(2);
+  left: scale(2);
+  height: calc(scale(2) + 2px);
+  width: calc(scale(2) + 2px);
 }
 
 .search-icon > path {
