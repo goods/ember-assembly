@@ -4,13 +4,19 @@
   font-weight: 400;
 }
 
+.trigger:active,
+.trigger:focus {
+  outline: none;
+}
+
 .multiple-dates {
   display: flex;
   text-align: left;
 }
 
 .multiple-dates .separator {
-  margin: 0 scale(2);
+  font-weight: 400;
+  margin: 0 scale(1);
 }
 
 .selected-range {
@@ -22,9 +28,12 @@
   width: calc(scale(2) + 2px);
   height: calc(scale(2) + 2px);
   margin-right: scale(2);
+  position: relative;
   fill: neutral-n10;
+  top: -1px;
 }
 
 .ui-datepicker :global(.ui-popover-content) {
   max-height: inherit;
+  margin-top: scale(2);
 }

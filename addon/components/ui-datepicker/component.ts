@@ -14,23 +14,33 @@ export default class UiDatepicker extends Component {
   selected: Moment[] = [];
   mode?: "single" | "multiple" | "range" = "multiple";
   center?: Moment | undefined = undefined;
+  rangeStart?: Moment | undefined = undefined;
+  rangeFinish?: Moment | undefined = undefined;
+
   onChangeSelection?: Function | null = null;
+  onChangeRange?: Function | null = null;
+  onChangeCenter?: Function | null = null;
 
   @action
-  onChangeDateSelection(
-    onClose: Function,
-    selected: Moment[],
-    _rangeStart: Moment[] | undefined,
-    rangeFinish: Moment[] | undefined
-  ) {
+  onChangeDateSelection(onClose: Function, selected: Moment[]) {
     if (!isNone(this.onChangeSelection)) {
       this.onChangeSelection(selected);
     }
 
     if (this.mode == "single") {
       onClose();
-    } else if (this.mode == "range" && !isNone(rangeFinish)) {
-      onClose();
     }
+  }
+
+  @action
+  onChangeDateRange(
+    onClose: Function,
+    rangeStart: Moment[],
+    rangeFinish: Moment[]
+  ) {
+    if (!isNone(this.onChangeRange)) {
+      this.onChangeRange(rangeStart, rangeFinish);
+    }
+    onClose();
   }
 }
