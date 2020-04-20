@@ -1,0 +1,59 @@
+<nav local-class="nav">
+  <button 
+    type="button" 
+    local-class="nav-control on-previous-month" 
+    {{on "click" (fn this.onMoveCenter -1 "month")}}
+  >
+    {{ui-icon "arrow-left-12" size="small"}}
+  </button>
+  <div local-class="nav-title">
+    {{moment-format this.center "MMMM YYYY"}}
+  </div>
+  <button 
+    type="button"
+    local-class="nav-control on-next-month" 
+    {{on "click" (fn this.onMoveCenter 1 "month")}}
+  >
+    {{ui-icon "arrow-right-12" size="small"}}
+  </button>
+</nav>
+
+<div local-class="weekdays">
+  <div local-class="weekday">
+    Sun
+  </div>
+  <div local-class="weekday">
+    Mon
+  </div>
+  <div local-class="weekday">
+    Tue
+  </div>
+  <div local-class="weekday">
+    Wed
+  </div>
+  <div local-class="weekday">
+    Thu
+  </div>
+  <div local-class="weekday">
+    Fri
+  </div>
+  <div local-class="weekday">
+    Sat
+  </div>
+</div>
+
+<div local-class="weeks">
+  {{#each this.weeks as |week|}}
+    <div local-class="week">
+      {{#each week.days as |day|}}
+        <button 
+          type="button" 
+          local-class="day {{if day.isSelected "is-selected"}} {{if day.isPreviousMonth  "is-previous-month"}} {{if day.isNextMonth  "is-next-month"}} {{if day.isToday "is-today"}} {{if day.isRangeStart "is-range-start"}} {{if day.isRangeFinish "is-range-finish"}}"
+          {{on "click" (fn this.onSelectDate day)}}
+        >
+          {{day.number}}
+        </button>
+      {{/each}}
+    </div>
+  {{/each}}
+</div>

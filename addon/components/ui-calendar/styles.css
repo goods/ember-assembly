@@ -1,0 +1,102 @@
+@value blue-base, blue-dark, neutral-n0, neutral-n3, neutral-n6, neutral-n8, text-default, text-muted from "palette";
+
+.calendar {
+  font-size: 12px;
+  margin: scale(1);
+  width: auto;
+}
+
+.nav {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-title {
+  line-height: scale(5);
+}
+
+.nav-control {
+  background: 0;
+  border: 0;
+  box-shadow: none;
+  line-height: 1;
+  position: relative;
+}
+
+.nav-control:active {
+  fill: blue-base;
+  outline: none;
+  top: 1px;
+}
+
+.nav-control:focus {
+  outline: none;
+  transform: none;
+}
+
+.nav-control:hover {
+  fill: blue-base;
+}
+
+.weekdays {
+  display: flex;
+  height: scale(8);
+  justify-content: space-between;
+}
+
+.weekday {
+  flex: 1;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.week {
+  display: flex;
+  height: auto;
+}
+
+.day {
+  background: transparent;
+  border: 1px solid neutral-n3;
+  flex: 1 1 scale(8);
+  font-weight: 400;
+  font-size: 12px;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  max-width: inherit;
+  max-height: scale(8);
+  width: scale(8);
+  height: scale(8);
+}
+
+.day.is-previous-month,
+.day.is-next-month {
+  color: neutral-n6;
+}
+
+.day:not([disabled]):hover {
+  background: blue-dark;
+  border-color: blue-dark;
+  color: neutral-n0;
+}
+
+.day:focus {
+  outline: none;
+}
+
+.day.is-selected {
+  background: blue-base;
+  border-color: blue-base;
+  color: neutral-n0;
+}
+
+.day.is-selected.is-range-start,
+.day.is-selected.is-range-finish {
+  background: blue-dark;
+  border-color: blue-dark;
+  color: neutral-n0;
+}
