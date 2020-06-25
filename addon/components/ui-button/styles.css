@@ -201,3 +201,7 @@
   border-color: neutral-n4;
   color: neutral-n5;
 }
+
+.ui-button.full-width {
+  width: 100%;
+}
