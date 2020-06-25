@@ -16,7 +16,7 @@ export default class UiButton extends Component {
   onClick?: Function | null = null;
   label?: string = "";
   appearance?: "default" | "strong" | "minimal" = "default";
-  width?: "full" | "";
+  width?: "full" | "default" = "default";
   intent?: "none" | "success" | "warning" | "danger" = "none";
   size?: "default" | "small" | "large" = "default";
   isDisabled?: boolean = false;
