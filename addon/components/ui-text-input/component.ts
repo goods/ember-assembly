@@ -5,7 +5,7 @@ import { localClassNames, localClassName } from "ember-css-modules";
 import { classNames } from "@ember-decorators/component";
 import { action } from "@ember/object";
 import { isNone } from "@ember/utils";
-import { set } from "@ember/object";
+import { set, computed } from "@ember/object";
 
 @classNames("ui-text-input")
 @localClassNames("ui-text-input")
@@ -21,9 +21,16 @@ export default class UiTextInput extends Component {
   disabled?: boolean = false;
   max?: number | null = null;
   min?: number | null = null;
+  width?: "full" | "default" = "default";
 
   @localClassName()
   hasError?: boolean = false;
+
+  @localClassName()
+  @computed("width")
+  get widthClass(): string {
+    return `${this.width}-width`;
+  }
 
   @action
   onKeyUp(value: string) {

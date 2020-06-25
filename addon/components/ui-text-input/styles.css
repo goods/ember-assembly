@@ -27,3 +27,7 @@
   background: neutral-n2;
   cursor: not-allowed;
 }
+
+.ui-text-input.full-width input {
+  width: 100%;
+}
