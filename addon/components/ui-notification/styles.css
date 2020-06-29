@@ -13,7 +13,7 @@
 .notification {
   align-items: center;
   display: flex;
-  padding: scale(4) scale(4);
+  padding: scale(3);
 }
 
 .has-description .notification {
@@ -32,7 +32,7 @@
 .icon {
   display: flex;
   fill: blue-base;
-  margin-right: scale(4);
+  margin-right: scale(3);
 }
 
 .dismiss {
@@ -40,8 +40,8 @@
 }
 
 .info-icon {
-  width: scale(4);
-  height: scale(4);
+  width: scale(3);
+  height: scale(3);
 }
 
 .message {
@@ -50,7 +50,7 @@
 
 .message .title {
   font-weight: 500;
-  line-height: scale(4);
+  line-height: scale(3);
 }
 
 .message .description {

@@ -60,7 +60,7 @@
   border-left: border-muted;
   border-right: border-muted;
   min-width: scale(12);
-  line-height: scale(6);
+  line-height: scale(7);
 }
 
 .current-page button:hover {
