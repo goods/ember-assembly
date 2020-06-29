@@ -18,6 +18,8 @@ export default class UiTextInput extends Component {
   required?: boolean = false;
   type?: string = "text";
   disabled?: boolean = false;
+  max?: number | null = null;
+  min?: number | null = null;
 
   @localClassName()
   hasError?: boolean = false;
