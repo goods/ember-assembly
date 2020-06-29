@@ -12,7 +12,7 @@
   height: scale(32);
   padding: scale(2);
   line-height: 1.5em;
-  width: scale(128);
+  width: scale(80);
 }
 
 .ui-textarea textarea:focus {
