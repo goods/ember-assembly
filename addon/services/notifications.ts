@@ -2,9 +2,9 @@ import Service from "@ember/service";
 
 interface NotificationParams {
   title: string;
-  description: string;
+  description?: string;
   intent: "info" | "success" | "warning" | "danger";
-  timeout: number;
+  timeout?: number;
 }
 
 export default class Notifications extends Service {
@@ -16,7 +16,7 @@ export default class Notifications extends Service {
     title,
     description = "",
     intent = "info",
-    timeout = 5000
+    timeout = 5000,
   }: NotificationParams) {
     let id = this.get("nextId");
     this.notifications.pushObject({
@@ -24,7 +24,7 @@ export default class Notifications extends Service {
       title: title,
       description: description,
       intent: intent,
-      timeout: timeout
+      timeout: timeout,
     });
 
     this.incrementProperty("nextId");
