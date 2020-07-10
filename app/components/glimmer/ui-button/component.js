@@ -1,0 +1,1 @@
+export { default } from 'ember-assembly/components/glimmer/ui-button/component';

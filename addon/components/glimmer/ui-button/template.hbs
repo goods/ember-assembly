@@ -1,0 +1,12 @@
+<button type="button" {{on "click" (fn this.onClick)}} local-class="glimmer-button {{this.appearanceClass}} {{this.intentClass}} {{this.sizeClass}}" class="glimmer-ui-button">
+{{#if @isLoading}}
+  <UiSpinner local-class="spinner" />
+{{/if}}
+<span local-class="label">
+  {{#if @label}}
+    {{@label}}
+  {{else}}
+    {{yield}}
+  {{/if}}
+</span>
+</button>
