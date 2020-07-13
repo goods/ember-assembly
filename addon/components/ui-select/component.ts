@@ -1,7 +1,6 @@
 import Component from "@ember/component";
 //@ts-ignore
 import template from "./template";
-import { layout } from "@ember-decorators/component";
 import { localClassNames } from "ember-css-modules";
 
 // <UiSelect @onChange={{action (mut value)}} @value={{value}} as |Select|>
@@ -11,8 +10,9 @@ import { localClassNames } from "ember-css-modules";
 // </UiSelect>
 
 @localClassNames("ui-select")
-@layout(template)
 export default class UiSelect extends Component {
+  layout = template;
+
   value!: any;
   onChange!: Function;
   labelPath?: string = "";

@@ -2,7 +2,6 @@
 import Component from "ember-basic-dropdown/components/basic-dropdown";
 //@ts-ignore
 import template from "ember-basic-dropdown/templates/components/basic-dropdown";
-import { layout } from "@ember-decorators/component";
 import { localClassNames } from "ember-css-modules";
 
 /*
@@ -13,7 +12,8 @@ import { localClassNames } from "ember-css-modules";
 */
 
 @localClassNames("ui-popover")
-@layout(template)
 export default class UiPopover extends Component {
+  layout = template;
+
   useAnimation?: boolean = true;
 }

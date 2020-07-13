@@ -4,13 +4,14 @@ import template from "./template";
 import { localClassNames, localClassName } from "ember-css-modules";
 import { assert } from "@ember/debug";
 import { isNone } from "@ember/utils";
-import { layout, classNames } from "@ember-decorators/component";
+import { classNames } from "@ember-decorators/component";
 import { computed } from "@ember/object";
 
 @classNames("ui-field")
 @localClassNames("ui-field")
-@layout(template)
 export default class UiField extends Component {
+  layout = template;
+
   label!: string;
   description?: string = "";
   validationMessages?: Array<string> = [];

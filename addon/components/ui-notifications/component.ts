@@ -1,7 +1,6 @@
 import Component from "@ember/component";
 //@ts-ignore
 import template from "./template";
-import { layout } from "@ember-decorators/component";
 import { action } from "@ember/object";
 import { alias } from "@ember/object/computed";
 import { inject } from "@ember/service";
@@ -12,8 +11,9 @@ import move from "ember-animated/motions/move";
 import { fadeOut } from "ember-animated/motions/opacity";
 
 @localClassNames("ui-notifications")
-@layout(template)
 export default class UiNotifications extends Component {
+  layout = template;
+
   @inject("notifications") service!: any;
   @alias("service.notifications") notifications!: any;
 
