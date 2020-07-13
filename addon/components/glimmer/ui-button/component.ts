@@ -1,3 +1,4 @@
+import { isNone } from "@ember/utils";
 import Component from "@glimmer/component";
 import { attribute } from "@ember-decorators/component";
 import { or } from "@ember/object/computed";
@@ -18,15 +19,15 @@ export default class GlimmerUiButton extends Component<GlimmerUiButtonArgs> {
   type?: string = "submit";
 
   get appearanceClass(): string {
-    return `appearance-${this.appearance}`;
+    return `appearance-${this.args.appearance}`;
   }
 
   get intentClass(): string {
-    return `intent-${this.intent}`;
+    return `intent-${this.args.intent}`;
   }
 
   get sizeClass(): string {
-    return `size-${this.size}`;
+    return `size-${this.args.size}`;
   }
 
   @attribute()
