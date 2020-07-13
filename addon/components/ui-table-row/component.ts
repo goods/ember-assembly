@@ -1,16 +1,17 @@
 import Component from "@ember/component";
 // @ts-ignore: Ignore import of compiled template
 import template from "./template";
-import { layout, tagName } from "@ember-decorators/component";
+import { tagName } from "@ember-decorators/component";
 import { computed, action } from "@ember/object";
 import { isNone } from "@ember/utils";
 import { localClassNames, localClassName } from "ember-css-modules";
 import { notEmpty } from "@ember/object/computed";
 
 @localClassNames("ui-table-row")
-@layout(template)
 @tagName("tr")
 export default class UiTableRow extends Component {
+  layout = template;
+
   isHead?: boolean = false;
   hasFixedHeader?: boolean = false;
   onSort?: Function | null = null;

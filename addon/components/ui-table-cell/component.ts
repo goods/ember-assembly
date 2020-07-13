@@ -1,15 +1,16 @@
 import Component from "@ember/component";
 // @ts-ignore: Ignore import of compiled template
 import template from "./template";
-import { layout, tagName, classNames } from "@ember-decorators/component";
+import { tagName, classNames } from "@ember-decorators/component";
 import { localClassNames, localClassName } from "ember-css-modules";
 import { notEmpty } from "@ember/object/computed";
 
 @localClassNames("ui-table-cell")
 @classNames("ui-table-cell")
-@layout(template)
 @tagName("td")
 export default class UiTableCell extends Component {
+  layout = template;
+
   linkTo?: any[] = [];
 
   @localClassName()

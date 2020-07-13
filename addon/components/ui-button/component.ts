@@ -2,21 +2,17 @@ import Component from "@ember/component";
 // @ts-ignore: Ignore import of compiled template
 import template from "./template";
 import { localClassNames, localClassName } from "ember-css-modules";
-import {
-  layout,
-  tagName,
-  attribute,
-  classNames
-} from "@ember-decorators/component";
+import { tagName, attribute, classNames } from "@ember-decorators/component";
 import { or } from "@ember/object/computed";
 import { computed } from "@ember/object";
 import { isNone } from "@ember/utils";
 
 @classNames("ui-button")
 @localClassNames("ui-button")
-@layout(template)
 @tagName("button")
 export default class UiButton extends Component {
+  layout = template;
+
   onClick?: Function | null = null;
   label?: string = "";
   appearance?: string = "default"; //Enum: default, strong, minimal

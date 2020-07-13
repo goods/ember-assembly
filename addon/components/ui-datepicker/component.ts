@@ -2,15 +2,16 @@ import Component from "@ember/component";
 // @ts-ignore: Ignore import of compiled template
 import template from "./template";
 import { localClassNames } from "ember-css-modules";
-import { layout, classNames } from "@ember-decorators/component";
+import { classNames } from "@ember-decorators/component";
 import { Moment } from "moment";
 import { action } from "@ember/object";
 import { isNone } from "@ember/utils";
 
 @classNames("ui-datepicker")
 @localClassNames("ui-datepicker")
-@layout(template)
 export default class UiDatepicker extends Component {
+  layout = template;
+
   selected: Moment[] = [];
   mode?: "single" | "multiple" | "range" = "multiple";
   center?: Moment | undefined = undefined;

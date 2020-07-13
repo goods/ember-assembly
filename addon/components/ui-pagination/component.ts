@@ -2,13 +2,13 @@ import Component from "@ember/component";
 // @ts-ignore: Ignore import of compiled template
 import template from "./template";
 import { localClassNames } from "ember-css-modules";
-import { layout } from "@ember-decorators/component";
 import { gt } from "@ember/object/computed";
 import { computed, action } from "@ember/object";
 
 @localClassNames("ui-pagination")
-@layout(template)
 export default class UiPagination extends Component {
+  layout = template;
+
   start!: number;
   count!: number;
   total!: number;
@@ -25,12 +25,12 @@ export default class UiPagination extends Component {
   get currentPagination(): any {
     if (this.total == 0) {
       return {
-        label: "0"
+        label: "0",
       };
     }
     let max = Math.min(this.start + this.count, this.total);
     return {
-      label: `${this.start + 1} - ${max} of ${this.total}`
+      label: `${this.start + 1} - ${max} of ${this.total}`,
     };
   }
 
@@ -42,7 +42,7 @@ export default class UiPagination extends Component {
 
       pages.push({
         label: `${i + 1} - ${max}`,
-        value: i
+        value: i,
       });
     }
     return pages;

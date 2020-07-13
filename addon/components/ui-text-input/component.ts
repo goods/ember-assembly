@@ -2,15 +2,16 @@ import Component from "@ember/component";
 // @ts-ignore: Ignore import of compiled template
 import template from "./template";
 import { localClassNames, localClassName } from "ember-css-modules";
-import { layout, classNames } from "@ember-decorators/component";
+import { classNames } from "@ember-decorators/component";
 import { action } from "@ember/object";
 import { isNone } from "@ember/utils";
 import { set } from "@ember/object";
 
 @classNames("ui-text-input")
 @localClassNames("ui-text-input")
-@layout(template)
 export default class UiTextInput extends Component {
+  layout = template;
+
   value?: string = "";
   onSetValue?: Function | null = null;
   onFocusOut?: Function | null = null;

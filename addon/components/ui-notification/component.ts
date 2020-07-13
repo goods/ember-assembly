@@ -3,7 +3,7 @@ import { get, set, action } from "@ember/object";
 import { notEmpty } from "@ember/object/computed";
 // @ts-ignore: Ignore import of compiled template
 import template from "./template";
-import { layout, classNames } from "@ember-decorators/component";
+import { classNames } from "@ember-decorators/component";
 import { localClassNames, localClassName } from "ember-css-modules";
 // @ts-ignore
 import { timeout } from "ember-concurrency";
@@ -13,8 +13,9 @@ import { htmlSafe } from "@ember/string";
 
 @classNames("ui-notification")
 @localClassNames("ui-notification")
-@layout(template)
 export default class UiNotification extends Component {
+  layout = template;
+
   notification!: any;
   onDismiss!: Function;
 

@@ -1,15 +1,16 @@
 import Component from "@ember/component";
 //@ts-ignore
 import template from "./template";
-import { layout, classNames } from "@ember-decorators/component";
+import { classNames } from "@ember-decorators/component";
 import { localClassNames, localClassName } from "ember-css-modules";
 import { computed } from "@ember/object";
 import { htmlSafe } from "@ember/string";
 
 @classNames("ui-progress-ring")
 @localClassNames("ui-progress-ring")
-@layout(template)
 export default class UiProgressRing extends Component {
+  layout = template;
+
   progress?: number = 0;
   stroke?: number = 4;
   size?: number = 60;
