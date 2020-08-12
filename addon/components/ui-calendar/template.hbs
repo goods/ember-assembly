@@ -1,54 +1,55 @@
-<nav local-class="nav">
+<nav local-class="nav" class="ui-calendar-nav">
   <button
     type="button"
-    local-class="nav-control on-previous-month"
+    local-class="nav-control on-previous-month" class="ui-calendar-nav-previous"
     {{on "click" (fn this.onMoveCenter -1 "month")}}
   >
     {{svg-jar "arrow-left-1" height="15" width="15"}}
   </button>
-  <div local-class="nav-title">
+  <div local-class="nav-title" class="ui-calendar-nav-title">
     {{moment-format this.center "MMMM YYYY"}}
   </div>
   <button
     type="button"
-    local-class="nav-control on-next-month"
+    local-class="nav-control on-next-month" class="ui-calendar-nav-next"
     {{on "click" (fn this.onMoveCenter 1 "month")}}
   >
     {{svg-jar "arrow-right-1" height="15" width="15"}}
   </button>
 </nav>
 
-<div local-class="weekdays">
-  <div local-class="weekday">
+<div local-class="weekdays" class="ui-calendar-weekdays">
+  <div local-class="weekday" class="ui-calendar-weekday">
     Sun
   </div>
-  <div local-class="weekday">
+  <div local-class="weekday" class="ui-calendar-weekday">
     Mon
   </div>
-  <div local-class="weekday">
+  <div local-class="weekday" class="ui-calendar-weekday">
     Tue
   </div>
-  <div local-class="weekday">
+  <div local-class="weekday" class="ui-calendar-weekday">
     Wed
   </div>
-  <div local-class="weekday">
+  <div local-class="weekday" class="ui-calendar-weekday">
     Thu
   </div>
-  <div local-class="weekday">
+  <div local-class="weekday" class="ui-calendar-weekday">
     Fri
   </div>
-  <div local-class="weekday">
+  <div local-class="weekday" class="ui-calendar-weekday">
     Sat
   </div>
 </div>
 
-<div local-class="weeks">
+<div local-class="weeks"  class="ui-calendar-weeks">
   {{#each this.weeks as |week|}}
-    <div local-class="week">
+    <div local-class="week" class="ui-calendar-week">
       {{#each week.days as |day|}}
         <button
           type="button"
           local-class="day {{if day.isSelected "is-selected"}} {{if day.isPreviousMonth  "is-previous-month"}} {{if day.isNextMonth  "is-next-month"}} {{if day.isToday "is-today"}} {{if day.isRangeStart "is-range-start"}} {{if day.isRangeFinish "is-range-finish"}}"
+          class="ui-calendar-day {{if day.isSelected "is-selected"}} {{if day.isPreviousMonth  "is-previous-month"}} {{if day.isNextMonth  "is-next-month"}} {{if day.isToday "is-today"}} {{if day.isRangeStart "is-range-start"}} {{if day.isRangeFinish "is-range-finish"}}"
           {{on "click" (fn this.onSelectDate day)}}
         >
           {{day.number}}
