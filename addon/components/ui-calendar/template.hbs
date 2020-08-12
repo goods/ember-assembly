@@ -1,20 +1,20 @@
 <nav local-class="nav">
-  <button 
-    type="button" 
-    local-class="nav-control on-previous-month" 
+  <button
+    type="button"
+    local-class="nav-control on-previous-month"
     {{on "click" (fn this.onMoveCenter -1 "month")}}
   >
-    {{ui-icon "arrow-left-12" size="small"}}
+    {{svg-jar "arrow-left-1" height="15" width="15"}}
   </button>
   <div local-class="nav-title">
     {{moment-format this.center "MMMM YYYY"}}
   </div>
-  <button 
+  <button
     type="button"
-    local-class="nav-control on-next-month" 
+    local-class="nav-control on-next-month"
     {{on "click" (fn this.onMoveCenter 1 "month")}}
   >
-    {{ui-icon "arrow-right-12" size="small"}}
+    {{svg-jar "arrow-right-1" height="15" width="15"}}
   </button>
 </nav>
 
@@ -46,8 +46,8 @@
   {{#each this.weeks as |week|}}
     <div local-class="week">
       {{#each week.days as |day|}}
-        <button 
-          type="button" 
+        <button
+          type="button"
           local-class="day {{if day.isSelected "is-selected"}} {{if day.isPreviousMonth  "is-previous-month"}} {{if day.isNextMonth  "is-next-month"}} {{if day.isToday "is-today"}} {{if day.isRangeStart "is-range-start"}} {{if day.isRangeFinish "is-range-finish"}}"
           {{on "click" (fn this.onSelectDate day)}}
         >
