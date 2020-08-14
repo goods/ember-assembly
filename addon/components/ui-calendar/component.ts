@@ -146,26 +146,21 @@ export default class UiCalendar extends Component {
   @action
   onSelectDate(day: Day) {
     let selected: Moment[] = [];
+
     if (this.mode == "single") {
       selected = [day.date];
-      this.days.forEach((day: Day) => {
-        set(day, "isSelected", false);
-      });
-      set(day, "isSelected", true);
       if (!isNone(this.onChangeSelection)) {
         this.onChangeSelection(selected);
       }
     } else if (this.mode == "multiple") {
       selected = this.selected.map((date) => date.clone());
       if (day.isSelected) {
-        set(day, "isSelected", false);
         let date = selected.find((date) => date.format() == day.date.format());
         if (!isNone(date)) {
           //@ts-ignore
           selected.removeObject(date);
         }
       } else {
-        set(day, "isSelected", true);
         //@ts-ignore
         selected.pushObject(day.date);
       }
@@ -177,12 +172,10 @@ export default class UiCalendar extends Component {
         isNone(this.localRangeStart) || !isNone(this.localRangeFinish);
 
       if (isChangingStart) {
-        set(day, "isRangeStart", true);
         set(this, "localRangeStart", day.date);
         set(this, "localRangeFinish", undefined);
       } else {
         if (day.date.isBefore(this.localRangeStart)) {
-          set(day, "isRangeFinish", true);
           set(this, "localRangeFinish", this.localRangeStart);
           set(this, "localRangeStart", day.date);
         } else {
