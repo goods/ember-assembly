@@ -68,7 +68,7 @@ export default class UiCalendar extends Component {
       currentMonth = this.center.format("M");
     }
     let formattedSelected = this.selected.map((selected) =>
-      selected.format("YYYY-MM-DD")
+      moment(selected).format("YYYY-MM-DD")
     );
 
     while (date.isBefore(this.finishDate)) {
