@@ -31,7 +31,11 @@ export default class UiTextInput extends Component {
   @attribute()
   @computed("width")
   get style(): SafeString {
-    return htmlSafe(`width:${this.width}`);
+    if (this.width) {
+      return htmlSafe(`width:${this.width}`);
+    } else {
+      return htmlSafe("");
+    }
   }
 
   @action
