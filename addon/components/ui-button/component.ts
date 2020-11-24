@@ -6,6 +6,8 @@ import { tagName, attribute, classNames } from "@ember-decorators/component";
 import { or } from "@ember/object/computed";
 import { computed } from "@ember/object";
 import { isNone } from "@ember/utils";
+import { htmlSafe } from "@ember/string";
+import { SafeString } from "handlebars";
 
 @classNames("ui-button")
 @localClassNames("ui-button")
@@ -29,8 +31,8 @@ export default class UiButton extends Component {
 
   @attribute()
   @computed("width")
-  get style(): string {
-    return `width:${this.width}`;
+  get style(): SafeString {
+    return htmlSafe(`width:${this.width}`);
   }
 
   @localClassName()
