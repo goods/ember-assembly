@@ -16,7 +16,7 @@ export default class UiButton extends Component {
   onClick?: Function | null = null;
   label?: string = "";
   appearance?: "default" | "strong" | "minimal" = "default";
-  width?: "full" | "default" = "default";
+  width?: string; //Accepts any standard CSS width measurement
   intent?: "none" | "success" | "warning" | "danger" = "none";
   size?: "default" | "small" | "large" = "default";
   isDisabled?: boolean = false;
@@ -27,10 +27,10 @@ export default class UiButton extends Component {
   @localClassName()
   isLoading?: boolean = false;
 
-  @localClassName()
+  @attribute()
   @computed("width")
-  get widthClass(): string {
-    return `${this.width}-width`;
+  get style(): string {
+    return `width:${this.width}`;
   }
 
   @localClassName()
