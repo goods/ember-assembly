@@ -38,6 +38,12 @@ export default class UiTextInput extends Component {
     }
   }
 
+  @localClassName()
+  @computed("width")
+  get hasWidth(): boolean {
+    return !!this.width;
+  }
+
   @action
   onKeyUp(value: string) {
     if (isNone(this.onSetValue)) {
