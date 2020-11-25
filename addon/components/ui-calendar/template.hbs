@@ -48,7 +48,6 @@
       {{#each week.days as |day|}}
         <button
           type="button"
-          local-class="day {{if day.isSelected "is-selected"}} {{if day.isPreviousMonth  "is-previous-month"}} {{if day.isNextMonth  "is-next-month"}} {{if day.isToday "is-today"}} {{if day.isRangeStart "is-range-start"}} {{if day.isRangeFinish "is-range-finish"}}"
           class="ui-calendar-day {{if day.isSelected "is-selected"}} {{if day.isPreviousMonth  "is-previous-month"}} {{if day.isNextMonth  "is-next-month"}} {{if day.isToday "is-today"}} {{if day.isRangeStart "is-range-start"}} {{if day.isRangeFinish "is-range-finish"}}"
           {{on "click" (fn this.onSelectDate day)}}
         >

@@ -1,11 +1,5 @@
 @value blue-base, blue-dark, neutral-n0, neutral-n3, neutral-n6, neutral-n8, text-default, text-muted from "palette";
 
-.calendar {
-  font-size: 12px;
-  margin: scale(1);
-  width: auto;
-}
-
 .nav {
   align-items: center;
   box-sizing: border-box;
@@ -59,7 +53,7 @@
   height: auto;
 }
 
-.day {
+:global(.ui-calendar-day) {
   background: transparent;
   border: 1px solid neutral-n3;
   flex: 1 1 scale(8);
@@ -73,29 +67,29 @@
   height: scale(8);
 }
 
-.day.is-previous-month,
-.day.is-next-month {
+:global(.ui-calendar-day.is-previous-month),
+:global(.ui-calendar-day.is-next-month) {
   color: neutral-n6;
 }
 
-.day:not([disabled]):hover {
+:global(.ui-calendar-day:not([disabled])):hover {
   background: blue-dark;
   border-color: blue-dark;
   color: neutral-n0;
 }
 
-.day:focus {
+:global(.ui-calendar-day):focus {
   outline: none;
 }
 
-.day.is-selected {
+:global(.ui-calendar-day.is-selected) {
   background: blue-base;
   border-color: blue-base;
   color: neutral-n0;
 }
 
-.day.is-selected.is-range-start,
-.day.is-selected.is-range-finish {
+:global(.ui-calendar-day.is-selected.is-range-start),
+:global(.ui-calendar-day.is-selected.is-range-finish) {
   background: blue-dark;
   border-color: blue-dark;
   color: neutral-n0;
