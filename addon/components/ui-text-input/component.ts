@@ -23,7 +23,7 @@ export default class UiTextInput extends Component {
   disabled?: boolean = false;
   max?: number | null = null;
   min?: number | null = null;
-  width?: string; //Accepts any standard CSS width measurement
+  width?: string; //Accepts any standard CSS width value
 
   @localClassName()
   hasError?: boolean = false;
@@ -32,16 +32,10 @@ export default class UiTextInput extends Component {
   @computed("width")
   get style(): SafeString {
     if (this.width) {
-      return htmlSafe(`width:${this.width}`);
+      return htmlSafe(`width: ${this.width}`);
     } else {
       return htmlSafe("");
     }
-  }
-
-  @localClassName()
-  @computed("width")
-  get hasWidth(): boolean {
-    return !!this.width;
   }
 
   @action
