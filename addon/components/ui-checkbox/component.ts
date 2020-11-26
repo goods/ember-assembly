@@ -14,9 +14,11 @@ export default class UiCheckbox extends Component {
   checked?: boolean = false;
   onChange?: Function | null = null;
 
-  click() {
+  click(event: any) {
     if (!isNone(this.onChange)) {
-      this.onChange(!this.checked);
+      this.onChange(!this.checked, event);
+      return false;
     }
+    return;
   }
 }

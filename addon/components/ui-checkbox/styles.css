@@ -1,5 +1,4 @@
 @value blue-base, neutral-n5, neutral-n0 from "palette";
-@value size: 16px;
 
 .ui-checkbox {
   align-items: center;
@@ -11,7 +10,7 @@
   border: 0px;
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
-  margin: 0;
+  margin: 0 -1px 0 0;
   overflow: hidden;
   padding: 0px;
   white-space: nowrap;
@@ -27,9 +26,9 @@
   display: flex;
   justify-content: center;
   margin-right: scale(2);
-  height: size;
-  width: size;
-  min-width: size;
+  height: scale(3);
+  width: scale(3);
+  min-width: scale(3);
 }
 
 .check-icon {
