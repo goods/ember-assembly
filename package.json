@@ -40,7 +40,6 @@
     "ember-decorators": "^6.1.1",
     "ember-moment": "^8.0.1",
     "ember-svg-jar": "^2.2.3",
-    "moment": "^2.29.1",
     "postcss-functions": "^3.0.0"
   },
   "devDependencies": {
