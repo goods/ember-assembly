@@ -28,6 +28,6 @@
   cursor: not-allowed;
 }
 
-.ui-text-input.has-width input {
+.ui-text-input :global(.has-width) {
   width: 100%;
 }
