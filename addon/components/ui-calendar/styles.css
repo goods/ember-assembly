@@ -54,7 +54,7 @@
   height: auto;
 }
 
-:global(.ui-calendar-day) {
+.day {
   background: transparent;
   border: 1px solid neutral-n3;
   flex: 1 1 scale(8);
@@ -68,29 +68,29 @@
   height: scale(8);
 }
 
-:global(.ui-calendar-day.is-previous-month),
-:global(.ui-calendar-day.is-next-month) {
+.day.is-previous-month,
+.day.is-next-month {
   color: neutral-n6;
 }
 
-:global(.ui-calendar-day:not([disabled])):hover {
+.day:not([disabled]):hover {
   background: blue-dark;
   border-color: blue-dark;
   color: neutral-n0;
 }
 
-:global(.ui-calendar-day):focus {
+.day:focus {
   outline: none;
 }
 
-:global(.ui-calendar-day.is-selected) {
+.day.is-selected {
   background: blue-base;
   border-color: blue-base;
   color: neutral-n0;
 }
 
-:global(.ui-calendar-day.is-selected.is-range-start),
-:global(.ui-calendar-day.is-selected.is-range-finish) {
+.day.is-selected.is-range-start,
+.day.is-selected.is-range-finish {
   background: blue-dark;
   border-color: blue-dark;
   color: neutral-n0;
