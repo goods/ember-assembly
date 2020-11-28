@@ -1,5 +1,5 @@
 <UiPopover disabled={{this.isDisabled}} @renderInPlace={{true}} as |Popover|>
-  <Popover.trigger local-class="ui-combobox-trigger">
+  <Popover.Trigger local-class="ui-combobox-trigger">
     {{#if this.triggerComponent}}
       {{component this.triggerComponent selected=this.selected isDisabled=this.isDisabled}}
     {{else}}
@@ -7,8 +7,8 @@
         {{this.triggerLabel}}
       </UiButton>
     {{/if}}
-  </Popover.trigger>
-  <Popover.content @class="ui-popover-content ui-popover-animated {{local-class "ui-combobox-content"}}">
+  </Popover.Trigger>
+  <Popover.Content class="ui-popover-content ui-popover-animated {{local-class "ui-combobox-content"}}">
     {{#if hasBlock}}
       {{yield 
         (hash
@@ -55,5 +55,5 @@
         {{/each}}
       {{/if}}
     {{/if}}
-  </Popover.content>
+  </Popover.Content>
 </UiPopover>
