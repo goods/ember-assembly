@@ -1,5 +1,5 @@
 <UiPopover disabled={{this.isDisabled}} as |Popover|>
-  <Popover.trigger local-class="ui-select-trigger" class="ui-select-trigger">
+  <Popover.Trigger local-class="ui-select-trigger" class="ui-select-trigger">
     {{#if this.triggerComponent}}
       {{component this.triggerComponent value=this.value isDisabled=this.isDisabled}}
     {{else}}
@@ -18,8 +18,8 @@
         {{/if}}
       </UiButton>
     {{/if}}
-  </Popover.trigger>
-  <Popover.content @class="ui-popover-content ui-popover-animated {{local-class "ui-select-content"}}">
+  </Popover.Trigger>
+  <Popover.Content class="ui-popover-content ui-popover-animated {{local-class "ui-select-content"}}">
     {{#if hasBlock}}
       {{yield 
         (hash
@@ -50,5 +50,5 @@
           {{/each}}
         {{/if}}
     {{/if}}
-  </Popover.content>
+  </Popover.Content>
 </UiPopover>

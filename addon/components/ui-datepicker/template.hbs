@@ -1,5 +1,5 @@
 <UiPopover local-class="ui-popover" disabled={{this.isDisabled}} @renderInPlace={{true}} as |Popover|>
-  <Popover.trigger local-class="trigger">
+  <Popover.Trigger local-class="trigger">
     <UiButton class="ui-datepicker-trigger-button">
       {{svg-jar "calendar-3" local-class="calendar-icon" class="ui-datepicker-calendar-icon" }}
       
@@ -47,8 +47,8 @@
       {{/if}}
     </UiButton>
 
-  </Popover.trigger>
-  <Popover.content @class="ui-popover-content ui-popover-animated options">
+  </Popover.Trigger>
+  <Popover.Content class="ui-popover-content ui-popover-animated options">
     <UiCalendar
       @mode={{this.mode}}
       @center={{this.center}}
@@ -59,5 +59,5 @@
       @onChangeSelection={{fn this.onChangeDateSelection Popover.actions.close}}
       @onChangeRange={{fn this.onChangeDateRange Popover.actions.close}}
     />
-  </Popover.content>
+  </Popover.Content>
 </UiPopover>
