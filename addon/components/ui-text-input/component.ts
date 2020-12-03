@@ -23,7 +23,7 @@ export default class UiTextInput extends Component {
   disabled?: boolean = false;
   max?: number | null = null;
   min?: number | null = null;
-  width?: string; //Accepts any standard CSS width value
+  width?: string = ""; //Accepts any standard CSS width value
 
   @localClassName()
   hasError?: boolean = false;
