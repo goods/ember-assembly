@@ -47,6 +47,7 @@
     <div local-class="week" class="ui-calendar-week">
       {{#each week.days as |day|}}
         <button
+          data-date={{moment-format day.date "YYYY-MM-DD"}}
           type="button"
           local-class="day {{if day.isSelected "is-selected"}} {{if day.isPreviousMonth  "is-previous-month"}} {{if day.isNextMonth  "is-next-month"}} {{if day.isToday "is-today"}} {{if day.isRangeStart "is-range-start"}} {{if day.isRangeFinish "is-range-finish"}}"
           class="ui-calendar-day {{if day.isSelected "is-selected"}} {{if day.isPreviousMonth  "is-previous-month"}} {{if day.isNextMonth  "is-next-month"}} {{if day.isToday "is-today"}} {{if day.isRangeStart "is-range-start"}} {{if day.isRangeFinish "is-range-finish"}}"
