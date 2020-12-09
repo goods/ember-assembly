@@ -2,6 +2,10 @@ import Component from "@ember/component";
 //@ts-ignore
 import template from "./template";
 import { localClassNames } from "ember-css-modules";
+import { computed } from "@ember/object";
+import { htmlSafe } from "@ember/string";
+import { SafeString } from "handlebars";
+import { attribute } from "@ember-decorators/component";
 
 // <UiSelect @onChange={{action (mut value)}} @value={{value}} as |Select|>
 //   <Select.Option @value="option-1">Option 1</Select.Option>
@@ -13,6 +17,7 @@ import { localClassNames } from "ember-css-modules";
 export default class UiSelect extends Component {
   layout = template;
 
+  class?: string = "";
   value!: any;
   onChange!: Function;
   labelPath?: string = "";
@@ -24,4 +29,10 @@ export default class UiSelect extends Component {
   triggerIcon?: string | null = null;
   triggerComponent?: string | null = null;
   optionComponent?: string | null = null;
+
+  @attribute("data-content-class")
+  @computed("elementId")
+  get contentClass(): SafeString {
+    return htmlSafe(`ui-select-content-${this.elementId}`);
+  }
 }
