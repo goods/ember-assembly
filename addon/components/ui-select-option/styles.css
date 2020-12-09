@@ -1,19 +1,24 @@
-@value blue-b3, blue-b2, text-default from "palette";
+@value neutral-n0, blue-b3, blue-b2, text-default from "palette";
 @value ui from "typography";
 
 .ui-select-option {
   align-items: center;
+  background: neutral-n0;
+  border: none;
   border-top: 1px solid blue-b3;
   color: text-default;
   cursor: pointer;
+  display: block;
   font-family: ui;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5em;
   overflow-x: hidden;
-  padding: scale(2) scale(4);
+  padding: scale(2) scale(3);
+  text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: 100%;
 }
 
 .ui-select-option:first-child {
