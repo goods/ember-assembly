@@ -1,13 +1,10 @@
-@value blue-base, neutral-n0, neutral-n7, neutral-n9 from "palette";
-@value intent-none, intent-success, intent-danger, intent-warning from "palette";
-
 .ui-notification {
-  background: neutral-n0;
+  background: var(--ea-colour-neutral-n0);
   border-radius: 3px;
   box-shadow: rgba(67, 90, 111, 0.3) 0px 0px 1px,
     rgba(67, 90, 111, 0.47) 0px 8px 10px -4px;
   margin-top: scale(2);
-  border-left: 3px solid blue-base;
+  border-left: 3px solid var(--ea-colour-blue-base);
 }
 
 .notification {
@@ -31,7 +28,7 @@
 
 .icon {
   display: flex;
-  fill: blue-base;
+  fill: var(--ea-colour-blue-base);
   margin-right: scale(3);
 }
 
@@ -68,13 +65,13 @@
 
 .dismiss-icon {
   transition: fill 150ms ease-in-out;
-  fill: neutral-n7;
+  fill: var(--ea-colour-neutral-n7);
   width: calc(scale(2) + 1.5px);
   height: calc(scale(2) + 1.5px);
 }
 
 .notification :global(.ui-button).dismiss-btn:hover .dismiss-icon {
-  fill: neutral-n9;
+  fill: var(--ea-colour-neutral-n9);
 }
 
 .description strong {
@@ -82,25 +79,25 @@
 }
 
 .intent-success.ui-notification {
-  border-color: intent-success;
+  border-color: var(--ea-colour-intent-success);
 }
 
 .intent-success .icon {
-  fill: intent-success;
+  fill: var(--ea-colour-intent-success);
 }
 
 .intent-danger.ui-notification {
-  border-color: intent-danger;
+  border-color: var(--ea-colour-intent-danger);
 }
 
 .intent-danger .icon {
-  fill: intent-danger;
+  fill: var(--ea-colour-intent-danger);
 }
 
 .intent-warning.ui-notification {
-  border-color: intent-warning;
+  border-color: var(--ea-colour-intent-warning);
 }
 
 .intent-warning .icon {
-  fill: intent-warning;
+  fill: var(--ea-colour-intent-warning);
 }

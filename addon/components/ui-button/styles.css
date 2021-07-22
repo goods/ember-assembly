@@ -1,24 +1,13 @@
-@value text-default, text-muted, icon-danger from "palette";
-@value intent-none, intent-success, intent-danger, intent-warning from "palette";
-@value blue-b3 from "palette";
-@value blue-b4a from "palette";
-@value blue-tint, blue-dark from "palette";
-@value red-tint, red-dark from "palette";
-@value green-tint, green-dark from "palette";
-@value yellow-tint, yellow-dark from "palette";
-@value neutral-n0, neutral-n1, neutral-n2, neutral-n3, neutral-n4, neutral-n5, neutral-n7 from "palette";
-@value white-w5a from "palette";
-@value ui from "typography";
 @value timing-function: cubic-bezier(0, 0, 0.25, 0.99);
 
 .ui-button {
-  background: neutral-n0;
-  border: 1px solid neutral-n5;
+  background: var(--ea-colour-neutral-n0);
+  border: 1px solid var(--ea-colour-neutral-n5);
   border-radius: 3px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-  color: text-default;
+  color: var(--ea-colour-text-default);
   cursor: default;
-  font-family: ui;
+  font-family: var(--ea-typography-ui);
   font-size: 12px;
   font-weight: 500;
   line-height: calc(scale(7) - 2px);
@@ -33,14 +22,14 @@
 
 .ui-button.appearance-minimal:focus,
 .ui-button:focus {
-  box-shadow: 0 0 0 3px blue-b4a;
+  box-shadow: 0 0 0 3px var(--ea-colour-blue-b4a);
   outline: none;
   z-index: 1;
 }
 
 .ui-button.appearance-minimal:active:enabled,
 .ui-button:active:enabled {
-  background: blue-b3;
+  background: var(--ea-colour-blue-b3);
 }
 
 .ui-button .label {
@@ -50,7 +39,7 @@
 }
 
 .is-loading {
-  border-color: neutral-n4;
+  border-color: var(--ea-colour-neutral-n4);
 }
 
 .is-loading .label {
@@ -93,28 +82,28 @@
   background: transparent;
   border: 1px solid transparent;
   box-shadow: none;
-  color: intent-none;
+  color: var(--ea-colour-intent-none);
 }
 
 .ui-button.appearance-minimal:hover {
-  background: neutral-n2;
-  border: 1px solid neutral-n2;
+  background: var(--ea-colour-neutral-n2);
+  border: 1px solid var(--ea-colour-neutral-n2);
 }
 
 .ui-button.appearance-minimal.intent-success {
-  color: intent-success;
+  color: var(--ea-colour-intent-success);
 }
 
 .ui-button.appearance-minimal.intent-danger {
-  color: intent-danger;
+  color: var(--ea-colour-intent-danger);
 }
 
 .ui-button.appearance-minimal.intent-warning {
-  color: intent-warning;
+  color: var(--ea-colour-intent-warning);
 }
 
 .ui-button.appearance-minimal:disabled {
-  color: neutral-n5;
+  color: var(--ea-colour-neutral-n5);
 }
 
 .ui-button.appearance-minimal:disabled:hover {
@@ -123,81 +112,81 @@
 
 /* Appearance: Default */
 .ui-button.appearance-default.intent-success {
-  color: intent-success;
+  color: var(--ea-colour-intent-success);
 }
 
 .ui-button.appearance-default.intent-danger {
-  color: intent-danger;
+  color: var(--ea-colour-intent-danger);
 }
 
 .ui-button.appearance-default.intent-warning {
-  color: intent-warning;
+  color: var(--ea-colour-intent-warning);
 }
 
 .ui-button.appearance-default:disabled {
-  border-color: neutral-n4;
-  color: neutral-n5;
+  border-color: var(--ea-colour-neutral-n4);
+  color: var(--ea-colour-neutral-n5);
 }
 
 /* Appearance: Strong */
 .ui-button.appearance-strong.intent-none.is-loading:disabled,
 .ui-button.appearance-strong.intent-none {
-  background: intent-none;
-  border-color: intent-none;
-  color: neutral-n0;
+  background: var(--ea-colour-intent-none);
+  border-color: var(--ea-colour-intent-none);
+  color: var(--ea-colour-neutral-n0);
 }
 .ui-button.appearance-strong.intent-none:active {
-  background: blue-dark;
-  border-color: blue-dark;
+  background: var(--ea-colour-blue-dark);
+  border-color: var(--ea-colour-blue-dark);
 }
 .ui-button.appearance-strong .spinner > div {
-  border-top-color: white-w5a;
+  border-top-color: var(--ea-colour-white-w5a);
 }
 
 .ui-button.appearance-strong.intent-success.is-loading:disabled,
 .ui-button.appearance-strong.intent-success {
-  background: intent-success;
-  border-color: intent-success;
-  color: neutral-n0;
+  background: var(--ea-colour-intent-success);
+  border-color: var(--ea-colour-intent-success);
+  color: var(--ea-colour-neutral-n0);
 }
 .ui-button.appearance-strong.intent-success:focus {
-  box-shadow: 0 0 0 3px green-tint;
+  box-shadow: 0 0 0 3px var(--ea-colour-green-tint);
 }
 .ui-button.appearance-strong.intent-success:active {
-  background: green-dark;
-  border-color: green-dark;
+  background: var(--ea-colour-green-dark);
+  border-color: var(--ea-colour-green-dark);
 }
 
 .ui-button.appearance-strong.intent-danger.is-loading:disabled,
 .ui-button.appearance-strong.intent-danger {
-  background: intent-danger;
-  border-color: intent-danger;
-  color: neutral-n0;
+  background: var(--ea-colour-intent-danger);
+  border-color: var(--ea-colour-intent-danger);
+  color: var(--ea-colour-neutral-n0);
 }
 .ui-button.appearance-strong.intent-danger:focus {
-  box-shadow: 0 0 0 3px red-tint;
+  box-shadow: 0 0 0 3px var(--ea-colour-red-tint);
 }
 .ui-button.appearance-strong.intent-danger:active {
-  background: red-dark;
-  border-color: red-dark;
+  background: var(--ea-colour-red-dark);
+  border-color: var(--ea-colour-red-dark);
 }
 
 .ui-button.appearance-strong.intent-warning.is-loading:disabled,
 .ui-button.appearance-strong.intent-warning {
-  background: intent-warning;
-  border-color: intent-warning;
-  color: neutral-n0;
+  background: var(--ea-colour-intent-warning);
+  border-color: var(--ea-colour-intent-warning);
+  color: var(--ea-colour-neutral-n0);
 }
 .ui-button.appearance-strong.intent-warning:focus {
-  box-shadow: 0 0 0 3px yellow-tint;
+  box-shadow: 0 0 0 3px var(--ea-colour-yellow-tint);
 }
 .ui-button.appearance-strong.intent-warning:active {
-  background: yellow-dark;
-  border-color: yellow-dark;
+  background: var(--ea-colour-yellow-dark);
+  border-color: var(--ea-colour-yellow-dark);
 }
 
 .ui-button.appearance-strong:disabled {
-  background: neutral-n1;
-  border-color: neutral-n4;
-  color: neutral-n5;
+  background: var(--ea-colour-neutral-n1);
+  border-color: var(--ea-colour-neutral-n4);
+  color: var(--ea-colour-neutral-n5);
 }

@@ -1,0 +1,12 @@
+:root {
+  --ea-typography-display: "SF UI Display", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  --ea-typography-ui: "SF UI Text", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  --ea-typography-mono: "SF Mono", "Monaco", "Inconsolata", "Fira Mono",
+    "Droid Sans Mono", "Source Code Pro", monospace;
+  --ea-typography-base-font-size: 13px;
+  --ea-typography-small-font-size: 12px;
+}

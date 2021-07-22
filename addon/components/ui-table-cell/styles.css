@@ -1,8 +1,6 @@
-@value blue-b3, neutral-n0, text-default from "palette";
-
 .ui-table-cell {
-  background: neutral-n0;
-  border-bottom: 1px solid blue-b3;
+  background: var(--ea-colour-neutral-n0);
+  border-bottom: 1px solid var(--ea-colour-blue-b3);
   padding: scale(2);
   white-space: nowrap;
 }
@@ -12,7 +10,7 @@
 }
 
 .cell-link {
-  color: text-default;
+  color: var(--ea-colour-text-default);
   display: block;
   padding: scale(2);
 }

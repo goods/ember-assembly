@@ -1,29 +1,26 @@
-@value text-default, text-muted, text-danger, icon-danger, neutral-n3, neutral-n4 from "palette";
-@value ui, small-font-size, base-font-size from "typography";
-
 .ui-field {
   margin: scale(4) 0;
 }
 
 .ui-field .label {
-  color: text-default;
+  color: var(--ea-colour-text-default);
   display: inline-block;
-  font-family: ui;
-  font-size: base-font-size;
+  font-family: var(--ea-typography-ui);
+  font-size: var(--ea-typography-base-font-size);
   font-weight: 500;
   margin: 0 0 scale(1) 0;
 }
 
 .ui-field .description {
-  color: text-muted;
-  font-size: base-font-size;
+  color: var(--ea-colour-text-muted);
+  font-size: var(--ea-typography-base-font-size);
   margin: calc(-1 * scale(1)) 0 scale(1) 0;
 }
 
 .validation-message {
-  color: text-danger;
+  color: var(--ea-colour-text-danger);
   display: flex;
-  font-size: small-font-size;
+  font-size: var(--ea-typography-small-font-size);
   line-height: 16px;
   margin-top: scale(2);
 }
@@ -33,7 +30,7 @@
 }
 
 .validation-icon path {
-  fill: icon-danger;
+  fill: var(--ea-colour-icon-danger);
 }
 
 .ui-field.horizontal {

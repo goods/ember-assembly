@@ -1,15 +1,12 @@
-@value neutral-n0, blue-b3, blue-b2, text-default from "palette";
-@value ui from "typography";
-
 .ui-select-option {
   align-items: center;
-  background: neutral-n0;
+  background: var(--ea-colour-neutral-n0);
   border: none;
-  border-top: 1px solid blue-b3;
-  color: text-default;
+  border-top: 1px solid var(--ea-colour-blue-b3);
+  color: var(--ea-colour-text-default);
   cursor: pointer;
   display: block;
-  font-family: ui;
+  font-family: var(--ea-typography-ui);
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5em;
@@ -26,5 +23,5 @@
 }
 
 .ui-select-option:hover {
-  background: blue-b2;
+  background: var(--ea-colour-blue-b2);
 }

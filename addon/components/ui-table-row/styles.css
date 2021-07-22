@@ -1,9 +1,7 @@
-@value blue-base, blue-b1 from "palette";
-
 .ui-table-row.has-link:hover :global(.ui-table-cell) {
-  background: blue-b1;
+  background: var(--ea-colour-blue-b1);
 }
 
 .ui-table-row.has-link:hover :global(.ui-table-cell-link) {
-  color: blue-base;
+  color: var(--ea-colour-blue-base);
 }

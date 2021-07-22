@@ -1,12 +1,10 @@
-@value blue-base, blue-b4a, border-default, border-muted, neutral-n4, neutral-n5 from "palette";
-
 .ui-pagination {
   border-radius: 3px;
   display: flex;
 }
 
 .ui-pagination:focus-within {
-  box-shadow: 0 0 0 3px blue-b4a;
+  box-shadow: 0 0 0 3px var(--ea-colour-blue-b4a);
   outline: none;
 }
 
@@ -27,21 +25,21 @@
 
 .ui-pagination .next-btn:hover svg,
 .ui-pagination .prev-btn:hover svg {
-  fill: blue-base;
+  fill: var(--ea-colour-blue-base);
 }
 
 .ui-pagination .next-btn:disabled svg,
 .ui-pagination .prev-btn:disabled svg {
-  fill: neutral-n4;
+  fill: var(--ea-colour-neutral-n4);
 }
 
 .ui-pagination .next-btn:disabled {
-  border: 1px solid neutral-n5;
+  border: 1px solid var(--ea-colour-neutral-n5);
   border-left: 0;
 }
 
 .ui-pagination .prev-btn:disabled {
-  border: 1px solid neutral-n5;
+  border: 1px solid var(--ea-colour-neutral-n5);
   border-right: 0;
 }
 
@@ -57,12 +55,12 @@
 
 .current-page button {
   border-radius: 0;
-  border-left: border-muted;
-  border-right: border-muted;
+  border-left: var(--ea-colour-border-muted);
+  border-right: var(--ea-colour-border-muted);
   min-width: scale(12);
   line-height: scale(7);
 }
 
 .current-page button:hover {
-  color: blue-base;
+  color: var(--ea-colour-blue-base);
 }

@@ -1,5 +1,3 @@
-@value blue-b4a, neutral-n10 from "palette";
-
 :global(.ui-popover-content.ui-popover-content).ui-select-content {
   margin-top: scale(2);
   padding: 0;
@@ -10,7 +8,7 @@
 
 .ui-select-trigger:focus {
   border-radius: 3px;
-  box-shadow: 0 0 0 3px blue-b4a;
+  box-shadow: 0 0 0 3px var(--ea-colour-blue-b4a);
   outline: none;
 }
 
@@ -19,6 +17,6 @@
   height: calc(scale(2) + 2px);
   margin-right: scale(2);
   position: relative;
-  fill: neutral-n10;
+  fill: var(--ea-colour-neutral-n10);
   top: -1px;
 }
