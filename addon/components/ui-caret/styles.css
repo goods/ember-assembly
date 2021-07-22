@@ -1,5 +1,4 @@
 @value caret-size: 5px;
-@value neutral-n7 from "palette";
 
 .ui-caret {
   display: inline-block;
@@ -8,7 +7,7 @@
   border-radius: 2px;
   border-left: caret-size solid transparent;
   border-right: caret-size solid transparent;
-  border-bottom: caret-size solid neutral-n7;
+  border-bottom: caret-size solid var(--ea-colour-neutral-n7);
   margin-top: -2px;
   transition: transform 150ms;
   vertical-align: middle;

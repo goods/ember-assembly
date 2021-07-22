@@ -1,7 +1,5 @@
-@value text-muted, neutral-n3, neutral-n4, border-default, border-error, icon-danger from "palette";
-
 .ui-tag-input {
-  border: 1px solid border-default;
+  border: 1px solid var(--ea-colour-border-default);
   border-radius: 3px;
   display: flex;
   flex-wrap: wrap;
@@ -10,11 +8,11 @@
 }
 
 .ui-tag-input.has-error {
-  border-color: border-error;
+  border-color: var(--ea-colour-border-error);
 }
 
 .tag {
-  background: neutral-n3;
+  background: var(--ea-colour-neutral-n3);
   border: 0;
   border-radius: 3px;
   box-shadow: none;
@@ -25,7 +23,7 @@
 }
 
 .tag:hover {
-  background: neutral-n4;
+  background: var(--ea-colour-neutral-n4);
 }
 
 .ui-tag-input .input {
@@ -38,7 +36,7 @@
 }
 
 .ui-tag-input .input::placeholder {
-  color: text-muted;
+  color: var(--ea-colour-text-muted);
 }
 
 .ui-tag-input .input:focus {

@@ -1,15 +1,12 @@
-@value blue-b4a, blue-base, border-default, border-error, text-default, neutral-n8 from "palette";
-@value ui from "typography";
-
 .ui-search-input {
   position: relative;
 }
 
 .ui-search-input input {
-  border: 1px solid border-default;
+  border: 1px solid var(--ea-colour-border-default);
   border-radius: 3px;
-  color: text-default;
-  font-family: ui;
+  color: var(--ea-colour-text-default);
+  font-family: var(--ea-typography-ui);
   font-size: 12px;
   font-weight: 400;
   height: scale(7);
@@ -17,13 +14,13 @@
 }
 
 .ui-search-input input:focus {
-  border-color: blue-base;
-  box-shadow: 0 0 0 3px blue-b4a;
+  border-color: var(--ea-colour-blue-base);
+  box-shadow: 0 0 0 3px var(--ea-colour-blue-b4a);
   outline: none;
 }
 
 .ui-search-input.has-error input {
-  border-color: border-error;
+  border-color: var(--ea-colour-border-error);
 }
 
 .search-icon {
@@ -35,7 +32,7 @@
 }
 
 .search-icon > path {
-  fill: neutral-n8;
+  fill: var(--ea-colour-neutral-n8);
 }
 
 .spinner {

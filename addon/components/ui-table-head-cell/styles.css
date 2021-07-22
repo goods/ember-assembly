@@ -1,10 +1,8 @@
-@value blue-b2, blue-b3, text-default from "palette";
-
 .ui-table-head-cell {
-  background: blue-b2;
-  border-top: 1px solid blue-b3;
-  border-bottom: 1px solid blue-b3;
-  color: text-default;
+  background: var(--ea-colour-blue-b2);
+  border-top: 1px solid var(--ea-colour-blue-b3);
+  border-bottom: 1px solid var(--ea-colour-blue-b3);
+  color: var(--ea-colour-text-default);
   font-size: 12px;
   font-weight: 500;
   padding: scale(2);

@@ -1,8 +1,8 @@
 # ember-assembly
 
-This is currently WIP.
+Currently WIP.
 
-A collection of beautiful UI components built by [Goods](https://www.goods.co.uk).
+A collection of UI components built by [Goods](https://www.goods.co.uk).
 
 ## Installation
 
@@ -18,9 +18,33 @@ ember install ember-assembly
 
 ## Usage
 
-## Usage
+See components full list of components.
 
-[Longer description of how to use the addon in apps.]
+By default the base scale is 5px. This can be adjusted by setting the value in `environment.js`.
+
+Example
+
+```
+
+module.exports = function (environment) {
+  let ENV = {
+    ...,
+    "ember-assembly": {
+      layout: {
+        "base-scale": 8,
+      },
+    },
+    ...
+  }
+```
+
+## Theming
+
+Theming is managed through CSS variables.
+
+- Palette variables live in `/addon/styles/palette.css`
+- Typography variables live in `/addon/styles/palette.css`
+- Component specific variables live in the component css
 
 ## License
 

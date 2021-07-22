@@ -1,12 +1,8 @@
-@value ui from "typography";
-@value border-default, border-error from "palette";
-@value text-default, blue-b4a, blue-base, neutral-n2 from "palette";
-
 .ui-textarea textarea {
-  border: 1px solid border-default;
+  border: 1px solid var(--ea-colour-border-default);
   border-radius: 3px;
-  color: text-default;
-  font-family: ui;
+  color: var(--ea-colour-text-default);
+  font-family: var(--ea-typography-ui);
   font-size: 12px;
   font-weight: 400;
   height: scale(32);
@@ -16,16 +12,16 @@
 }
 
 .ui-textarea textarea:focus {
-  border-color: blue-base;
-  box-shadow: 0 0 0 3px blue-b4a;
+  border-color: var(--ea-colour-blue-base);
+  box-shadow: 0 0 0 3px var(--ea-colour-blue-b4a);
   outline: 0;
 }
 
 .ui-textarea.has-error textarea {
-  border-color: border-error;
+  border-color: var(--ea-colour-border-error);
 }
 
 .ui-textarea textarea:disabled {
-  background: neutral-n2;
+  background: var(--ea-colour-neutral-n2);
   cursor: not-allowed;
 }

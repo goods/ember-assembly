@@ -1,9 +1,7 @@
-@value blue-b3 from "palette";
-
 .table {
   border-spacing: 0;
-  border-left: 1px solid blue-b3;
-  border-right: 1px solid blue-b3;
+  border-left: 1px solid var(--ea-colour-blue-b3);
+  border-right: 1px solid var(--ea-colour-blue-b3);
   width: 100%;
 }
 
