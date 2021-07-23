@@ -5,7 +5,7 @@
       
       {{#if (and (is-empty this.selected) (is-empty this.rangeStart))}}
         <div local-class="no-dates">
-          Select dates
+          {{this.placeholder}}
         </div>
       {{else if (eq this.mode "single")}}
         <div local-class="single-date">
