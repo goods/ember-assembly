@@ -18,6 +18,7 @@ export default class UiDatepicker extends Component {
   center?: Moment | undefined = undefined;
   rangeStart?: Moment | undefined = undefined;
   rangeFinish?: Moment | undefined = undefined;
+  placeholder: string = "Select dates";
 
   onChangeSelection?: Function | null = null;
   onChangeRange?: Function | null = null;
