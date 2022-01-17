@@ -5,7 +5,7 @@ import { localClassNames } from "ember-css-modules";
 import { computed } from "@ember/object";
 import { htmlSafe } from "@ember/string";
 import { SafeString } from "handlebars";
-import { attribute } from "@ember-decorators/component";
+import { attribute, classNames } from "@ember-decorators/component";
 
 // <UiSelect @onChange={{action (mut value)}} @value={{value}} as |Select|>
 //   <Select.Option @value="option-1">Option 1</Select.Option>
@@ -13,6 +13,7 @@ import { attribute } from "@ember-decorators/component";
 //   <Select.Option @value="option-3">Option 3</Select.Option>
 // </UiSelect>
 
+@classNames("ui-select")
 @localClassNames("ui-select")
 export default class UiSelect extends Component {
   layout = template;
