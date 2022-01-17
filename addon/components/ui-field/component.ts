@@ -20,9 +20,10 @@ export default class UiField extends Component {
     if (isNone(this.validationMessages)) {
       return null;
     }
-    if (Array.isArray(this.validationMessages) == false) {
+    if (!Array.isArray(this.validationMessages)) {
       return [this.validationMessages];
     }
+
     return this.validationMessages;
   }
 
