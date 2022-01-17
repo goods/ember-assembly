@@ -1,7 +1,9 @@
 <div local-class="descriptors" class="ui-field-descriptors">
-  <label local-class="label" for={{this.inputId}}>
-    {{@label}}
-  </label>
+  {{#if this.label}}
+    <label local-class="label" for={{this.inputId}}>
+      {{@label}}
+    </label>
+  {{/if}}
   {{#if this.description}}
     <div local-class="description">
       {{this.description}}
@@ -12,9 +14,9 @@
 <div local-class="controls" class="ui-field-controls">
   {{yield (hash inputId=this.inputId)}}
 
-  {{#if @validationMessages}}
+  {{#if this.errors}}
     <div local-class="validation-messages" class="ui-field-validation-messages">
-      {{#each @validationMessages as |message|}}
+      {{#each this.errors as |message|}}
         <div local-class="validation-message"  class="ui-field-validation-message">
           {{svg-jar "exclamation-point-2" local-class="validation-icon" height="14px" width="14px"}}
           {{message}}
