@@ -1,7 +1,7 @@
 <UiPopover disabled={{this.isDisabled}} @renderInPlace={{true}} as |Popover|>
   <Popover.Trigger local-class="ui-select-trigger" class="ui-select-trigger">
     {{#if this.triggerComponent}}
-      {{component this.triggerComponent value=this.value placeholder=this.placeholder isDisabled=this.isDisabled isOpen=Popover.isOpen}}
+      {{component this.triggerComponent value=this.value placeholder=this.placeholder isDisabled=this.isDisabled isOpen=Popover.isOpen labelPath=this.labelPath}}
     {{else}}
       <UiButton type="button" disabled={{this.isDisabled}}>
         {{#if this.triggerIcon}}
