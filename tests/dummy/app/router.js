@@ -6,9 +6,4 @@ export default class Router extends EmberRouter {
   rootURL = config.rootURL;
 }
 
-Router.map(function() {
-  docsRoute(this, function() {
-    /* Your docs routes go here */
-    this.route("404", { path: "/*path" });
-  });
-});
+Router.map(function () {});
