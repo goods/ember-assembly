@@ -8,9 +8,14 @@
 
 ## Linting
 
+<<<<<<< HEAD
 * `npm run lint:hbs`
 * `npm run lint:js`
 * `npm run lint:js -- --fix`
+=======
+* `yarn lint`
+* `yarn lint:fix`
+>>>>>>> ed7de1a (v3.22.0...v3.28.5)
 
 ## Running tests
 
