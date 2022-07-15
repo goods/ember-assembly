@@ -12,6 +12,10 @@
   margin: 0;
 }
 
+.ui-tag:disabled {
+  cursor: default;
+}
+
 .ui-tag:focus {
   box-shadow: 0 0 0 3px var(--ea-colour-blue-b4a);
   outline: none;
