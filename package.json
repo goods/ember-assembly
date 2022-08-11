@@ -104,7 +104,10 @@
     "edition": "octane"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "versionCompatibility": {
+      "ember": ">3.16.0 < 4.0.0"
+    }
   },
   "homepage": "https://goods.github.io/ember-assembly"
 }
