@@ -9,7 +9,7 @@
     {{/if}}
   </Popover.Trigger>
   <Popover.Content class="ui-popover-content ui-popover-animated {{local-class "ui-combobox-content"}}">
-    {{#if hasBlock}}
+    {{#if (has-block)}}
       {{yield 
         (hash
           Option=(component "ui-combobox-option" onSelect=this.onSelect)

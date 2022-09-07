@@ -1,6 +1,6 @@
 
 {{#each this.tags as |tag|}}
-  <button local-class="tag" onclick={{action this.onRemove tag}}>
+  <button local-class="tag" onclick={{action this.onRemove tag}} type="button">
     {{tag}} {{svg-jar "x-1"}}
   </button>
 {{/each}}
