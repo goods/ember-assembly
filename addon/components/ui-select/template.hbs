@@ -20,7 +20,7 @@
     {{/if}}
   </Popover.Trigger>
   <Popover.Content class="ui-popover-content ui-popover-animated ui-select-content {{local-class "ui-select-content"}} {{this.contentClass}}">
-    {{#if hasBlock}}
+    {{#if (has-block)}}
       {{yield 
         (hash
           Option=(component "ui-select-option" onChange=this.onChange onClose=Popover.actions.close)
