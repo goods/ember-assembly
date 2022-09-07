@@ -1,6 +1,6 @@
 {{#if this.optionComponent}}
   {{component this.optionComponent value=option}}
-{{else if hasBlock}}
+{{else if (has-block)}}
   {{yield}}
 {{else if this.label}}
   {{this.label}}

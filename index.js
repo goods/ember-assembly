@@ -1,17 +1,17 @@
-"use strict";
+'use strict';
 
 let layout = {};
-layout["base-scale"] = 5; // Base scale in px
+layout['base-scale'] = 5; // Base scale in px
 
 module.exports = {
-  name: require("./package").name,
+  name: require('./package').name,
 
   isDevelopingAddon() {
     return true;
   },
 
   included() {
-    let config = this.project.config()["ember-assembly"] || { styles: {} };
+    let config = this.project.config()['ember-assembly'] || { styles: {} };
 
     let virtualModules = {
       layout: Object.assign({}, layout, config.styles.layout),
@@ -21,10 +21,10 @@ module.exports = {
       cssModules: {
         virtualModules,
         plugins: [
-          require("postcss-functions")({
+          require('postcss-functions')({
             functions: {
               scale: function (value) {
-                return value * virtualModules["layout"]["base-scale"] + "px";
+                return value * virtualModules['layout']['base-scale'] + 'px';
               },
             },
           }),
