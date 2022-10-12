@@ -3,9 +3,11 @@
   style={{this.style}}
   disabled={{this.disabled}}
   type={{this.type}}
+  {{on "click" this.onClick}}
+  ...attributes
 >
   {{#if this.isLoading}}
-    <UiSpinner local-class="spinner" />
+    <Asm::Ui::Spinner local-class="spinner" />
   {{/if}}
   <span local-class="label">
     {{#if this.label}}

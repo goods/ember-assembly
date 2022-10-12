@@ -1,0 +1,58 @@
+@value large-size: 34px;
+@value medium-size: 20px;
+@value small-size: 10px;
+@value ring-width: 3px;
+
+.ui-spinner {
+  display: inline-block;
+  position: relative;
+  width: medium-size;
+  height: medium-size;
+  margin-top: -1px;
+}
+
+.ui-spinner.size-small,
+.ui-spinner.size-small .inner {
+  width: small-size;
+  height: small-size;
+}
+
+.ui-spinner.size-large,
+.ui-spinner.size-large .inner {
+  width: large-size;
+  height: large-size;
+}
+
+.ui-spinner.appearance-strong .inner {
+  border-color: var(--ea-colour-blue-base) transparent transparent transparent;
+}
+
+.ui-spinner .inner {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: medium-size;
+  height: medium-size;
+  border: ring-width solid var(--ea-colour-neutral-n5);
+  border-radius: 50%;
+  animation: ui-spinner-animation 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: var(--ea-colour-neutral-n5) transparent transparent transparent;
+}
+.ui-spinner .inner:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.ui-spinner .inner:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.ui-spinner .inner:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes ui-spinner-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
