@@ -7,7 +7,7 @@ import { SafeString } from 'handlebars';
 export type Appearance = 'default' | 'strong' | 'minimal';
 export type Intent = 'none' | 'success' | 'warning' | 'danger';
 export type Size = 'default' | 'small' | 'large';
-type OnClickFn = () => {};
+type OnClickFn = (event: PointerEvent) => {};
 
 interface AsmUiButtonArgs {
   onClick?: OnClickFn | null;
@@ -79,9 +79,9 @@ export default class AsmUiButton extends Component<AsmUiButtonArgs> {
   }
 
   @action
-  onClick() {
+  onClick(event: PointerEvent) {
     if (this.disabled === false && !isNone(this.args.onClick)) {
-      this.args.onClick();
+      this.args.onClick(event);
     }
   }
 }

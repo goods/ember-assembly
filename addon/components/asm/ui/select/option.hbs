@@ -1,0 +1,20 @@
+<button 
+  local-class="ui-select-option" 
+  class="ui-select-option" 
+  type="button" 
+  data-value={{@value}}
+  {{on "click" this.onClick}}
+  ...attributes
+>
+  {{#if @optionComponent}}
+    {{component @optionComponent value=@option}}
+  {{else if (has-block)}}
+    {{yield}}
+  {{else if @label}}
+    {{@label}}
+  {{else if @labelPath}}
+    {{get @value @labelPath}}
+  {{else}}
+    {{@value}}
+  {{/if}}
+</button>

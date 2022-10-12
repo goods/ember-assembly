@@ -1,0 +1,22 @@
+<div local-class="ui-search-input" ...attributes>
+  <div local-class="search-icon">
+    {{svg-jar "search"}}
+  </div>
+
+  <Input
+    id={{@inputId}}
+    @value={{@value}}
+    required={{@required}}
+    type={{@type}}
+    placeholder={{@placeholder}}
+    disabled={{this.isDisabled}}
+    {{on "input" this.onInput}}
+  />
+
+  {{#if this.isSearching}}
+    <UiSpinner 
+      local-class="spinner"
+      @appearance="strong"
+    />
+  {{/if}}
+</div>

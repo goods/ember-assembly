@@ -1,0 +1,56 @@
+<div local-class="ui-select" data-content-class={{this.contentClass}} ...attributes>
+  <Asm::Ui::Popover disabled={{this.isDisabled}} @renderInPlace={{true}} as |Popover|>
+    <Popover.Trigger local-class="ui-select-trigger" class="ui-select-trigger">
+      {{#if this.triggerComponent}}
+        {{component this.triggerComponent value=this.value placeholder=this.placeholder isDisabled=this.isDisabled isOpen=Popover.isOpen labelPath=this.labelPath}}
+      {{else}}
+        <Asm::Ui::Button type="button" disabled={{this.isDisabled}}>
+          {{#if this.triggerIcon}}
+            {{svg-jar this.triggerIcon local-class="trigger-icon" class="ui-select-trigger-icon"}}
+          {{/if}}
+          {{#if this.value}}
+            {{#if this.labelPath}}
+              {{get this.value this.labelPath}}
+            {{else}}
+              {{this.value}}
+            {{/if}}
+          {{else}}
+            {{this.placeholder}}
+          {{/if}}
+        </Asm::Ui::Button>
+      {{/if}}
+    </Popover.Trigger>
+    <Popover.Content class="ui-popover-content ui-popover-animated ui-select-content {{local-class "ui-select-content"}} {{this.contentClass}}">
+      {{#if (has-block)}}
+        {{yield 
+          (hash
+            Option=(component "ui-select-option" onChange=this.onChange onClose=Popover.actions.close)
+          )
+        }}
+      {{else}}
+          {{#if this.isLoading}}
+            <UiSpinner />
+          {{else}}
+            {{#if this.acceptsNull}}
+              <Asm::Ui::Select::Option 
+                @value={{null}}
+                @label={{this.placeholder}}
+                @optionComponent={{this.optionComponent}}
+                @onChange={{this.onChange}} 
+                @onClose={{Popover.actions.close}}
+              />
+            {{/if}}
+            {{#each this.options as |option|}}
+              <Asm::Ui::Select::Option 
+                @value={{option}}
+                @labelPath={{this.labelPath}}
+                @optionComponent={{this.optionComponent}}
+                @onChange={{this.onChange}} 
+                @onClose={{Popover.actions.close}}
+              />
+            {{/each}}
+          {{/if}}
+      {{/if}}
+    </Popover.Content>
+  </Asm::Ui::Popover>
+</div>

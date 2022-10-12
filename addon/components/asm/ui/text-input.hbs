@@ -1,0 +1,14 @@
+<Input
+  local-class="ui-text-input {{if this.hasError "has-error"}} {{if (not (is-empty this.width)) "has-width"}}"
+  style={{this.style}}
+  id={{@inputId}}
+  value={{@value}}
+  required={{@required}}
+  type={{@type}}
+  placeholder={{@placeholder}}
+  disabled={{this.isDisabled}}
+  max={{this.max}}
+  min={{this.min}}
+  {{on "input" this.onUpdate}}
+/>
+  {{!-- {{on "focus-out" this.didFocusOut}} --}}

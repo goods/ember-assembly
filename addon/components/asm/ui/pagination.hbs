@@ -1,0 +1,25 @@
+<div local-class="ui-pagination" ...attributes>
+  <Asm::Ui::Button 
+    local-class="prev-btn"
+    @isDisabled={{not this.showPrevious}}
+    @onClick={{this.onPrevious}}
+  >
+    {{svg-jar "arrow-left-1"}}
+  </Asm::Ui::Button>
+
+  <Asm::Ui::Select
+    local-class="current-page"
+    @labelPath="label"
+    @options={{this.paginationOptions}}
+    @onChange={{this.onSetPage}}
+    @value={{this.currentPagination}}
+  />
+
+  <Asm::Ui::Button 
+    local-class="next-btn"
+    @isDisabled={{not this.showNext}}
+    @onClick={{this.onNext}}
+  >
+    {{svg-jar "arrow-right-1"}}
+  </Asm::Ui::Button>
+</div>
