@@ -1,0 +1,9 @@
+<Textarea 
+  local-class="textarea"
+  id={{@inputId}}
+  value={{@value}}
+  required={{@required}}
+  placeholder={{@placeholder}}
+  disabled={{this.isDisabled}}
+  {{on "input" this.onUpdate}}
+/>
