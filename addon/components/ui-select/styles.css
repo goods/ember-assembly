@@ -13,10 +13,10 @@
 }
 
 .trigger-icon {
-  width: calc(scale(2) + 2px);
-  height: calc(scale(2) + 2px);
+  width: 16px;
+  height: 16px;
   margin-right: scale(2);
   position: relative;
-  fill: var(--ea-colour-neutral-n10);
+  stroke: var(--ea-colour-neutral-n10);
   top: -1px;
 }
