@@ -1,17 +1,32 @@
+:root {
+  --ea-text-input--box-shadow: none;
+  --ea-text-input--border-color: var(--ea-colour-border-default);
+  --ea-text-input--border-radius: 3px;
+  --ea-text-input--color: var(--ea-colour-text-default);
+  --ea-text-input--focus--border-color: var(--ea-colour-blue-base);
+  --ea-text-input--focus--box-shadow: 0 0 0 3px var(--ea-colour-blue-b4a);
+  --ea-text-input--font-family: var(--ea-typography-ui);
+  --ea-text-input--height: scale(7);
+  --ea-text-input--line-height: scale(4);
+  --ea-text-input--padding: 0 scale(2);
+}
+
 .ui-text-input {
-  border: 1px solid var(--ea-colour-border-default);
-  border-radius: 3px;
-  color: var(--ea-colour-text-default);
-  font-family: var(--ea-typography-ui);
+  border: 1px solid var(--ea-text-input--border-color);
+  border-radius: var(--ea-text-input--border-radius);
+  box-shadow: var(--ea-text-input--box-shadow);
+  color: var(--ea-text-input--color);
+  font-family: var(--ea-text-input--font-family);
   font-size: 13px;
   font-weight: 400;
-  height: scale(7);
-  padding: 0 scale(2);
+  line-height: var(--ea-text-input--line-height);
+  height: var(--ea-text-input--height);
+  padding: var(--ea-text-input--padding);
 }
 
 .ui-text-input:focus {
-  border-color: var(--ea-colour-blue-base);
-  box-shadow: 0 0 0 3px var(--ea-colour-blue-b4a);
+  border-color: var(--ea-text-input--focus--border-color);
+  box-shadow: var(--ea-text-input--focus--box-shadow);
   outline: 0;
 }
 

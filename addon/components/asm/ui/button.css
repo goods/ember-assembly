@@ -6,6 +6,9 @@
   --ea-button--strong--bg-color: var(--ea-colour-intent-none);
   --ea-button--strong--color: var(--ea-colour-neutral-n0);
   --ea-button--strong--bg-color--active: var(--ea-colour-blue-dark);
+  --ea-button--size-large--font-size: 14px;
+  --ea-button--size-large--line-height: 37px;
+  --ea-button--size-large--padding: 0 15px;
 }
 
 .ui-button {
@@ -78,8 +81,9 @@
 
 /* Size */
 .ui-button.size-large {
-  font-size: 14px;
-  line-height: 37px;
+  font-size: var(--ea-button--size-large--font-size);
+  line-height: var(--ea-button--size-large--line-height);
+  padding: var(--ea-button--size-large--padding);
 }
 
 .ui-button.size-small {
