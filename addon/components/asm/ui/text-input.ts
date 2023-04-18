@@ -1,4 +1,5 @@
 import Component from '@glimmer/component';
+/* @ts-ignore */
 import { htmlSafe } from '@ember/string';
 import { action } from '@ember/object';
 import { isNone } from '@ember/utils';

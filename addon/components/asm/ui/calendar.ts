@@ -185,6 +185,7 @@ export default class AsmUiCalendar extends Component<AsmUiCalendarArgs> {
     while (days[i]) {
       let daysOfWeek = days.slice(i, i + 7);
       weeks.push({
+        /* @ts-ignore */
         id: `week-of-${daysOfWeek[0].id}`,
         days: daysOfWeek,
         missingDays: 7 - daysOfWeek.length,
@@ -205,6 +206,7 @@ export default class AsmUiCalendar extends Component<AsmUiCalendarArgs> {
     if (!isNone(this.args.onChangeCenter)) {
       this.args.onChangeCenter(center);
     } else {
+      //@ts-ignore
       set(this, 'center', center);
     }
   }
@@ -219,6 +221,7 @@ export default class AsmUiCalendar extends Component<AsmUiCalendarArgs> {
         this.args.onChangeSelection(selected);
       }
     } else if (this.mode == 'multiple') {
+      //@ts-ignore
       selected = this.map((date) => date.clone());
       if (day.isSelected) {
         let date = selected.find((date) => date.format() == day.date.format());
@@ -249,6 +252,7 @@ export default class AsmUiCalendar extends Component<AsmUiCalendarArgs> {
         }
 
         if (!isNone(this.args.onChangeRange)) {
+          //@ts-ignore
           this.args.onChangeRange(this.localRangeStart, this.localRangeFinish);
         }
       }

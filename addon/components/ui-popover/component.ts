@@ -1,5 +1,6 @@
 //ts-ignore see: https://github.com/cibernox/ember-basic-dropdown/issues/542
 
+//@ts-ignore
 import BasicDropdown from 'ember-basic-dropdown/components/basic-dropdown';
 //@ts-ignore
 import { setComponentTemplate } from '@ember/component';

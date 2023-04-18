@@ -1,4 +1,5 @@
 import Component from '@glimmer/component';
+/* @ts-ignore */
 import { htmlSafe } from '@ember/string';
 import { SafeString } from 'handlebars';
 import { action } from '@ember/object';
@@ -71,6 +72,7 @@ export default class AsmUiSelect extends Component<AsmUiSelectArgs> {
   }
 
   get contentClass(): SafeString {
+    //@ts-ignore
     return htmlSafe(`ui-select-content-${this.elementId}`);
   }
 
