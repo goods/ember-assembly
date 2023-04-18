@@ -86,6 +86,7 @@
   --ea-colour-border-muted: var(--ea-colour-neutral-n3);
   --ea-colour-border-default: var(--ea-colour-neutral-light);
   --ea-colour-border-error: var(--ea-colour-red-base);
+  --ea-colour-border-highlight: var(--ea-colour-blue-base);
 
   --ea-colour-text-muted: var(--ea-colour-neutral-n8);
   --ea-colour-text-default: var(--ea-colour-neutral-base);
@@ -93,6 +94,8 @@
   --ea-colour-text-danger: var(--ea-colour-red-dark);
 
   --ea-colour-icon-danger: var(--ea-colour-red-base);
+
+  --ea-colour-link: var(--ea-colour-blue-base);
 
   /* Intents */
   --ea-colour-intent-none: var(--ea-colour-blue-base);
