@@ -1,9 +1,8 @@
 @value timing-function: cubic-bezier(0, 0, 0.25, 0.99);
 
 :root {
+  --ea-focus-shadow-colour: var(--ea-colour-blue-b4a);
   --ea-button--font-weight: 500;
-  --ea-button--focus-shadow-colour: var(--ea-colour-blue-b4a);
-  --ea-button--strong--bg-color: var(--ea-colour-intent-none);
   --ea-button--strong--color: var(--ea-colour-neutral-n0);
   --ea-button--strong--bg-color--active: var(--ea-colour-blue-dark);
   --ea-button--size-large--font-size: 14px;
@@ -36,7 +35,7 @@
 
 .ui-button.appearance-minimal:focus,
 .ui-button:focus {
-  box-shadow: 0 0 0 3px var(--ea-button--focus-shadow-colour);
+  box-shadow: 0 0 0 3px var(--ea-focus-shadow-colour);
   outline: none;
   z-index: 1;
 }
@@ -150,7 +149,7 @@
   border-color: var(--ea-button--strong--bg-color);
   color: var(--ea-button--strong--color);
 }
-.ui-button.appearance-strong.intent-none:active {
+.ui-button.appearance-strong.intent-none:active:enabled {
   background: var(--ea-button--strong--bg-color--active);
   border-color: var(--ea-button--strong--bg-color--active);
 }
