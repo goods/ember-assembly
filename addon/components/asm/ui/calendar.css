@@ -1,0 +1,115 @@
+:root {
+  --ea-calendar--link--colour: var(--ea-colour-link);
+}
+
+.nav {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-title {
+  line-height: scale(5);
+  font-weight: 500;
+}
+
+.nav-control {
+  background: 0;
+  border: 0;
+  box-shadow: none;
+  line-height: 1;
+  position: relative;
+}
+
+.nav-control:active {
+  fill: var(--ea-calendar--link--colour);
+  outline: none;
+  top: 1px;
+}
+
+.nav-control:focus {
+  outline: none;
+  transform: none;
+}
+
+.nav-control:hover {
+  fill: var(--ea-calendar--link--colour);
+}
+
+.weekdays {
+  display: flex;
+  height: scale(8);
+  justify-content: space-between;
+}
+
+.weekday {
+  flex: 1;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.weeks {
+  position: relative;
+}
+
+.is-loading {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.week {
+  display: flex;
+  height: auto;
+}
+
+.day {
+  background: transparent;
+  border: 1px solid var(--ea-colour-neutral-n3);
+  flex: 1 1 scale(8);
+  font-weight: 400;
+  font-size: 12px;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  max-width: inherit;
+  max-height: scale(8);
+  width: scale(8);
+  height: scale(8);
+}
+
+.day.is-previous-month,
+.day.is-next-month {
+  color: var(--ea-colour-neutral-n6);
+}
+
+.day:not([disabled]):hover {
+  background: var(--ea-colour-blue-dark);
+  border-color: var(--ea-colour-blue-dark);
+  color: var(--ea-colour-neutral-n0);
+}
+
+.day:focus {
+  outline: none;
+}
+
+.day.is-selected {
+  background: var(--ea-colour-blue-base);
+  border-color: var(--ea-colour-blue-base);
+  color: var(--ea-colour-neutral-n0);
+}
+
+.day.is-selected.is-range-start,
+.day.is-selected.is-range-finish {
+  background: var(--ea-colour-blue-dark);
+  border-color: var(--ea-colour-blue-dark);
+  color: var(--ea-colour-neutral-n0);
+}
