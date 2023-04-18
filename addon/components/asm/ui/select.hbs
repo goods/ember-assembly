@@ -24,7 +24,7 @@
       {{#if (has-block)}}
         {{yield 
           (hash
-            Option=(component "ui-select-option" onChange=this.onChange onClose=Popover.actions.close)
+            Option=(component "asm/ui/select/option" onChange=this.onChange onClose=Popover.actions.close)
           )
         }}
       {{else}}
