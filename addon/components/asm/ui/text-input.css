@@ -3,8 +3,8 @@
   --ea-text-input--border-color: var(--ea-colour-border-default);
   --ea-text-input--border-radius: 3px;
   --ea-text-input--color: var(--ea-colour-text-default);
-  --ea-text-input--focus--border-color: var(--ea-colour-blue-base);
-  --ea-text-input--focus--box-shadow: 0 0 0 3px var(--ea-colour-blue-b4a);
+  --ea-text-input--focus--border-color: var(--ea-colour-border-highlight);
+  --ea-text-input--focus--box-shadow: 0 0 0 3px var(--ea-focus-shadow-colour);
   --ea-text-input--font-family: var(--ea-typography-ui);
   --ea-text-input--height: scale(7);
   --ea-text-input--line-height: scale(4);
