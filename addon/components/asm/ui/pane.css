@@ -1,0 +1,12 @@
+
+
+:root {
+  --ea-pane--bg-colour: var(--ea-colour-neutral-n0);
+  --ea-pane--border-radius: 5px;
+}
+
+.pane {
+  background: var(--ea-pane--bg-colour);
+  border-radius: var(--ea-pane--border-radius);
+  padding: scale(2);
+}
