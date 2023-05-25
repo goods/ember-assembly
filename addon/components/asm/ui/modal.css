@@ -1,0 +1,52 @@
+
+.wrapper .overlay {
+  z-index: 2000;
+}
+
+.wrapper .container {
+  border-radius: scale(2);
+  padding: 0;
+}
+
+.wrapper .header {
+  align-items: center;
+  background: var(--ea-colour-modal-background);
+  border-radius: scale(2) scale(2) 0 0;
+  border-bottom: 1px solid var(--ea-colour-border-muted);
+  display: flex;
+  padding: scale(3);
+  flex: 0 0 auto;
+}
+
+.wrapper .header-title {
+  flex: 1 1 auto;
+  font-weight: 500;
+}
+
+.wrapper .header-actions {
+  flex: 0 0 auto;
+}
+
+.wrapper .body {
+  flex: 1 1 auto;
+  overflow: auto;
+  padding: scale(3);
+}
+
+.footer {
+  border-top: 1px solid var(--ea-colour-border-muted);
+  display: flex;
+  padding: scale(3);
+}
+
+.footer-actions {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  gap: scale(1);
+} 
+
+.footer-actions > button {
+  flex: 1;
+}

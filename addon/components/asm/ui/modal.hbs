@@ -1,0 +1,41 @@
+<ModalDialog
+  local-class="ui-modal"
+  @containerClass="{{local-class "container"}} {{@containerClass}}"
+  @wrapperClass="{{local-class "wrapper"}} {{@wrapperClass}}"
+  @overlayClass="{{local-class "overlay"}} {{@overlayClass}}"
+  @translucentOverlay={{true}}
+  ...attributes
+>
+
+  {{#if (or (has-block "header-title") (has-block "header-actions"))}}
+    <header local-class="header" class="asm--ui-modal--header">
+      <div local-class="header-title" class="asm--ui-modal--header-title">
+        {{yield to="header-title"}}
+      </div>
+      <div local-class="header-actions" class="asm--ui-modal--actions">
+        {{yield to="header-actions"}}
+      </div>
+    </header>
+  {{/if}}
+
+  <div local-class="body" class="asm--ui-modal--body">
+    {{yield to="body"}}
+  </div>
+
+  {{#if (or (has-block "footer") (has-block "footer-actions"))}}
+    <div local-class="footer" class="asm--ui-modal--footer">
+
+      {{#if (has-block "footer")}}
+        {{yield to="footer"}}
+      {{/if}}
+
+      {{#if (has-block "footer-actions")}}
+        <div local-class="footer-actions">
+          {{yield to="footer-actions"}}
+        </div>
+      {{/if}}
+    </div>
+  {{/if}}
+    
+  
+</ModalDialog>

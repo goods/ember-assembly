@@ -97,6 +97,10 @@
 
   --ea-colour-link: var(--ea-colour-blue-base);
 
+  /* Modals */
+  --ea-colour-modal-container-background: var(--ea-colour-black-b6a);
+  --ea-colour-modal-background: var(--ea-colour-neutral-n0);
+
   /* Intents */
   --ea-colour-intent-none: var(--ea-colour-blue-base);
   --ea-colour-intent-success: var(--ea-colour-green-base);
