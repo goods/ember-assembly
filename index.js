@@ -6,6 +6,17 @@ layout['base-scale'] = 5; // Base scale in px
 module.exports = {
   name: require('./package').name,
 
+  config(environment, appConfig) {
+    let initialConfig = _.merge({}, appConfig);
+    let updatedConfig = this.addons.reduce((config, addon) => {
+      if (addon.config) {
+        _.merge(config, addon.config(environment, config));
+      }
+      return config;
+    }, initialConfig);
+    return updatedConfig;
+  },
+
   isDevelopingAddon() {
     return true;
   },
