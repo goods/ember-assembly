@@ -1,6 +1,6 @@
 import Component from '@glimmer/component';
 import moment, { Moment } from 'moment';
-import { action } from '@ember/object';
+import { action, set } from '@ember/object';
 import { isNone, isEmpty } from '@ember/utils';
 import { tracked } from '@glimmer/tracking';
 
@@ -12,6 +12,7 @@ interface AsmUiCalendarArgs {
   mode?: CalendarMode;
   center?: Moment;
   daysMetadata?: DayMetadata[];
+  datePath?: string;
   rangeStart?: Moment | undefined;
   rangeFinish?: Moment | undefined;
   onChangeSelection?: (selection: Moment[]) => void;
@@ -70,6 +71,13 @@ export default class AsmUiCalendar extends Component<AsmUiCalendarArgs> {
   /**
    *
    */
+  get datePath(): string {
+    return this.args.datePath ?? 'date';
+  }
+
+  /**
+   *
+   */
   get isLoading(): boolean {
     return this.args.isLoading ?? false;
   }
@@ -111,7 +119,7 @@ export default class AsmUiCalendar extends Component<AsmUiCalendarArgs> {
     );
 
     let dayMetadataIndex = this.daysMetadata.map((dayMetadata: any) => {
-      let id = dayMetadata.date.format('YYYY-MM-DD');
+      let id = moment(dayMetadata[this.datePath]).format('YYYY-MM-DD');
       return {
         id,
         dayMetadata,
