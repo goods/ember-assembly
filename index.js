@@ -7,10 +7,10 @@ module.exports = {
   name: require('./package').name,
 
   config(environment, appConfig) {
-    let initialConfig = _.merge({}, appConfig);
+    let initialConfig = Object.assign({}, appConfig);
     let updatedConfig = this.addons.reduce((config, addon) => {
       if (addon.config) {
-        _.merge(config, addon.config(environment, config));
+        Object.assign(config, addon.config(environment, config));
       }
       return config;
     }, initialConfig);
