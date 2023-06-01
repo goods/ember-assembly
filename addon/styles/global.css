@@ -4,5 +4,6 @@
 :root {
   --ea-global-border-radius: 3px;
 
-  
+  /* Inputs */
+  --ea--input--box-shadow: rgb(0 0 0 / 4%) 0px 2px 5px;
 }
