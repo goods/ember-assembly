@@ -1,0 +1,9 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: scale(1);
+}
+
+.label {
+  display: block;
+}

@@ -1,0 +1,11 @@
+<Asm::Form::Field
+  @label={{@label}}
+>
+  <Input 
+    local-class="input"
+    @type={{this.type}}
+    @value={{@value}}
+    {{on "input" this.onUpdate}}
+    ...attributes
+  />
+</Asm::Form::Field>

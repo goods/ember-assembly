@@ -1,0 +1,16 @@
+.input {
+  border: 1px solid var(--ea-colour-border-default);
+  border-radius: scale(0.5);
+  box-sizing: border-box;
+  color: var(--ea-colour-text-default);
+  font-family: var(--ea-typography-ui);
+  font-size: var(--font-size--body);
+  height: scale(7);
+  padding: 0 scale(2);
+}
+
+.input:focus {
+  border-color: var(--ea-colour-blue-base);
+  box-shadow: 0 0 0 3px var(--ea-colour-blue-b4a);
+  outline: none;
+}

@@ -1,0 +1,11 @@
+<div local-class="field" ...attributes>
+  {{#if @label}}
+    <Asm::Form::Label 
+      local-class="label"
+    >
+      {{@label}}
+    </Asm::Form::Label>
+  {{/if}}
+  
+  {{yield}}
+</div>

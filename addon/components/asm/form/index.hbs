@@ -1,0 +1,8 @@
+<form local-class="form" {{on "submit" @onSubmit}}...attributes>
+  {{yield (hash 
+    Input=(component "asm/form/input")
+    Field=(component "asm/form/field")
+    Label=(component "asm/form/label")
+    Actions=(component "asm/form/actions")
+  )}}
+</form>
