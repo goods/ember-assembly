@@ -2,9 +2,9 @@
   local-class="ui-text-input {{if this.hasError "has-error"}} {{if (not (is-empty this.width)) "has-width"}}"
   style={{this.style}}
   id={{@inputId}}
-  value={{@value}}
+  @value={{@value}}
   required={{@required}}
-  type={{@type}}
+  @type={{@type}}
   placeholder={{@placeholder}}
   disabled={{this.isDisabled}}
   max={{this.max}}
