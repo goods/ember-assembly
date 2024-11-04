@@ -2,7 +2,7 @@ import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { isNone } from '@ember/utils';
 /* @ts-ignore */
-import { htmlSafe } from '@ember/string';
+import { htmlSafe } from '@ember/template';
 import { SafeString } from 'handlebars';
 
 export type Appearance = 'default' | 'strong' | 'minimal';

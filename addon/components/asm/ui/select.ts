@@ -1,6 +1,6 @@
 import Component from '@glimmer/component';
 /* @ts-ignore */
-import { htmlSafe } from '@ember/string';
+import { htmlSafe } from '@ember/template';
 import { SafeString } from 'handlebars';
 import { action } from '@ember/object';
 import { isNone } from '@ember/utils';
