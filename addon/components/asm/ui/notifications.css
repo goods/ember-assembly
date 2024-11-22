@@ -1,0 +1,10 @@
+.ui-notifications {
+  max-width: 560px;
+  top: 40px;
+  left: 0px;
+  right: 0px;
+  position: fixed;
+  z-index: 1000;
+  margin: 0px auto;
+  padding: 0 scale(2);
+}

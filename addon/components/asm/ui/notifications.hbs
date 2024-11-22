@@ -1,0 +1,13 @@
+<div local-class="ui-notifications">
+  {{#animated-each (reverse this.notifications)
+    key='id'
+    use=this.transition
+    duration=300
+    as |notification|
+  }}
+    <Asm::Ui::Notification
+      @notification={{notification}}
+      @onDismiss={{fn this.onDestroyNotification notification}}
+    />
+  {{/animated-each}}
+</div>

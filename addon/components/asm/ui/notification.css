@@ -1,0 +1,103 @@
+.ui-notification {
+  background: var(--ea-colour-neutral-n0);
+  border-radius: 3px;
+  box-shadow: rgba(67, 90, 111, 0.3) 0px 0px 1px,
+    rgba(67, 90, 111, 0.47) 0px 8px 10px -4px;
+  margin-top: scale(2);
+  border-left: 3px solid var(--ea-colour-blue-base);
+}
+
+.notification {
+  align-items: center;
+  display: flex;
+  padding: scale(3);
+}
+
+.has-description .notification {
+  align-items: inherit;
+}
+
+.body {
+  display: flex;
+}
+
+.icon,
+.dismiss {
+  flex: 0 0 auto;
+}
+
+.icon {
+  display: flex;
+  fill: var(--ea-colour-blue-base);
+  margin-right: scale(3);
+}
+
+.dismiss {
+  margin-left: scale(2);
+}
+
+.info-icon {
+  width: scale(3);
+  height: scale(3);
+}
+
+.message {
+  flex: 1;
+}
+
+.message .title {
+  font-weight: 500;
+  line-height: scale(3);
+}
+
+.message .description {
+  margin-top: scale(1);
+}
+
+.dismiss-btn {
+  padding: 0;
+}
+
+.notification :global(.ui-button).dismiss-btn:hover {
+  background: 0;
+  border-color: transparent;
+}
+
+.dismiss-icon {
+  transition: fill 150ms ease-in-out;
+  fill: var(--ea-colour-neutral-n7);
+  width: calc(scale(2) + 1.5px);
+  height: calc(scale(2) + 1.5px);
+}
+
+.notification :global(.ui-button).dismiss-btn:hover .dismiss-icon {
+  fill: var(--ea-colour-neutral-n9);
+}
+
+.description strong {
+  font-weight: 500;
+}
+
+.intent-success.ui-notification {
+  border-color: var(--ea-colour-intent-success);
+}
+
+.intent-success .icon {
+  fill: var(--ea-colour-intent-success);
+}
+
+.intent-danger.ui-notification {
+  border-color: var(--ea-colour-intent-danger);
+}
+
+.intent-danger .icon {
+  fill: var(--ea-colour-intent-danger);
+}
+
+.intent-warning.ui-notification {
+  border-color: var(--ea-colour-intent-warning);
+}
+
+.intent-warning .icon {
+  fill: var(--ea-colour-intent-warning);
+}
