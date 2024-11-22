@@ -1,8 +1,8 @@
 <UiPopover local-class="ui-popover" disabled={{this.isDisabled}} @renderInPlace={{true}} as |Popover|>
   <Popover.Trigger local-class="trigger">
-    <UiButton class="ui-datepicker-trigger-button">
+    <Asm::Ui::Button class="ui-datepicker-trigger-button">
       {{svg-jar "calendar-3" local-class="calendar-icon" class="ui-datepicker-calendar-icon" }}
-      
+
       {{#if (and (is-empty this.selected) (is-empty this.rangeStart))}}
         <div local-class="no-dates">
           {{this.placeholder}}
@@ -27,7 +27,7 @@
         </div>
       {{else if (eq this.mode "range")}}
         <div local-class="multiple-dates">
-          
+
           {{#if (is-same this.rangeStart this.rangeFinish)}}
             <div local-class="from">
               {{moment-format this.rangeStart "Do MMMM YYYY"}}
@@ -45,11 +45,11 @@
           {{/if}}
         </div>
       {{/if}}
-    </UiButton>
+    </Asm::Ui::Button>
 
   </Popover.Trigger>
   <Popover.Content class="ui-popover-content ui-popover-animated options">
-    <UiCalendar
+    <Asm::Ui::Calendar
       @mode={{this.mode}}
       @center={{this.center}}
       @selected={{this.selected}}

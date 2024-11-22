@@ -1,12 +1,12 @@
-<UiButton 
+<Asm::Ui::Button
   local-class="prev-btn"
   @isDisabled={{not this.showPrevious}}
   @onClick={{action "onPrevious"}}
 >
   {{svg-jar "arrow-left-1"}}
-</UiButton>
+</Asm::Ui::Button>
 
-<UiSelect
+<Asm::Ui::Select
   local-class="current-page"
   @labelPath="label"
   @options={{this.paginationOptions}}
@@ -14,10 +14,10 @@
   @value={{this.currentPagination}}
 />
 
-<UiButton 
+<Asm::Ui::Button
   local-class="next-btn"
   @isDisabled={{not this.showNext}}
   @onClick={{action "onNext"}}
 >
   {{svg-jar "arrow-right-1"}}
-</UiButton>
+</Asm::Ui::Button>
