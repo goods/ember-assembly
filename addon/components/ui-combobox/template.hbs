@@ -3,14 +3,14 @@
     {{#if this.triggerComponent}}
       {{component this.triggerComponent selected=this.selected isDisabled=this.isDisabled}}
     {{else}}
-      <UiButton disabled={{this.isDisabled}}>
+      <Asm::Ui::Button disabled={{this.isDisabled}}>
         {{this.triggerLabel}}
-      </UiButton>
+      </Asm::Ui::Button>
     {{/if}}
   </Popover.Trigger>
   <Popover.Content class="ui-popover-content ui-popover-animated {{local-class "ui-combobox-content"}}">
     {{#if (has-block)}}
-      {{yield 
+      {{yield
         (hash
           Option=(component "ui-combobox-option" onSelect=this.onSelect)
         )
@@ -21,23 +21,23 @@
           <div local-class="title">
             {{this.title}}
           </div>
-          <UiButton
+          <Asm::Ui::Button
             local-class="close-btn"
             @appearance="minimal"
             @onClick={{action Popover.actions.close}}
           >
             {{svg-jar "x-1"}}
-          </UiButton>
+          </Asm::Ui::Button>
         </div>
       {{/if}}
       {{#if this.hasFilter}}
         <div local-class="filter">
-          <UiSearchInput 
+          <UiSearchInput
             local-class="filter-input"
             @value={{this.filter}}
             @placeholder="Filter..."
             @onSetValue={{action (mut this.filter)}}
-          /> 
+          />
         </div>
       {{/if}}
       {{#if this.isLoading}}
