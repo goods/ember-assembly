@@ -2515,7 +2515,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/types@npm:^7.25.9, @babel/types@npm:^7.26.0, @babel/types@npm:^7.8.3":
+"@babel/types@npm:^7.12.13, @babel/types@npm:^7.25.9, @babel/types@npm:^7.26.0, @babel/types@npm:^7.8.3":
   version: 7.26.0
   resolution: "@babel/types@npm:7.26.0"
   dependencies:
@@ -2867,6 +2867,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@glimmer/interfaces@npm:0.84.3":
+  version: 0.84.3
+  resolution: "@glimmer/interfaces@npm:0.84.3"
+  dependencies:
+    "@simple-dom/interface": "npm:^1.4.0"
+  checksum: 10c0/654dfbcd4a1492745ff872b29b24d6ad261bd22382baa266097f9ea03b2ef4ac6f1c8120a38d0cd8e19f92f75dbd11b0e0de4de71b20ec01de566e6eec5d7bb9
+  languageName: node
+  linkType: hard
+
 "@glimmer/reference@npm:^0.65.0":
   version: 0.65.4
   resolution: "@glimmer/reference@npm:0.65.4"
@@ -2892,7 +2901,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@glimmer/tracking@npm:^1.0.4":
+"@glimmer/syntax@npm:^0.84.3":
+  version: 0.84.3
+  resolution: "@glimmer/syntax@npm:0.84.3"
+  dependencies:
+    "@glimmer/interfaces": "npm:0.84.3"
+    "@glimmer/util": "npm:0.84.3"
+    "@handlebars/parser": "npm:~2.0.0"
+    simple-html-tokenizer: "npm:^0.5.11"
+  checksum: 10c0/7ab226e823e9b90b83ac6a76fa3324823739a667199eda48d3e7661c6fd701b38267d4154657a4310cc655f69ddea3fa01a5bc77f5a5cdced25a100f1bc14976
+  languageName: node
+  linkType: hard
+
+"@glimmer/tracking@npm:^1.0.4, @glimmer/tracking@npm:^1.1.2":
   version: 1.1.2
   resolution: "@glimmer/tracking@npm:1.1.2"
   dependencies:
@@ -2910,6 +2931,17 @@ __metadata:
     "@glimmer/interfaces": "npm:0.65.4"
     "@simple-dom/interface": "npm:^1.4.0"
   checksum: 10c0/2ca5415e057de559ea8ef7e26383a6c60f06bc10f255b6d96bbb998b9489ed27d16ddeda9a563780f4d16bd66a893517ad46ab1ff30a2a4b2273ca60562e495a
+  languageName: node
+  linkType: hard
+
+"@glimmer/util@npm:0.84.3":
+  version: 0.84.3
+  resolution: "@glimmer/util@npm:0.84.3"
+  dependencies:
+    "@glimmer/env": "npm:0.1.7"
+    "@glimmer/interfaces": "npm:0.84.3"
+    "@simple-dom/interface": "npm:^1.4.0"
+  checksum: 10c0/16b18024a1c9505d4051fdc129e8b9ea0db6200856270e5f821dfc90be76895221ea89541a8481a7d9f88b55a430395aba34a27ac9ac090ea3feba7ecc749c88
   languageName: node
   linkType: hard
 
@@ -2950,6 +2982,13 @@ __metadata:
   version: 1.1.0
   resolution: "@handlebars/parser@npm:1.1.0"
   checksum: 10c0/c16b9de82ae2dd892a629753d468c30819d00bd4aa0d83566b626c9fb35275401f5224110852c9bf15b482570aedce646da57330f4c0d74b1cbc14cd790797f0
+  languageName: node
+  linkType: hard
+
+"@handlebars/parser@npm:~2.0.0":
+  version: 2.0.0
+  resolution: "@handlebars/parser@npm:2.0.0"
+  checksum: 10c0/186adabd36b59594309f8e8715ee20d6f842568308811b70b992de9c74fd0015637b08652cbe03d329e125ac4cca314ec571ef09ba9c869e87e5da287de13859
   languageName: node
   linkType: hard
 
@@ -4963,6 +5002,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-import-util@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "babel-import-util@npm:3.0.0"
+  checksum: 10c0/cad6e83b36e1939562c27a3e3fdf16ed509369717af2cdba0870f116bd217d031fe1202cf4a54bbfba7eacbfd4e076aee7fd49ea573fba44d4d4dee8dfc2b388
+  languageName: node
+  linkType: hard
+
 "babel-loader@npm:^8.0.6":
   version: 8.2.5
   resolution: "babel-loader@npm:8.2.5"
@@ -5063,6 +5109,16 @@ __metadata:
     magic-string: "npm:^0.26.0"
     string.prototype.matchall: "npm:^4.0.5"
   checksum: 10c0/eb319213af3fe2ddb7c7f96f1054f1a34171e0e482b94cbdf9b9eb23cb66c92f44946c9077583009eb0ae2a7ef42a128b446ef72ceccd99ef158d2e5ec7deba8
+  languageName: node
+  linkType: hard
+
+"babel-plugin-ember-template-compilation@npm:^2.0.0":
+  version: 2.3.0
+  resolution: "babel-plugin-ember-template-compilation@npm:2.3.0"
+  dependencies:
+    "@glimmer/syntax": "npm:^0.84.3"
+    babel-import-util: "npm:^3.0.0"
+  checksum: 10c0/31115341ea683f3d270fc10d30b2856ebe8cdc005d14a3681de8c90944e94c82085d1c547276cff92340acc33bfffcfb10d8891fcc4ec49b8a2ab10c95c5f7d0
   languageName: node
   linkType: hard
 
@@ -8455,8 +8511,8 @@ __metadata:
     ember-cli-terser: "npm:^4.0.2"
     ember-cli-typescript: "npm:^5.2.1"
     ember-cli-typescript-blueprints: "npm:^3.0.0"
-    ember-concurrency: "npm:^1.3.0"
-    ember-concurrency-decorators: "npm:2.0.1"
+    ember-concurrency: "npm:^3.0.0"
+    ember-concurrency-decorators: "npm:^2.0.1"
     ember-css-modules: "npm:^1.2.1"
     ember-decorators: "npm:^6.1.1"
     ember-disable-prototype-extensions: "npm:^1.1.3"
@@ -8481,7 +8537,7 @@ __metadata:
     eslint-plugin-qunit: "npm:^6.2.0"
     loader.js: "npm:^4.7.0"
     npm-run-all: "npm:^4.1.5"
-    postcss-functions: "npm:^3.0.0"
+    postcss-functions: "npm:^4.0.0"
     prettier: "npm:^2.5.1"
     qunit: "npm:^2.17.2"
     qunit-dom: "npm:^1.6.0"
@@ -8846,6 +8902,28 @@ __metadata:
     strip-bom: "npm:^4.0.0"
     walk-sync: "npm:^2.2.0"
   checksum: 10c0/7c4e69947f396056af21d1b153bcb97dd958fcfc52cc1f7cd7e84a6dc90558ca4b63bc3a77066c96da519cdd7733b565d800c4ab3643d5010612b6e322dd15dc
+  languageName: node
+  linkType: hard
+
+"ember-cli-htmlbars@npm:^6.2.0":
+  version: 6.3.0
+  resolution: "ember-cli-htmlbars@npm:6.3.0"
+  dependencies:
+    "@ember/edition-utils": "npm:^1.2.0"
+    babel-plugin-ember-template-compilation: "npm:^2.0.0"
+    babel-plugin-htmlbars-inline-precompile: "npm:^5.3.0"
+    broccoli-debug: "npm:^0.6.5"
+    broccoli-persistent-filter: "npm:^3.1.2"
+    broccoli-plugin: "npm:^4.0.3"
+    ember-cli-version-checker: "npm:^5.1.2"
+    fs-tree-diff: "npm:^2.0.1"
+    hash-for-dep: "npm:^1.5.1"
+    heimdalljs-logger: "npm:^0.1.10"
+    js-string-escape: "npm:^1.0.1"
+    semver: "npm:^7.3.4"
+    silent-error: "npm:^1.1.1"
+    walk-sync: "npm:^2.2.0"
+  checksum: 10c0/1b4127fc9c261569914a9316eee9748a7a87dd4e22886c95f39ce12ae557c5d4b8bd149bab874e43e01aa6321234665a09d036dc648e4bbf67082269f0682d2c
   languageName: node
   linkType: hard
 
@@ -9273,26 +9351,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-concurrency-decorators@npm:2.0.1":
-  version: 2.0.1
-  resolution: "ember-concurrency-decorators@npm:2.0.1"
+"ember-concurrency-decorators@npm:^2.0.1":
+  version: 2.0.3
+  resolution: "ember-concurrency-decorators@npm:2.0.3"
   dependencies:
     "@ember-decorators/utils": "npm:^6.1.0"
     ember-cli-babel: "npm:^7.19.0"
     ember-cli-htmlbars: "npm:^4.3.1"
     ember-cli-typescript: "npm:^3.1.4"
-  checksum: 10c0/bbcbe93c551cd386d258e553d93690e00aacf1fbc0a7eaefdb01bb0fe69b1ba971a3cbfc46c601b9601dddaf9ff6b7fa4a90d61bcf11aa4416d18dec76a9cab5
+  checksum: 10c0/c9971a43e47ff42ebcb05f6cabf2b43a24c942b278361e320e86c5dfdd5b48f06db1bfaae32da1b435e3700724500366b595abc0a5df1c610caddcdb2cf46e92
   languageName: node
   linkType: hard
 
-"ember-concurrency@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "ember-concurrency@npm:1.3.0"
+"ember-concurrency@npm:^3.0.0":
+  version: 3.1.1
+  resolution: "ember-concurrency@npm:3.1.1"
   dependencies:
-    ember-cli-babel: "npm:^7.7.3"
+    "@babel/helper-plugin-utils": "npm:^7.12.13"
+    "@babel/types": "npm:^7.12.13"
+    "@glimmer/tracking": "npm:^1.1.2"
+    ember-cli-babel: "npm:^7.26.11"
+    ember-cli-babel-plugin-helpers: "npm:^1.1.1"
+    ember-cli-htmlbars: "npm:^6.2.0"
     ember-compatibility-helpers: "npm:^1.2.0"
-    ember-maybe-import-regenerator: "npm:^0.1.6"
-  checksum: 10c0/f77cd4a81bb2a3c31802aa5699685dc71329fe551bdf00322eab8383b512c68c8b044f32bf8a90ec9f732e025cb5d26a54566e69a9f14616d2f30290302b8504
+  peerDependencies:
+    ember-source: ^3.28.0 || ^4.0.0 || >=5.0.0
+  checksum: 10c0/8c4ed76851ee89988bc033cb2476937a6e1efb63a2a729291c8657bd923e0be3289571c4e2e2868b160ea1539b4adacc95eceb754bfa4ebef896501dd93dbfd5
   languageName: node
   linkType: hard
 
@@ -15450,15 +15534,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-functions@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "postcss-functions@npm:3.0.0"
+"postcss-functions@npm:^4.0.0":
+  version: 4.0.2
+  resolution: "postcss-functions@npm:4.0.2"
   dependencies:
-    glob: "npm:^7.1.2"
-    object-assign: "npm:^4.1.1"
-    postcss: "npm:^6.0.9"
-    postcss-value-parser: "npm:^3.3.0"
-  checksum: 10c0/8f47c51ce66fa6da666a86f10736133f9c31c8cd8ff872f184ff694b682d5cd37560e4fe8e3c8ca6896278e05b35426183bbd9afd3a25e6f3e5bc32ecc8909bc
+    postcss-value-parser: "npm:^4.0.0"
+  peerDependencies:
+    postcss: ^8.0.0
+  checksum: 10c0/1ee271a639ba08a7abdb53eddd434eb4f13574ef7d26adf4b8623fd141422713672044becb9273c9d7373ddc7f399b4ef5659afb5c1073a2a344b7cd1f460489
   languageName: node
   linkType: hard
 
@@ -15516,28 +15599,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-value-parser@npm:^3.3.0":
-  version: 3.3.1
-  resolution: "postcss-value-parser@npm:3.3.1"
-  checksum: 10c0/23eed98d8eeadb1f9ef1db4a2757da0f1d8e7c1dac2a38d6b35d971aab9eb3c6d8a967d0e9f435558834ffcd966afbbe875a56bcc5bcdd09e663008c106b3e47
-  languageName: node
-  linkType: hard
-
-"postcss-value-parser@npm:^4.1.0":
+"postcss-value-parser@npm:^4.0.0, postcss-value-parser@npm:^4.1.0":
   version: 4.2.0
   resolution: "postcss-value-parser@npm:4.2.0"
   checksum: 10c0/f4142a4f56565f77c1831168e04e3effd9ffcc5aebaf0f538eee4b2d465adfd4b85a44257bb48418202a63806a7da7fe9f56c330aebb3cac898e46b4cbf49161
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^6.0.9":
-  version: 6.0.23
-  resolution: "postcss@npm:6.0.23"
-  dependencies:
-    chalk: "npm:^2.4.1"
-    source-map: "npm:^0.6.1"
-    supports-color: "npm:^5.4.0"
-  checksum: 10c0/45d45184ffbb9d510e7585d9441af9a1a771a56b7553b1d598544e54acdfd31df439a95d5f00a6dc57b85b76d0c8925fec18614b1cc795887c845c3965e32e63
   languageName: node
   linkType: hard
 
@@ -16948,7 +17013,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"simple-html-tokenizer@npm:^0.5.10":
+"simple-html-tokenizer@npm:^0.5.10, simple-html-tokenizer@npm:^0.5.11":
   version: 0.5.11
   resolution: "simple-html-tokenizer@npm:0.5.11"
   checksum: 10c0/086864c3f499f5988dd6ad65a8c72b8c3c8a443edf469cb531f8091b6524b435b173651e543782a88060a55f05c6fe9a249ac5c971a2d0f451cba02c5156b9e5
@@ -17647,7 +17712,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"supports-color@npm:^5.3.0, supports-color@npm:^5.4.0":
+"supports-color@npm:^5.3.0":
   version: 5.5.0
   resolution: "supports-color@npm:5.5.0"
   dependencies:
