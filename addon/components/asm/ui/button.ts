@@ -1,9 +1,6 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { isNone } from '@ember/utils';
-/* @ts-ignore */
-import { htmlSafe } from '@ember/string';
-import { SafeString } from 'handlebars';
 
 export type Appearance = 'default' | 'strong' | 'minimal';
 export type Intent = 'none' | 'success' | 'warning' | 'danger';
@@ -14,7 +11,6 @@ interface AsmUiButtonArgs {
   onClick?: OnClickFn | null;
   label?: string;
   appearance?: Appearance;
-  width?: string; //Accepts any standard CSS width value
   intent?: Intent;
   size?: Size;
   isDisabled?: boolean;
@@ -29,10 +25,6 @@ export default class AsmUiButton extends Component<AsmUiButtonArgs> {
 
   get appearance(): Appearance {
     return this.args.appearance ?? 'default';
-  }
-
-  get width(): string {
-    return this.args.width ?? '';
   }
 
   get intent(): Intent {
@@ -53,14 +45,6 @@ export default class AsmUiButton extends Component<AsmUiButtonArgs> {
 
   get isLoading(): boolean {
     return this.args.isLoading ?? false;
-  }
-
-  get style(): SafeString {
-    if (this.width) {
-      return htmlSafe(`width: ${this.width}`);
-    } else {
-      return htmlSafe('');
-    }
   }
 
   get appearanceClass(): string {
