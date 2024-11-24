@@ -230,7 +230,7 @@ export default class AsmUiCalendar extends Component<AsmUiCalendarArgs> {
       }
     } else if (this.mode == 'multiple') {
       //@ts-ignore
-      selected = this.map((date) => date.clone());
+      selected = this.selected.map((date) => date.clone());
       if (day.isSelected) {
         let date = selected.find((date) => date.format() == day.date.format());
         if (!isNone(date)) {
