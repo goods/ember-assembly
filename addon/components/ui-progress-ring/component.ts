@@ -1,22 +1,18 @@
 import Component from '@ember/component';
 //@ts-ignore
 import template from './template';
-import { classNames } from '@ember-decorators/component';
-import { localClassNames, localClassName } from 'ember-css-modules';
 import { computed } from '@ember/object';
 import { htmlSafe } from '@ember/template';
 
-@classNames('ui-progress-ring')
-@localClassNames('ui-progress-ring')
 export default class UiProgressRing extends Component {
   layout = template;
+  tagName: string = '';
 
   progress?: number = 0;
   stroke?: number = 4;
   size?: number = 60;
   appearance?: 'default' | 'strong' | 'subtle' = 'default';
 
-  @localClassName()
   @computed('appearance')
   get appearanceClass(): string {
     return `appearance-${this.appearance}`;

@@ -1,21 +1,18 @@
-import Component from "@ember/component";
+import Component from '@ember/component';
 // @ts-ignore: Ignore import of compiled template
-import template from "./template";
-import { localClassNames, localClassName } from "ember-css-modules";
-import { isNone } from "@ember/utils";
-import { classNames } from "@ember-decorators/component";
-import { computed } from "@ember/object";
+import template from './template';
+import { isNone } from '@ember/utils';
+import { computed } from '@ember/object';
 
-@classNames("ui-field")
-@localClassNames("ui-field")
 export default class UiField extends Component {
   layout = template;
+  tagName: string = '';
 
   label?: string | null = null;
-  description?: string = "";
+  description?: string = '';
   validationMessages?: string[] | string = [];
 
-  @computed("validationMessages")
+  @computed('validationMessages')
   get errors(): string[] | null {
     if (isNone(this.validationMessages)) {
       return null;
@@ -27,10 +24,9 @@ export default class UiField extends Component {
     return this.validationMessages;
   }
 
-  @localClassName()
-  direction?: string = "vertical"; //vertical | horizontal
+  direction?: string = 'vertical'; //vertical | horizontal
 
-  @computed("elementId")
+  @computed('elementId')
   get inputId(): string {
     return `${this.elementId}-input`;
   }

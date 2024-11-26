@@ -18,18 +18,3 @@ export default class AsmUiCheckbox extends Component<AsmUiCheckboxArgs> {
     return;
   }
 }
-
-// label?: string = "";
-
-//   @className("is-checked")
-//   @localClassName("is-checked")
-//   checked?: boolean = false;
-//   onChange?: Function | null = null;
-
-//   click(event: any) {
-//     if (!isNone(this.onChange)) {
-//       this.onChange(!this.checked, event);
-//       return false;
-//     }
-//     return;
-//   }

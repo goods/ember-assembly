@@ -1,14 +1,10 @@
-import Component from "@ember/component";
+import Component from '@ember/component';
 // @ts-ignore: Ignore import of compiled template
-import template from "./template";
-import { localClassNames, localClassName } from "ember-css-modules";
-import { classNames } from "@ember-decorators/component";
+import template from './template';
 
-@classNames("ui-caret")
-@localClassNames("ui-caret")
 export default class UiCaret extends Component {
   layout = template;
+  tagName: string = '';
 
-  @localClassName()
   direction?: string | null = null;
 }

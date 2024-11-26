@@ -1,11 +1,10 @@
-import Component from "@ember/component";
+import Component from '@ember/component';
 // @ts-ignore: Ignore import of compiled template
-import template from "./template";
-import { tagName } from "@ember-decorators/component";
+import template from './template';
 
-@tagName("tbody")
 export default class UiTableBody extends Component {
   layout = template;
+  tagName: string = '';
 
   isLoading?: boolean = false;
 }

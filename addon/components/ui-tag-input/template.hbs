@@ -1,8 +1,9 @@
+<div local-class="ui-tag-input {{if this.hasError "has-error"}}" ...attributes>
+  {{#each this.tags as |tag|}}
+    <button local-class="tag" onclick={{action this.onRemove tag}} type="button">
+      {{tag}} {{svg-jar "x-1"}}
+    </button>
+  {{/each}}
 
-{{#each this.tags as |tag|}}
-  <button local-class="tag" onclick={{action this.onRemove tag}} type="button">
-    {{tag}} {{svg-jar "x-1"}}
-  </button>
-{{/each}}
-
-{{input local-class="input" type="text" keyPress=(action "onChangedTag") placeholder=this.placeholder value=(mut this.tag)}}
+  {{input local-class="input" type="text" keyPress=(action "onChangedTag") placeholder=this.placeholder value=(mut this.tag)}}
+</div>

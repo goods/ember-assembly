@@ -1,31 +1,30 @@
-import Component from "@ember/component";
+import Component from '@ember/component';
 // @ts-ignore: Ignore import of compiled template
-import template from "./template";
-import { localClassNames } from "ember-css-modules";
-import { gt } from "@ember/object/computed";
-import { computed, action } from "@ember/object";
+import template from './template';
+import { gt } from '@ember/object/computed';
+import { computed, action } from '@ember/object';
 
-@localClassNames("ui-pagination")
 export default class UiPagination extends Component {
   layout = template;
+  tagName: string = '';
 
   start!: number;
   count!: number;
   total!: number;
   onChangeStart!: any;
 
-  @gt("start", 0) showPrevious!: boolean;
+  @gt('start', 0) showPrevious!: boolean;
 
-  @computed("start", "count", "total")
+  @computed('start', 'count', 'total')
   get showNext(): boolean {
     return this.start + this.count < this.total;
   }
 
-  @computed("start", "count", "total")
+  @computed('start', 'count', 'total')
   get currentPagination(): any {
     if (this.total == 0) {
       return {
-        label: "0",
+        label: '0',
       };
     }
     let max = Math.min(this.start + this.count, this.total);
@@ -34,7 +33,7 @@ export default class UiPagination extends Component {
     };
   }
 
-  @computed("start", "count", "total")
+  @computed('start', 'count', 'total')
   get paginationOptions(): object[] {
     let pages: any[] = [];
     for (let i = 0; i < this.total; i += this.count) {

@@ -1,59 +1,61 @@
-<UiPopover disabled={{this.isDisabled}} @renderInPlace={{true}} as |Popover|>
-  <Popover.Trigger local-class="ui-combobox-trigger">
-    {{#if this.triggerComponent}}
-      {{component this.triggerComponent selected=this.selected isDisabled=this.isDisabled}}
-    {{else}}
-      <Asm::Ui::Button disabled={{this.isDisabled}}>
-        {{this.triggerLabel}}
-      </Asm::Ui::Button>
-    {{/if}}
-  </Popover.Trigger>
-  <Popover.Content class="ui-popover-content ui-popover-animated {{local-class "ui-combobox-content"}}">
-    {{#if (has-block)}}
-      {{yield
-        (hash
-          Option=(component "ui-combobox-option" onSelect=this.onSelect)
-        )
-      }}
-    {{else}}
-      {{#if this.hasTitle}}
-        <div local-class="header">
-          <div local-class="title">
-            {{this.title}}
-          </div>
-          <Asm::Ui::Button
-            local-class="close-btn"
-            @appearance="minimal"
-            @onClick={{action Popover.actions.close}}
-          >
-            {{svg-jar "x-1"}}
-          </Asm::Ui::Button>
-        </div>
-      {{/if}}
-      {{#if this.hasFilter}}
-        <div local-class="filter">
-          <UiSearchInput
-            local-class="filter-input"
-            @value={{this.filter}}
-            @placeholder="Filter..."
-            @onSetValue={{action (mut this.filter)}}
-          />
-        </div>
-      {{/if}}
-      {{#if this.isLoading}}
-        <UiSpinner />
+<div local-class="ui-combobox" ...attributes>
+  <UiPopover disabled={{this.isDisabled}} @renderInPlace={{true}} as |Popover|>
+    <Popover.Trigger local-class="ui-combobox-trigger">
+      {{#if this.triggerComponent}}
+        {{component this.triggerComponent selected=this.selected isDisabled=this.isDisabled}}
       {{else}}
-        {{#each this.filteredOptions as |option|}}
-          <UiComboboxOption
-            @value={{option}}
-            @isSelected={{contains option this.selected}}
-            @labelPath={{this.labelPath}}
-            @optionComponent={{this.optionComponent}}
-            @onSelect={{this.onSelect Popover.actions.close}}
-            @onDeselect={{this.onDeselect}}
-          />
-        {{/each}}
+        <Asm::Ui::Button disabled={{this.isDisabled}}>
+          {{this.triggerLabel}}
+        </Asm::Ui::Button>
       {{/if}}
-    {{/if}}
-  </Popover.Content>
-</UiPopover>
+    </Popover.Trigger>
+    <Popover.Content class="ui-popover-content ui-popover-animated {{local-class "ui-combobox-content"}}">
+      {{#if (has-block)}}
+        {{yield
+          (hash
+            Option=(component "ui-combobox-option" onSelect=this.onSelect)
+          )
+        }}
+      {{else}}
+        {{#if this.hasTitle}}
+          <div local-class="header">
+            <div local-class="title">
+              {{this.title}}
+            </div>
+            <Asm::Ui::Button
+              local-class="close-btn"
+              @appearance="minimal"
+              @onClick={{action Popover.actions.close}}
+            >
+              {{svg-jar "x-1"}}
+            </Asm::Ui::Button>
+          </div>
+        {{/if}}
+        {{#if this.hasFilter}}
+          <div local-class="filter">
+            <UiSearchInput
+              local-class="filter-input"
+              @value={{this.filter}}
+              @placeholder="Filter..."
+              @onSetValue={{action (mut this.filter)}}
+            />
+          </div>
+        {{/if}}
+        {{#if this.isLoading}}
+          <UiSpinner />
+        {{else}}
+          {{#each this.filteredOptions as |option|}}
+            <UiComboboxOption
+              @value={{option}}
+              @isSelected={{contains option this.selected}}
+              @labelPath={{this.labelPath}}
+              @optionComponent={{this.optionComponent}}
+              @onSelect={{this.onSelect Popover.actions.close}}
+              @onDeselect={{this.onDeselect}}
+            />
+          {{/each}}
+        {{/if}}
+      {{/if}}
+    </Popover.Content>
+  </UiPopover>
+</div>

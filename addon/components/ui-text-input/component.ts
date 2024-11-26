@@ -1,18 +1,15 @@
 import Component from '@ember/component';
 // @ts-ignore: Ignore import of compiled template
 import template from './template';
-import { localClassNames, localClassName } from 'ember-css-modules';
-import { classNames, attribute } from '@ember-decorators/component';
 import { action } from '@ember/object';
 import { isNone } from '@ember/utils';
 import { set, computed } from '@ember/object';
 import { htmlSafe } from '@ember/template';
 import { SafeString } from 'handlebars';
 
-@classNames('ui-text-input')
-@localClassNames('ui-text-input')
 export default class UiTextInput extends Component {
   layout = template;
+  tagName: string = '';
 
   value?: string = '';
   onSetValue?: Function | null = null;
@@ -25,10 +22,8 @@ export default class UiTextInput extends Component {
   min?: number | null = null;
   width?: string = ''; //Accepts any standard CSS width value
 
-  @localClassName()
   hasError?: boolean = false;
 
-  @attribute()
   @computed('width')
   get style(): SafeString {
     if (this.width) {

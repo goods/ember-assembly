@@ -1,21 +1,20 @@
-import Component from "@ember/component";
+import Component from '@ember/component';
 //@ts-ignore
-import template from "./template";
-import { action } from "@ember/object";
-import { alias } from "@ember/object/computed";
-import { inject } from "@ember/service";
-import { localClassNames } from "ember-css-modules";
+import template from './template';
+import { action } from '@ember/object';
+import { alias } from '@ember/object/computed';
+import { inject } from '@ember/service';
 // @ts-ignore
-import move from "ember-animated/motions/move";
+import move from 'ember-animated/motions/move';
 // @ts-ignore
-import { fadeOut } from "ember-animated/motions/opacity";
+import { fadeOut } from 'ember-animated/motions/opacity';
 
-@localClassNames("ui-notifications")
 export default class UiNotifications extends Component {
   layout = template;
+  tagName: string = '';
 
-  @inject("notifications") service!: any;
-  @alias("service.notifications") notifications!: any;
+  @inject('notifications') service!: any;
+  @alias('service.notifications') notifications!: any;
 
   *transition({ insertedSprites, removedSprites, keptSprites }: any) {
     for (let sprite of insertedSprites) {

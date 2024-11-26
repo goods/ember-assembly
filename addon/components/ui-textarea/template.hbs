@@ -1,8 +1,10 @@
-{{textarea 
-  id=@inputId
-  value=@value
-  required=@required
-  placeholder=@placeholder
-  disabled=this.isDisabled
-  key-up=(action "onKeyUp")
-}}
+<div class="ui-textarea" local-class="ui-textarea {{if this.hasError "has-error"}}" ...attributes>
+  {{textarea
+    id=@inputId
+    value=@value
+    required=@required
+    placeholder=@placeholder
+    disabled=this.isDisabled
+    key-up=(action "onKeyUp")
+  }}
+</div>

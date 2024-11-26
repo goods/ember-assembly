@@ -1,17 +1,17 @@
-import Component from "@ember/component";
+import Component from '@ember/component';
 // @ts-ignore: Ignore import of compiled template
-import template from "./template";
-import { localClassNames, localClassName } from "ember-css-modules";
+import template from './template';
 
-@localClassNames("ui-combobox-option")
 export default class UiComboboxOption extends Component {
   layout = template;
+
+  tagName: string = '';
 
   onSelect!: Function;
   onDeselect!: Function;
   value!: any;
-  @localClassName() isSelected?: boolean = false;
-  labelPath?: string = "";
+  isSelected?: boolean = false;
+  labelPath?: string = '';
   optionComponent?: any = null;
 
   click() {

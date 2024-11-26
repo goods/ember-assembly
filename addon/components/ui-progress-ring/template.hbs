@@ -1,22 +1,24 @@
-<svg
-  local-class="progress-ring"
-  height={{this.size}}
-  width={{this.size}}
->
-  <circle
-    local-class="progress-ring-circle"
-    stroke-dasharray="{{this.circumference}} {{this.circumference}}"
-    style={{this.ringStyle}}
-    stroke-width={{this.stroke}}
-    fill="transparent"
-    r={{this.normalizedRadius}}
-    cx={{this.radius}}
-    cy={{this.radius}}
-  />
-</svg>
+<div class="ui-progress-ring" local-class="ui-progress-ring {{this.appearanceClass}}" ...attributes>
+  <svg
+    local-class="progress-ring"
+    height={{this.size}}
+    width={{this.size}}
+  >
+    <circle
+      local-class="progress-ring-circle"
+      stroke-dasharray="{{this.circumference}} {{this.circumference}}"
+      style={{this.ringStyle}}
+      stroke-width={{this.stroke}}
+      fill="transparent"
+      r={{this.normalizedRadius}}
+      cx={{this.radius}}
+      cy={{this.radius}}
+    />
+  </svg>
 
-{{#if (has-block)}}
-  <div local-class="content" style={{this.contentStyle}}>
-    {{yield}}
-  </div>
-{{/if}}
+  {{#if (has-block)}}
+    <div local-class="content" style={{this.contentStyle}}>
+      {{yield}}
+    </div>
+  {{/if}}
+</div>

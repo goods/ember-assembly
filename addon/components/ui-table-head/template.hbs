@@ -1,9 +1,11 @@
-{{yield 
-  (hash 
-    Row=(component "ui-table-row" 
-      isHead=true 
-      hasFixedHeader=this.hasFixedHeader
-      onSort=this.onSort
+<thead ...attributes>
+  {{yield
+    (hash
+      Row=(component "ui-table-row"
+        isHead=true
+        hasFixedHeader=this.hasFixedHeader
+        onSort=this.onSort
+      )
     )
-  )
-}}
+  }}
+</thead>

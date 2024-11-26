@@ -1,8 +1,6 @@
 import Component from '@ember/component';
 // @ts-ignore: Ignore import of compiled template
 import template from './template';
-import { localClassNames } from 'ember-css-modules';
-import { classNames } from '@ember-decorators/component';
 import moment, { Moment } from 'moment';
 import { action, computed, set } from '@ember/object';
 import { isNone } from '@ember/utils';
@@ -20,10 +18,9 @@ interface Day {
   isRangeFinish: boolean;
 }
 
-@classNames('ui-calendar')
-@localClassNames('ui-calendar')
 export default class UiCalendar extends Component {
   layout = template;
+  tagName: string = '';
 
   selected: Moment[] = [];
   mode?: 'single' | 'multiple' | 'range' = 'multiple';

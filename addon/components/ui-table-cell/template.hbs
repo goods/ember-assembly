@@ -1,7 +1,9 @@
-{{#if this.linkTo}}
-  {{#link-to params=this.linkTo local-class="cell-link" class="ui-table-cell-link"}}
+<td class="ui-table-cell" local-class="ui-table-cell {{if this.hasLink "has-link"}}" ...attributes>
+  {{#if this.linkTo}}
+    {{#link-to params=this.linkTo local-class="cell-link" class="ui-table-cell-link"}}
+      {{yield}}
+    {{/link-to}}
+  {{else}}
     {{yield}}
-  {{/link-to}}
-{{else}}
-  {{yield}}
-{{/if}}
+  {{/if}}
+</td>

@@ -1,19 +1,21 @@
-<Input 
-  local-class="checkbox-input" 
-  class="ui-checkbox-input"
-  @type="checkbox" 
-  @checked={{this.checked}}
-  id={{concat "checkbox-input-" this.elementId}}
-/>
-<div local-class="checkbox" class="ui-checkbox-checkbox">
-  {{#if this.checked}}
-    {{svg-jar "checkmark-1" width="10px" height="10px" local-class="check-icon"}}
-  {{/if}}
+<div class="ui-checkbox {{if this.isChecked "is-checked"}}" local-class="ui-checkbox {{if this.checked "is-checked"}}" ...attributes>
+  <Input
+    local-class="checkbox-input"
+    class="ui-checkbox-input"
+    @type="checkbox"
+    @checked={{this.checked}}
+    id={{concat "checkbox-input-" this.elementId}}
+  />
+  <div local-class="checkbox" class="ui-checkbox-checkbox">
+    {{#if this.checked}}
+      {{svg-jar "checkmark-1" width="10px" height="10px" local-class="check-icon"}}
+    {{/if}}
+  </div>
+  <label local-class="label" class="ui-checkbox-label" for={{concat "checkbox-input-" this.elementId}}>
+    {{#if this.label}}
+      {{this.label}}
+    {{else}}
+      {{yield}}
+    {{/if}}
+  </label>
 </div>
-<label local-class="label" class="ui-checkbox-label" for={{concat "checkbox-input-" this.elementId}}>
-  {{#if this.label}}
-    {{this.label}}
-  {{else}}
-    {{yield}}
-  {{/if}}
-</label>

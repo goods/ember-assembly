@@ -3,18 +3,15 @@ import { get, set, action } from '@ember/object';
 import { notEmpty } from '@ember/object/computed';
 // @ts-ignore: Ignore import of compiled template
 import template from './template';
-import { classNames } from '@ember-decorators/component';
-import { localClassNames, localClassName } from 'ember-css-modules';
 // @ts-ignore
 import { timeout } from 'ember-concurrency';
 import { task } from 'ember-concurrency-decorators';
 import { computed } from '@ember/object';
 import { htmlSafe } from '@ember/template';
 
-@classNames('ui-notification')
-@localClassNames('ui-notification')
 export default class UiNotification extends Component {
   layout = template;
+  tagName: string = '';
 
   notification!: any;
   onDismiss!: Function;
@@ -23,13 +20,11 @@ export default class UiNotification extends Component {
 
   progress: number = 0;
 
-  @localClassName()
   @computed('notification.intent')
   get intentClass(): string {
     return `intent-${this.notification.intent}`;
   }
 
-  @localClassName()
   @notEmpty('notification.description')
   hasDescription!: boolean;
 

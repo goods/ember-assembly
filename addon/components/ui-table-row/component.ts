@@ -1,16 +1,13 @@
-import Component from "@ember/component";
+import Component from '@ember/component';
 // @ts-ignore: Ignore import of compiled template
-import template from "./template";
-import { tagName } from "@ember-decorators/component";
-import { computed, action } from "@ember/object";
-import { isNone } from "@ember/utils";
-import { localClassNames, localClassName } from "ember-css-modules";
-import { notEmpty } from "@ember/object/computed";
+import template from './template';
+import { computed, action } from '@ember/object';
+import { isNone } from '@ember/utils';
+import { notEmpty } from '@ember/object/computed';
 
-@localClassNames("ui-table-row")
-@tagName("tr")
 export default class UiTableRow extends Component {
   layout = template;
+  tagName: string = '';
 
   isHead?: boolean = false;
   hasFixedHeader?: boolean = false;
@@ -20,16 +17,15 @@ export default class UiTableRow extends Component {
   onDeselect: Function | null = null;
   linkTo?: any[] = [];
 
-  @computed("isHead")
+  @computed('isHead')
   get cellComponent() {
     if (this.isHead) {
-      return "ui-table-head-cell";
+      return 'ui-table-head-cell';
     }
-    return "ui-table-cell";
+    return 'ui-table-cell';
   }
 
-  @localClassName()
-  @notEmpty("linkTo")
+  @notEmpty('linkTo')
   hasLink!: boolean;
 
   @action

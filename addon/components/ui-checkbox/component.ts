@@ -1,18 +1,14 @@
-import Component from "@ember/component";
+import Component from '@ember/component';
 // @ts-ignore: Ignore import of compiled template
-import template from "./template";
-import { className } from "@ember-decorators/component";
-import { localClassNames, localClassName } from "ember-css-modules";
-import { isNone } from "@ember/utils";
+import template from './template';
+import { isNone } from '@ember/utils';
 
-@localClassNames("ui-checkbox")
 export default class UiCheckbox extends Component {
   layout = template;
+  tagName: string = '';
 
-  label?: string = "";
+  label?: string = '';
 
-  @className("is-checked")
-  @localClassName("is-checked")
   checked?: boolean = false;
   onChange?: Function | null = null;
 

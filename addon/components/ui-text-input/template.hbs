@@ -1,13 +1,15 @@
-{{input
-  class=(if (not (is-empty this.width)) "has-width")
-  id=@inputId
-  value=@value
-  required=@required
-  type=@type
-  placeholder=@placeholder
-  disabled=this.isDisabled
-  max=this.max
-  min=this.min
-  key-up=(action "onKeyUp")
-  focus-out=(action "didFocusOut")
-}}
+<div class="ui-text-input" local-class="ui-text-input {{if this.hasError "has-error"}}" ...attributes>
+  {{input
+    class=(if (not (is-empty this.width)) "has-width")
+    id=@inputId
+    value=@value
+    required=@required
+    type=@type
+    placeholder=@placeholder
+    disabled=this.isDisabled
+    max=this.max
+    min=this.min
+    key-up=(action "onKeyUp")
+    focus-out=(action "didFocusOut")
+  }}
+</div>
