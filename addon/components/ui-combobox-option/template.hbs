@@ -1,4 +1,8 @@
-<div local-class="ui-combobox-option {{if this.isSelected "is-selected"}}" ...attributes>
+<div
+  local-class="ui-combobox-option {{if this.isSelected "is-selected"}}"
+  {{on "click" this.onClick}}
+  ...attributes
+>
   {{#if this.optionComponent}}
     {{component this.optionComponent value=this.option isSelected=this.isSelected}}
   {{else}}

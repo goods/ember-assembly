@@ -1,4 +1,8 @@
-<button local-class="ui-tag {{this.appearanceClass}}" type="button" ...attributes>
+<button
+  local-class="ui-tag {{this.appearanceClass}}" type="button"
+  {{on "click" this.onLocalClick}}
+  ...attributes
+>
   <span local-class="label">
     {{@label}}
   </span>

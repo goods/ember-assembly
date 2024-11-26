@@ -2,7 +2,7 @@ import Component from '@ember/component';
 // @ts-ignore: Ignore import of compiled template
 import template from './template';
 import { isNone } from '@ember/utils';
-import { computed } from '@ember/object';
+import { action, computed } from '@ember/object';
 
 export default class UiTableHeadCell extends Component {
   layout = template;
@@ -32,7 +32,8 @@ export default class UiTableHeadCell extends Component {
     return this.isSorted && this.sortOrder === 'desc';
   }
 
-  click() {
+  @action
+  onClick() {
     if (this.isSortable && !isNone(this.onSort)) {
       if (this.isSortedAsc) {
         this.onSort(this.key, 'desc');

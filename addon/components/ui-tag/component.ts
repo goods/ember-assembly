@@ -2,7 +2,7 @@ import Component from '@ember/component';
 // @ts-ignore: Ignore import of compiled template
 import template from './template';
 import { isNone } from '@ember/utils';
-import { computed } from '@ember/object';
+import { action, computed } from '@ember/object';
 
 export default class UiTag extends Component {
   layout = template;
@@ -23,7 +23,8 @@ export default class UiTag extends Component {
     return `appearance-${this.appearance}`;
   }
 
-  click() {
+  @action
+  onLocalClick() {
     if (!isNone(this.onClick)) {
       this.onClick();
     }

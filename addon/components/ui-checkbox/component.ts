@@ -2,6 +2,7 @@ import Component from '@ember/component';
 // @ts-ignore: Ignore import of compiled template
 import template from './template';
 import { isNone } from '@ember/utils';
+import { action } from '@ember/object';
 
 export default class UiCheckbox extends Component {
   layout = template;
@@ -12,7 +13,8 @@ export default class UiCheckbox extends Component {
   checked?: boolean = false;
   onChange?: Function | null = null;
 
-  click(event: any) {
+  @action
+  onClick(event: any) {
     if (!isNone(this.onChange)) {
       this.onChange(!this.checked, event);
       return false;

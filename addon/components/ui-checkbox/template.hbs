@@ -1,4 +1,8 @@
-<div class="ui-checkbox {{if this.isChecked "is-checked"}}" local-class="ui-checkbox {{if this.checked "is-checked"}}" ...attributes>
+<div
+  class="ui-checkbox {{if this.isChecked "is-checked"}}" local-class="ui-checkbox {{if this.checked "is-checked"}}"
+  {{on "click" this.onClick}}
+  ...attributes
+>
   <Input
     local-class="checkbox-input"
     class="ui-checkbox-input"
