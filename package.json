@@ -41,7 +41,6 @@
     "ember-concurrency": "^3.0.0",
     "ember-concurrency-decorators": "^2.0.1",
     "ember-css-modules": "^2.1.0",
-    "ember-decorators": "^6.1.1",
     "ember-moment": "^10.0.0",
     "ember-svg-jar": "^2.2.3",
     "postcss-functions": "^4.0.0"

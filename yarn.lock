@@ -8505,7 +8505,6 @@ __metadata:
     ember-concurrency: "npm:^3.0.0"
     ember-concurrency-decorators: "npm:^2.0.1"
     ember-css-modules: "npm:^2.1.0"
-    ember-decorators: "npm:^6.1.1"
     ember-disable-prototype-extensions: "npm:^1.1.3"
     ember-export-application-global: "npm:^2.0.1"
     ember-load-initializers: "npm:^2.1.2"
