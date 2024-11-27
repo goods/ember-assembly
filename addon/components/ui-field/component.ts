@@ -3,6 +3,7 @@ import Component from '@ember/component';
 import template from './template';
 import { isNone } from '@ember/utils';
 import { computed } from '@ember/object';
+import { guidFor } from '@ember/object/internals';
 
 export default class UiField extends Component {
   layout = template;
@@ -28,6 +29,6 @@ export default class UiField extends Component {
 
   @computed('elementId')
   get inputId(): string {
-    return `${this.elementId}-input`;
+    return `${guidFor(this)}-input`;
   }
 }
