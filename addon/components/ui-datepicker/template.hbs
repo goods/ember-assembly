@@ -1,5 +1,5 @@
 <div class="ui-datepicker" local-class="ui-datepicker" ...attributes>
-  <UiPopover local-class="ui-popover" disabled={{this.isDisabled}} @renderInPlace={{true}} as |Popover|>
+  <Asm::Ui::Popover local-class="ui-popover" disabled={{this.isDisabled}} @renderInPlace={{true}} as |Popover|>
     <Popover.Trigger local-class="trigger">
       <Asm::Ui::Button class="ui-datepicker-trigger-button">
         {{svg-jar "calendar-3" local-class="calendar-icon" class="ui-datepicker-calendar-icon" }}
@@ -61,5 +61,5 @@
         @onChangeRange={{fn this.onChangeDateRange Popover.actions.close}}
       />
     </Popover.Content>
-  </UiPopover>
+  </Asm::Ui::Popover>
 </div>

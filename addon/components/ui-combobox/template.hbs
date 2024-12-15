@@ -1,5 +1,5 @@
 <div local-class="ui-combobox" ...attributes>
-  <UiPopover disabled={{this.isDisabled}} @renderInPlace={{true}} as |Popover|>
+  <Asm::Ui::Popover disabled={{this.isDisabled}} @renderInPlace={{true}} as |Popover|>
     <Popover.Trigger local-class="ui-combobox-trigger">
       {{#if this.triggerComponent}}
         {{component this.triggerComponent selected=this.selected isDisabled=this.isDisabled}}
@@ -57,5 +57,5 @@
         {{/if}}
       {{/if}}
     </Popover.Content>
-  </UiPopover>
+  </Asm::Ui::Popover>
 </div>
